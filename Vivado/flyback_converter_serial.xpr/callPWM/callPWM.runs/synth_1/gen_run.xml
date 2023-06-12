@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7s50csga324-1" LaunchTime="1686513582">
+  <File Type="PA-TCL" Name="topModule.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="topModule_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="topModule_reports.tcl"/>
+  <File Type="RDS-RDS" Name="topModule.vds"/>
+  <File Type="RDS-UTIL" Name="topModule_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="topModule_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="topModule.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="topModule_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="topModule_timing_summary_synth.pb"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xci">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../FPGA-based-Digital-Twin/Vivado/XADC FPGA Reading/hw.srcs/xadc_wiz_0/ip/xadc_wiz_0/xadc_wiz_0.xci"/>
+        <Attr Name="ImportTime" Val="1684180496"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Submodulos/DT.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../FPGA-based-Digital-Twin/Vivado/callPWMFixed/callPWM/callPWM.srcs/sources_1/imports/Submodulos/DT.v"/>
+        <Attr Name="ImportTime" Val="1685618915"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Submodulos/ROM_grados_numericos.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../FPGA-based-Digital-Twin/Vivado/PIDController/Submodulos/ROM_grados_numericos.v"/>
+        <Attr Name="ImportTime" Val="1669747896"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/hdl/XADCdemo.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../FPGA-based-Digital-Twin/Vivado/XADC FPGA Reading/hw.srcs/sources_1/imports/hdl/XADCdemo.v"/>
+        <Attr Name="ImportTime" Val="1685443034"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Submodulos/controlador.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../FPGA-based-Digital-Twin/Vivado/PIDController/Submodulos/controlador.v"/>
+        <Attr Name="ImportTime" Val="1669747896"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Submodulos/divisor_freq.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../FPGA-based-Digital-Twin/Vivado/PIDController/Submodulos/divisor_freq.v"/>
+        <Attr Name="ImportTime" Val="1669747896"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/pwm8bits.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../FPGA-based-Digital-Twin/Vivado/callPWMFixed/callPWM/callPWM.srcs/sources_1/new/pwm8bits.v"/>
+        <Attr Name="ImportTime" Val="1685618915"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Submodulos/transmisor_async.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../FPGA-based-Digital-Twin/Vivado/PIDController/Submodulos/transmisor_async.v"/>
+        <Attr Name="ImportTime" Val="1669747896"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/topModule.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../FPGA-based-Digital-Twin/Vivado/callPWMFixed/callPWM/callPWM.srcs/sources_1/new/topModule.v"/>
+        <Attr Name="ImportTime" Val="1686112947"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Submodulos/rotary_decoder.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../FPGA-based-Digital-Twin/Vivado/PIDController/Submodulos/rotary_decoder.v"/>
+        <Attr Name="ImportTime" Val="1669747896"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Submodulos/comparator.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../FPGA-based-Digital-Twin/Vivado/callPWMFixed/callPWM/callPWM.srcs/sources_1/imports/Submodulos/comparator.v"/>
+        <Attr Name="ImportTime" Val="1685618915"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Submodulos/ADC_CTRL.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../FPGA-based-Digital-Twin/Vivado/PIDController/Submodulos/ADC_CTRL.v"/>
+        <Attr Name="ImportTime" Val="1669747896"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Submodulos/display_360g.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../FPGA-based-Digital-Twin/Vivado/PIDController/Submodulos/display_360g.v"/>
+        <Attr Name="ImportTime" Val="1669747896"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/division32.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../FPGA-based-Digital-Twin/Vivado/callPWMFixed/callPWM/callPWM.srcs/sources_1/new/division32.v"/>
+        <Attr Name="ImportTime" Val="1685618915"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Submodulos/pwm.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../FPGA-based-Digital-Twin/Vivado/PIDController/Submodulos/pwm.v"/>
+        <Attr Name="ImportTime" Val="1669747896"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/serialPrint.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../FPGA-based-Digital-Twin/Vivado/callPWMFixed/callPWM/callPWM.srcs/sources_1/new/serialPrint.v"/>
+        <Attr Name="ImportTime" Val="1685618915"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/callPWM/archive_project_summary.txt">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../Flyback_Converter.xpr/callPWM/archive_project_summary.txt"/>
+        <Attr Name="ImportTime" Val="1686254290"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/archive_project_summary.txt"/>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="topModule"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/digilent-xdc-master/Arty-S7-50-Master.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../FPGA-based-Digital-Twin/Vivado/callPWM.srcs/constrs_1/imports/digilent-xdc-master/Arty-S7-50-Master.xdc"/>
+        <Attr Name="ImportTime" Val="1685434577"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
+      <Desc>Vivado Synthesis Defaults</Desc>
+    </StratHandle>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>
