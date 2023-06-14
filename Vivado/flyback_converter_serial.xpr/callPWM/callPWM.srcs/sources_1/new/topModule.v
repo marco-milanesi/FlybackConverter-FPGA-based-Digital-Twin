@@ -47,7 +47,7 @@
             
             output PWMOut,            //PWM output
                    DIR, out,              //PWM turning sense 
-                   TxD, TxD2, TxD3, TxD4,          //Serial port transmitter (control/encoder)
+                   TxD,          //Serial port transmitter (control/encoder)
                    [5:0] LED          // ADC Output leds
         );
         
@@ -189,7 +189,7 @@
         //TX UART Instance for send all the signals  
         reg [15:0] contData=16'd0; 
         reg [9:0] outData;
-        transmisor_async errorTx(.BaudTick(BaudTickError), .TxD_start(TxD_startError), .TxD_data(outData),.TxD(TxD3), .TxD_busy(TxD_busyError));
+        transmisor_async errorTx(.BaudTick(BaudTickError), .TxD_start(TxD_startError), .TxD_data(outData),.TxD(TxD), .TxD_busy(TxD_busyError));
        
                                         
         //send each data by serialControl by dividing the number in characters ()

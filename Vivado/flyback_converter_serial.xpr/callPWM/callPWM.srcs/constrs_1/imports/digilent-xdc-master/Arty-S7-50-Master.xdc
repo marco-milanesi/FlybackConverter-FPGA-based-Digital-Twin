@@ -85,12 +85,12 @@ set_property -dict { PACKAGE_PIN H15   IOSTANDARD LVCMOS33 } [get_ports { LED[3]
 #set_property -dict { PACKAGE_PIN N13   IOSTANDARD LVCMOS33 } [get_ports { ck_io1 }]; #IO_L6N_T0_D08_VREF_14   Sch=ck_io[1]
 #set_property -dict { PACKAGE_PIN L16   IOSTANDARD LVCMOS33 } [get_ports { ck_io2 }]; #IO_L3N_T0_DQS_EMCCLK_14 Sch=ck_io[2]
 #set_property -dict { PACKAGE_PIN R14   IOSTANDARD LVCMOS33 } [get_ports { ck_io3 }]; #IO_L13P_T2_MRCC_14      Sch=ck_io[3]
-set_property -dict { PACKAGE_PIN T14   IOSTANDARD LVCMOS33 } [get_ports { TxD4 }]; #IO_L13N_T2_MRCC_14      Sch=ck_io[4]
+#set_property -dict { PACKAGE_PIN T14   IOSTANDARD LVCMOS33 } [get_ports { TxD4 }]; #IO_L13N_T2_MRCC_14      Sch=ck_io[4]
 set_property -dict { PACKAGE_PIN R16   IOSTANDARD LVCMOS33 } [get_ports { B }]; #IO_L14P_T2_SRCC_14      Sch=ck_io[5]
 set_property -dict { PACKAGE_PIN R17   IOSTANDARD LVCMOS33 } [get_ports { A }]; #IO_L14N_T2_SRCC_14      Sch=ck_io[6]
 set_property -dict { PACKAGE_PIN V17   IOSTANDARD LVCMOS33 } [get_ports { TxD }]; #IO_L16N_T2_A15_D31_14   Sch=ck_io[7]
-set_property -dict { PACKAGE_PIN R15   IOSTANDARD LVCMOS33 } [get_ports { TxD2 }]; #IO_L17P_T2_A14_D30_14   Sch=ck_io[8]
-set_property -dict { PACKAGE_PIN T15   IOSTANDARD LVCMOS33 } [get_ports { TxD3 }]; #IO_L17N_T2_A13_D29_14   Sch=ck_io[9]
+#set_property -dict { PACKAGE_PIN R15   IOSTANDARD LVCMOS33 } [get_ports { TxD2 }]; #IO_L17P_T2_A14_D30_14   Sch=ck_io[8]
+#set_property -dict { PACKAGE_PIN T15   IOSTANDARD LVCMOS33 } [get_ports { TxD3 }]; #IO_L17N_T2_A13_D29_14   Sch=ck_io[9]
 
 ## ChipKit SPI Header
 ## NOTE: The ChipKit SPI header ports can also be used as digital I/O and share FPGA pins with ck_io10-13. Do not use both at the same time.

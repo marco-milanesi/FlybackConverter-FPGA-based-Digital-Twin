@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-| Date         : Sun Jun 11 22:03:20 2023
+| Date         : Thu Jun 15 00:15:32 2023
 | Host         : Milanesi-Dell running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file topModule_control_sets_placed.rpt
 | Design       : topModule
@@ -58,12 +58,12 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |             380 |          124 |
+| No           | No                    | No                     |             380 |          116 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |              59 |           19 |
-| Yes          | No                    | No                     |             129 |           50 |
+| No           | Yes                   | No                     |              59 |           17 |
+| Yes          | No                    | No                     |             129 |           47 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |              64 |           19 |
+| Yes          | Yes                   | No                     |              64 |           20 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
@@ -75,24 +75,24 @@ Table of Contents
 +-----------------------------------------+------------------------------------+---------------------------------+------------------+----------------+--------------+
 |  FSM_sequential_contData_reg[4]_i_2_n_0 | FSM_sequential_contData[4]_i_1_n_0 |                                 |                1 |              5 |         5.00 |
 |  clk_mk_BUFG                            |                                    |                                 |                2 |              5 |         2.50 |
-|  clk_IBUF_BUFG                          | u1/ready_rising                    |                                 |                3 |              6 |         2.00 |
 |  errorTx/TxD_ready                      |                                    |                                 |                2 |              6 |         3.00 |
+|  clk_IBUF_BUFG                          | u1/ready_rising                    |                                 |                2 |              6 |         3.00 |
 |  clk_IBUF_BUFG                          |                                    | gen_baud/cont1[0]_i_1__2_n_0    |                2 |              7 |         3.50 |
 |  clk_IBUF_BUFG                          |                                    | reloj_100k/cont1[0]_i_1__1_n_0  |                2 |              7 |         3.50 |
-|  clk_IBUF_BUFG                          |                                    | DT_inst/CO[0]                   |                3 |              8 |         2.67 |
-|  clk_IBUF_BUFG                          |                                    | reloj_20khz/cont1[0]_i_1__0_n_0 |                3 |              9 |         3.00 |
+|  clk_IBUF_BUFG                          |                                    | DT_inst/CO[0]                   |                1 |              8 |         8.00 |
 |  reloj_100k/CLK                         |                                    |                                 |                3 |              9 |         3.00 |
+|  clk_IBUF_BUFG                          |                                    | reloj_20khz/cont1[0]_i_1__0_n_0 |                3 |              9 |         3.00 |
 |  gen_baud/CLK                           |                                    | clk_TxDstart/SR[0]              |                5 |             12 |         2.40 |
 |  clk_IBUF_BUFG                          |                                    | clk_TxDstart/clear              |                4 |             16 |         4.00 |
-|  clk_mk_BUFG                            | controlador_PID/u_k_A0_i_2_n_0     |                                 |                9 |             17 |         1.89 |
 |  clk_mk_BUFG                            | controlador_PID/u_k_E0_i_1_n_0     |                                 |                8 |             17 |         2.12 |
-|  clk_mk_BUFG                            | controlador_PID/u_k_C[25]_i_1_n_0  |                                 |                9 |             26 |         2.89 |
-|  clk_mk_BUFG                            | controlador_PID/u_k_D[25]_i_1_n_0  |                                 |               10 |             26 |         2.60 |
-|  clk_mk_BUFG                            | controlador_PID/m_k[31]_i_1_n_0    |                                 |               10 |             32 |         3.20 |
-|  clk_mk_BUFG                            | controlador_PID/m_k_1[31]_i_1_n_0  | controlador_PID/u_k             |               11 |             32 |         2.91 |
+|  clk_mk_BUFG                            | controlador_PID/u_k_A0_i_2_n_0     |                                 |                8 |             17 |         2.12 |
+|  clk_mk_BUFG                            | controlador_PID/u_k_D[25]_i_1_n_0  |                                 |                9 |             26 |         2.89 |
+|  clk_mk_BUFG                            | controlador_PID/u_k_C[25]_i_1_n_0  |                                 |                8 |             26 |         3.25 |
+|  clk_mk_BUFG                            | controlador_PID/m_k_1[31]_i_1_n_0  | controlador_PID/u_k             |               12 |             32 |         2.67 |
+|  clk_mk_BUFG                            | controlador_PID/m_k[31]_i_1_n_0    |                                 |               11 |             32 |         2.91 |
 |  clk_mk_BUFG                            | controlador_PID/u_k[31]_i_1_n_0    | controlador_PID/u_k             |                8 |             32 |         4.00 |
 |  FSM_sequential_contData_reg[4]_i_2_n_0 |                                    |                                 |               28 |             66 |         2.36 |
-|  clk_IBUF_BUFG                          |                                    |                                 |               89 |            294 |         3.30 |
+|  clk_IBUF_BUFG                          |                                    |                                 |               81 |            294 |         3.63 |
 +-----------------------------------------+------------------------------------+---------------------------------+------------------+----------------+--------------+
 
 
