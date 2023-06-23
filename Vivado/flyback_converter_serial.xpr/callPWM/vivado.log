@@ -2,10 +2,10 @@
 # Vivado v2022.2 (64-bit)
 # SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Sat Jun 10 06:40:07 2023
-# Process ID: 15416
+# Start of session at: Fri Jun 23 01:47:35 2023
+# Process ID: 18960
 # Current directory: D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent10444 D:\Github\FlybackConverter-FPGA-based-Digital-Twin\Vivado\flyback_converter_serial.xpr\callPWM\callPWM.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent14704 D:\Github\FlybackConverter-FPGA-based-Digital-Twin\Vivado\flyback_converter_serial.xpr\callPWM\callPWM.xpr
 # Log file: D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/vivado.log
 # Journal file: D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM\vivado.jou
 # Running On: Milanesi-Dell, OS: Windows, CPU Frequency: 2208 MHz, CPU Physical cores: 6, Host memory: 16879 MB
@@ -37,14 +37,21 @@ WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 avail
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at D:/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at D:/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at D:/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
-INFO: [Project 1-313] Project file moved from 'C:/Users/Marco Milanesi/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-16056-Milanesi-Dell/PrjAr/_X_' since last save.
 Scanning sources...
 Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/2022.2/data/ip'.
-open_project: Time (s): cpu = 00:00:18 ; elapsed = 00:00:11 . Memory (MB): peak = 1317.770 ; gain = 367.461
+open_project: Time (s): cpu = 00:00:19 ; elapsed = 00:00:14 . Memory (MB): peak = 1337.867 ; gain = 396.852
 update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xci' is already up-to-date
+[Fri Jun 23 01:48:47 2023] Launched synth_1...
+Run output will be captured here: D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.runs/synth_1/runme.log
+[Fri Jun 23 01:48:47 2023] Launched impl_1...
+Run output will be captured here: D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.runs/impl_1/runme.log
 open_hw_manager
 connect_hw_server -allow_non_jtag
 INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
@@ -68,10 +75,10 @@ INFO: [Labtools 27-2221] Launch Output:
 
 
 
-connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 1347.484 ; gain = 6.758
+connect_hw_server: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 1375.258 ; gain = 0.000
 open_hw_target
 INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210352B7DE7AA
-open_hw_target: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 3507.559 ; gain = 2160.074
+open_hw_target: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 3540.340 ; gain = 2165.082
 set_property PROGRAM.FILE {D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.runs/impl_1/topModule.bit} [get_hw_devices xc7s50_0]
 current_hw_device [get_hw_devices xc7s50_0]
 refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7s50_0] 0]
@@ -87,9 +94,16 @@ close_hw_manager
 reset_run synth_1
 launch_runs impl_1 -to_step write_bitstream -jobs 12
 INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xci' is already up-to-date
-[Sat Jun 10 06:43:20 2023] Launched synth_1...
+[Fri Jun 23 02:11:50 2023] Launched synth_1...
 Run output will be captured here: D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.runs/synth_1/runme.log
-[Sat Jun 10 06:43:20 2023] Launched impl_1...
+[Fri Jun 23 02:11:51 2023] Launched impl_1...
+Run output will be captured here: D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xci' is already up-to-date
+[Fri Jun 23 02:17:08 2023] Launched synth_1...
+Run output will be captured here: D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.runs/synth_1/runme.log
+[Fri Jun 23 02:17:08 2023] Launched impl_1...
 Run output will be captured here: D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.runs/impl_1/runme.log
 open_hw_manager
 connect_hw_server -allow_non_jtag
@@ -114,7 +128,7 @@ INFO: [Labtools 27-2221] Launch Output:
 
 
 
-connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 3594.219 ; gain = 12.172
+connect_hw_server: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 3612.727 ; gain = 0.000
 open_hw_target
 INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210352B7DE7AA
 set_property PROGRAM.FILE {D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.runs/impl_1/topModule.bit} [get_hw_devices xc7s50_0]
@@ -127,96 +141,6 @@ set_property PROGRAM.FILE {D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vi
 program_hw_devices [get_hw_devices xc7s50_0]
 INFO: [Labtools 27-3164] End of startup status: HIGH
 refresh_hw_device [lindex [get_hw_devices xc7s50_0] 0]
-INFO: [Labtools 27-1434] Device xc7s50 (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 12
-INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xci' is already up-to-date
-[Sat Jun 10 06:50:36 2023] Launched synth_1...
-Run output will be captured here: D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.runs/synth_1/runme.log
-[Sat Jun 10 06:50:36 2023] Launched impl_1...
-Run output will be captured here: D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.runs/impl_1/runme.log
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 12
-INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xci' is already up-to-date
-[Sat Jun 10 06:51:29 2023] Launched synth_1...
-Run output will be captured here: D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.runs/synth_1/runme.log
-[Sat Jun 10 06:51:29 2023] Launched impl_1...
-Run output will be captured here: D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.runs/impl_1/runme.log
-set_property PROBES.FILE {} [get_hw_devices xc7s50_0]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7s50_0]
-set_property PROGRAM.FILE {D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.runs/impl_1/topModule.bit} [get_hw_devices xc7s50_0]
-program_hw_devices [get_hw_devices xc7s50_0]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices xc7s50_0] 0]
-INFO: [Labtools 27-1434] Device xc7s50 (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 12
-INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xci' is already up-to-date
-[Sat Jun 10 07:11:04 2023] Launched synth_1...
-Run output will be captured here: D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.runs/synth_1/runme.log
-[Sat Jun 10 07:11:04 2023] Launched impl_1...
-Run output will be captured here: D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.runs/impl_1/runme.log
-open_run impl_1
-INFO: [Device 21-403] Loading part xc7s50csga324-1
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.030 . Memory (MB): peak = 3946.266 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 477 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-INFO: [Project 1-479] Netlist was created with Vivado 2022.2
-INFO: [Project 1-570] Preparing netlist for logic optimization
-INFO: [Timing 38-478] Restoring timing data from binary archive.
-INFO: [Timing 38-479] Binary timing data restore complete.
-INFO: [Project 1-856] Restoring constraints from binary archive.
-INFO: [Project 1-853] Binary constraint restore complete.
-Reading XDEF placement.
-Reading placer database...
-Reading XDEF routing.
-Read XDEF Files: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.363 . Memory (MB): peak = 4537.309 ; gain = 0.000
-Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
-Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.364 . Memory (MB): peak = 4537.309 ; gain = 0.000
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 4537.309 ; gain = 0.000
-INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
-
-open_run: Time (s): cpu = 00:00:19 ; elapsed = 00:00:18 . Memory (MB): peak = 4661.000 ; gain = 1056.184
-WARNING: [Timing 38-313] There are no user specified timing constraints. Timing constraints are needed for proper timing analysis.
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 12
-INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xci' is already up-to-date
-[Sat Jun 10 07:15:13 2023] Launched synth_1...
-Run output will be captured here: D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.runs/synth_1/runme.log
-[Sat Jun 10 07:15:13 2023] Launched impl_1...
-Run output will be captured here: D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.runs/impl_1/runme.log
-close_design
-close_hw_manager
-open_hw_manager
-connect_hw_server -allow_non_jtag
-INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
-INFO: [Labtools 27-2222] Launching hw_server...
-INFO: [Labtools 27-2221] Launch Output:
-
-****** Xilinx hw_server v2022.2
-  **** Build date : Oct 14 2022 at 05:18:10
-    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-
-
-INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:0
-INFO: [Labtools 27-3417] Launching cs_server...
-INFO: [Labtools 27-2221] Launch Output:
-
-
-******** Xilinx cs_server v2022.2.0
-  ****** Build date   : Oct 05 2022-01:25:37
-    **** Build number : 2022.2.1664925937
-      ** Copyright 2017-2023 Xilinx, Inc. All Rights Reserved.
-
-
-
-connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 4727.777 ; gain = 0.000
-open_hw_target
-INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210352B7DE7AA
-set_property PROGRAM.FILE {D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.runs/impl_1/topModule.bit} [get_hw_devices xc7s50_0]
-current_hw_device [get_hw_devices xc7s50_0]
-refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7s50_0] 0]
 INFO: [Labtools 27-1434] Device xc7s50 (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
 set_property PROBES.FILE {} [get_hw_devices xc7s50_0]
 set_property FULL_PROBES.FILE {} [get_hw_devices xc7s50_0]
@@ -229,9 +153,9 @@ close_hw_manager
 reset_run synth_1
 launch_runs impl_1 -to_step write_bitstream -jobs 12
 INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xci' is already up-to-date
-[Sat Jun 10 07:24:25 2023] Launched synth_1...
+[Fri Jun 23 02:44:03 2023] Launched synth_1...
 Run output will be captured here: D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.runs/synth_1/runme.log
-[Sat Jun 10 07:24:25 2023] Launched impl_1...
+[Fri Jun 23 02:44:03 2023] Launched impl_1...
 Run output will be captured here: D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.runs/impl_1/runme.log
 open_hw_manager
 connect_hw_server -allow_non_jtag
@@ -256,7 +180,7 @@ INFO: [Labtools 27-2221] Launch Output:
 
 
 
-connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 4727.777 ; gain = 0.000
+connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 3620.992 ; gain = 0.000
 open_hw_target
 INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210352B7DE7AA
 set_property PROGRAM.FILE {D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.runs/impl_1/topModule.bit} [get_hw_devices xc7s50_0]
@@ -270,44 +194,6 @@ program_hw_devices [get_hw_devices xc7s50_0]
 INFO: [Labtools 27-3164] End of startup status: HIGH
 refresh_hw_device [lindex [get_hw_devices xc7s50_0] 0]
 INFO: [Labtools 27-1434] Device xc7s50 (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-close_hw_manager
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 12
-INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xci' is already up-to-date
-[Sat Jun 10 07:29:47 2023] Launched synth_1...
-Run output will be captured here: D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.runs/synth_1/runme.log
-[Sat Jun 10 07:29:47 2023] Launched impl_1...
-Run output will be captured here: D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.runs/impl_1/runme.log
-open_hw_manager
-connect_hw_server -allow_non_jtag
-INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
-INFO: [Labtools 27-2222] Launching hw_server...
-INFO: [Labtools 27-2221] Launch Output:
-
-****** Xilinx hw_server v2022.2
-  **** Build date : Oct 14 2022 at 05:18:10
-    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-
-
-INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:0
-INFO: [Labtools 27-3417] Launching cs_server...
-INFO: [Labtools 27-2221] Launch Output:
-
-
-******** Xilinx cs_server v2022.2.0
-  ****** Build date   : Oct 05 2022-01:25:37
-    **** Build number : 2022.2.1664925937
-      ** Copyright 2017-2023 Xilinx, Inc. All Rights Reserved.
-
-
-
-connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 4727.777 ; gain = 0.000
-open_hw_target
-INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210352B7DE7AA
-set_property PROGRAM.FILE {D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.runs/impl_1/topModule.bit} [get_hw_devices xc7s50_0]
-current_hw_device [get_hw_devices xc7s50_0]
-refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7s50_0] 0]
-INFO: [Labtools 27-1434] Device xc7s50 (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
 set_property PROBES.FILE {} [get_hw_devices xc7s50_0]
 set_property FULL_PROBES.FILE {} [get_hw_devices xc7s50_0]
 set_property PROGRAM.FILE {D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.runs/impl_1/topModule.bit} [get_hw_devices xc7s50_0]
@@ -315,54 +201,16 @@ program_hw_devices [get_hw_devices xc7s50_0]
 INFO: [Labtools 27-3164] End of startup status: HIGH
 refresh_hw_device [lindex [get_hw_devices xc7s50_0] 0]
 INFO: [Labtools 27-1434] Device xc7s50 (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 12
-INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xci' is already up-to-date
-[Sat Jun 10 08:57:11 2023] Launched synth_1...
-Run output will be captured here: D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.runs/synth_1/runme.log
-[Sat Jun 10 08:57:11 2023] Launched impl_1...
-Run output will be captured here: D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.runs/impl_1/runme.log
-close_hw_manager
-reset_run impl_1
-WARNING: [Vivado 12-1017] Problems encountered:
-1. PID not specified
-
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 12
-INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/ip/xadc_wiz_0/xadc_wiz_0.xci' is already up-to-date
-[Sat Jun 10 08:59:06 2023] Launched synth_1...
-Run output will be captured here: D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.runs/synth_1/runme.log
-[Sat Jun 10 08:59:06 2023] Launched impl_1...
-Run output will be captured here: D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.runs/impl_1/runme.log
-open_hw_manager
-connect_hw_server -allow_non_jtag
-INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
-INFO: [Labtools 27-2222] Launching hw_server...
-INFO: [Labtools 27-2221] Launch Output:
-
-****** Xilinx hw_server v2022.2
-  **** Build date : Oct 14 2022 at 05:18:10
-    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-
-
-INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:0
-INFO: [Labtools 27-3417] Launching cs_server...
-INFO: [Labtools 27-2221] Launch Output:
-
-
-******** Xilinx cs_server v2022.2.0
-  ****** Build date   : Oct 05 2022-01:25:37
-    **** Build number : 2022.2.1664925937
-      ** Copyright 2017-2023 Xilinx, Inc. All Rights Reserved.
-
-
-
-connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 4727.777 ; gain = 0.000
-open_hw_target
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210352B7DE7AA
 INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210352B7DE7AA
+INFO: [Labtools 27-1434] Device xc7s50 (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+set_property PROBES.FILE {} [get_hw_devices xc7s50_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7s50_0]
 set_property PROGRAM.FILE {D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.runs/impl_1/topModule.bit} [get_hw_devices xc7s50_0]
-current_hw_device [get_hw_devices xc7s50_0]
-refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7s50_0] 0]
+program_hw_devices [get_hw_devices xc7s50_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7s50_0] 0]
 INFO: [Labtools 27-1434] Device xc7s50 (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
 set_property PROBES.FILE {} [get_hw_devices xc7s50_0]
 set_property FULL_PROBES.FILE {} [get_hw_devices xc7s50_0]
@@ -373,4 +221,4 @@ refresh_hw_device [lindex [get_hw_devices xc7s50_0] 0]
 INFO: [Labtools 27-1434] Device xc7s50 (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
 close_hw_manager
 exit
-INFO: [Common 17-206] Exiting Vivado at Sat Jun 10 09:05:12 2023...
+INFO: [Common 17-206] Exiting Vivado at Fri Jun 23 02:52:20 2023...

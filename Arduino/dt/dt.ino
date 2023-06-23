@@ -9,42 +9,36 @@ void setup() {
 void loop() {
   unsigned long startTime = millis();  // Get the current time
 
-  while (millis() - startTime < 30000) {  // Loop for 30 seconds
-    if (millis() - startTime < 5000) {  // 25 %
-      digitalWrite(ledPin, HIGH);
-      delayMicroseconds(5);  
-      digitalWrite(ledPin, LOW);
-      delayMicroseconds(15);
-    }
-    else if ((millis() - startTime > 5000) && (millis() - startTime < 10000)){ // 0 %
-      // digitalWrite(ledPin, HIGH);
-      // delayMicroseconds(0);  
-      // digitalWrite(ledPin, LOW);
-      // delayMicroseconds(20);
-    }
-    else if ((millis() - startTime > 10000) && (millis() - startTime < 15000)){   // 30 %
-      digitalWrite(ledPin, HIGH);
-      delayMicroseconds(6);  
-      digitalWrite(ledPin, LOW);
-      delayMicroseconds(14);
-    }
-    else if ((millis() - startTime > 15000) && (millis() - startTime < 20000)){   // 0 %
-      // digitalWrite(ledPin, HIGH);
-      // delayMicroseconds(0);  
-      // digitalWrite(ledPin, LOW);
-      // delayMicroseconds(20);
-    }
-    else if ((millis() - startTime > 20000) && (millis() - startTime < 25000)){   // 60 %
+  while (millis() - startTime < 10000) {  // Loop for 30 seconds
+    if (millis() - startTime < 2000) {  // 60 %
       digitalWrite(ledPin, HIGH);
       delayMicroseconds(12);  
       digitalWrite(ledPin, LOW);
       delayMicroseconds(8);
     }
-    else {            // 35 %
+    else if ((millis() - startTime > 2000) && (millis() - startTime < 4000)){ // 15 %
       digitalWrite(ledPin, HIGH);
-      delayMicroseconds(7);  
+      delayMicroseconds(3);  
       digitalWrite(ledPin, LOW);
-      delayMicroseconds(13);
+      delayMicroseconds(17);
+    }
+    else if ((millis() - startTime > 4000) && (millis() - startTime < 6000)){   // 20 %
+      digitalWrite(ledPin, HIGH);
+      delayMicroseconds(4);  
+      digitalWrite(ledPin, LOW);
+      delayMicroseconds(17);
+    }
+    else if ((millis() - startTime > 6000) && (millis() - startTime < 8000)){   // 25 %
+      digitalWrite(ledPin, HIGH);
+      delayMicroseconds(5);  
+      digitalWrite(ledPin, LOW);
+      delayMicroseconds(15);
+    }
+    else {            // 30 %
+      digitalWrite(ledPin, HIGH);
+      delayMicroseconds(6);  
+      digitalWrite(ledPin, LOW);
+      delayMicroseconds(14);
     }
   }
 

@@ -22,8 +22,8 @@ reg [31:0] e_k_2=32'd0;		//error 2 veces anterior
 reg [31:0] e_k=32'd0;		//error actual
 reg [31:0] u_k=32'd0;  		//resultado de la ecuacion PID
 
-reg [31:0] Kp = 32'd1; 		//ganancia proporcional //8//6
-reg [31:0] Ki = 32'd1;    //doble sintonizacion		//ganancia integral  //4//2
+reg [31:0] Kp = 32'd0; 		//ganancia proporcional //8//6
+reg [31:0] Ki = 32'd30;    //doble sintonizacion		//ganancia integral  //4//2
 reg [31:0] Kd = 32'd0; 		//ganancia derivativa 
 
 reg [31:0] f = 32'd50;  		// 1/T frecuencia de muestreo

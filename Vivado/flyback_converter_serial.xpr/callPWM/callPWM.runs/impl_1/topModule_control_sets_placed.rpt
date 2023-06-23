@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-| Date         : Thu Jun 15 00:15:32 2023
+| Date         : Fri Jun 23 09:29:58 2023
 | Host         : Milanesi-Dell running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file topModule_control_sets_placed.rpt
 | Design       : topModule
@@ -23,11 +23,11 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |    20 |
-|    Minimum number of control sets                        |    20 |
+| Total control sets                                       |    11 |
+|    Minimum number of control sets                        |    11 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    64 |
+| Unused register locations in slices containing registers |    17 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -39,15 +39,15 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |    20 |
+| Total control sets |    11 |
 | >= 0 to < 4        |     0 |
-| >= 4 to < 6        |     2 |
-| >= 6 to < 8        |     4 |
-| >= 8 to < 10       |     3 |
+| >= 4 to < 6        |     1 |
+| >= 6 to < 8        |     3 |
+| >= 8 to < 10       |     1 |
 | >= 10 to < 12      |     0 |
-| >= 12 to < 14      |     1 |
+| >= 12 to < 14      |     2 |
 | >= 14 to < 16      |     0 |
-| >= 16              |    10 |
+| >= 16              |     4 |
 +--------------------+-------+
 * Control sets can be remapped at either synth_design or opt_design
 
@@ -58,41 +58,32 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |             380 |          116 |
+| No           | No                    | No                     |             180 |           63 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |              59 |           17 |
-| Yes          | No                    | No                     |             129 |           47 |
+| No           | Yes                   | No                     |              56 |           15 |
+| Yes          | No                    | No                     |              11 |            4 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |              64 |           20 |
+| Yes          | Yes                   | No                     |               0 |            0 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 4. Detailed Control Set Information
 -----------------------------------
 
-+-----------------------------------------+------------------------------------+---------------------------------+------------------+----------------+--------------+
-|               Clock Signal              |            Enable Signal           |         Set/Reset Signal        | Slice Load Count | Bel Load Count | Bels / Slice |
-+-----------------------------------------+------------------------------------+---------------------------------+------------------+----------------+--------------+
-|  FSM_sequential_contData_reg[4]_i_2_n_0 | FSM_sequential_contData[4]_i_1_n_0 |                                 |                1 |              5 |         5.00 |
-|  clk_mk_BUFG                            |                                    |                                 |                2 |              5 |         2.50 |
-|  errorTx/TxD_ready                      |                                    |                                 |                2 |              6 |         3.00 |
-|  clk_IBUF_BUFG                          | u1/ready_rising                    |                                 |                2 |              6 |         3.00 |
-|  clk_IBUF_BUFG                          |                                    | gen_baud/cont1[0]_i_1__2_n_0    |                2 |              7 |         3.50 |
-|  clk_IBUF_BUFG                          |                                    | reloj_100k/cont1[0]_i_1__1_n_0  |                2 |              7 |         3.50 |
-|  clk_IBUF_BUFG                          |                                    | DT_inst/CO[0]                   |                1 |              8 |         8.00 |
-|  reloj_100k/CLK                         |                                    |                                 |                3 |              9 |         3.00 |
-|  clk_IBUF_BUFG                          |                                    | reloj_20khz/cont1[0]_i_1__0_n_0 |                3 |              9 |         3.00 |
-|  gen_baud/CLK                           |                                    | clk_TxDstart/SR[0]              |                5 |             12 |         2.40 |
-|  clk_IBUF_BUFG                          |                                    | clk_TxDstart/clear              |                4 |             16 |         4.00 |
-|  clk_mk_BUFG                            | controlador_PID/u_k_E0_i_1_n_0     |                                 |                8 |             17 |         2.12 |
-|  clk_mk_BUFG                            | controlador_PID/u_k_A0_i_2_n_0     |                                 |                8 |             17 |         2.12 |
-|  clk_mk_BUFG                            | controlador_PID/u_k_D[25]_i_1_n_0  |                                 |                9 |             26 |         2.89 |
-|  clk_mk_BUFG                            | controlador_PID/u_k_C[25]_i_1_n_0  |                                 |                8 |             26 |         3.25 |
-|  clk_mk_BUFG                            | controlador_PID/m_k_1[31]_i_1_n_0  | controlador_PID/u_k             |               12 |             32 |         2.67 |
-|  clk_mk_BUFG                            | controlador_PID/m_k[31]_i_1_n_0    |                                 |               11 |             32 |         2.91 |
-|  clk_mk_BUFG                            | controlador_PID/u_k[31]_i_1_n_0    | controlador_PID/u_k             |                8 |             32 |         4.00 |
-|  FSM_sequential_contData_reg[4]_i_2_n_0 |                                    |                                 |               28 |             66 |         2.36 |
-|  clk_IBUF_BUFG                          |                                    |                                 |               81 |            294 |         3.63 |
-+-----------------------------------------+------------------------------------+---------------------------------+------------------+----------------+--------------+
++-------------------------------------------------+------------------------------------+---------------------------------+------------------+----------------+--------------+
+|                   Clock Signal                  |            Enable Signal           |         Set/Reset Signal        | Slice Load Count | Bel Load Count | Bels / Slice |
++-------------------------------------------------+------------------------------------+---------------------------------+------------------+----------------+--------------+
+|  FSM_sequential_contData_reg[4]_i_2_n_0         | FSM_sequential_contData[4]_i_1_n_0 |                                 |                1 |              5 |         5.00 |
+|  errorTx/TxD_ready                              |                                    |                                 |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG                                  | u1/ready_rising                    |                                 |                3 |              6 |         2.00 |
+|  clk_IBUF_BUFG                                  |                                    | gen_baud/cont1[0]_i_1__1_n_0    |                2 |              7 |         3.50 |
+|  clk_IBUF_BUFG                                  |                                    | PID_inst/CO[0]                  |                2 |              8 |         4.00 |
+|  gen_baud/CLK                                   |                                    | clk_TxDstart/SR[0]              |                3 |             12 |         4.00 |
+|  clk_IBUF_BUFG                                  |                                    | reloj_20khz/cont1[0]_i_1__0_n_0 |                4 |             13 |         3.25 |
+|  clk_IBUF_BUFG                                  |                                    | clk_TxDstart/clear              |                4 |             16 |         4.00 |
+|  FSM_sequential_contData_reg[4]_i_2_n_0         |                                    |                                 |               24 |             48 |         2.00 |
+|  clk_IBUF_BUFG                                  |                                    |                                 |               20 |             62 |         3.10 |
+|  Discrete_Time_Integrator1_x_reg_reg[0]_i_2_n_0 |                                    |                                 |               16 |             64 |         4.00 |
++-------------------------------------------------+------------------------------------+---------------------------------+------------------+----------------+--------------+
 
 

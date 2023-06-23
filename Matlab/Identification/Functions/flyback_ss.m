@@ -1,9 +1,8 @@
-function [A,B,C,D,G] = flyback_ss(Vs,X,DuCy)
+function [A,B,C,D,G] = flyback_ss(Vs,X,DuCy, Lm, C)
 
 Rsw=0.01;   
-n=2;        
-Lm=0.5e-6;   
-C=100e-6;
+n=1/2.33;        
+
 Rc=0;
 R=0.1;     
 

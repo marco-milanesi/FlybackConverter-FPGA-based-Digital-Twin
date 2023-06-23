@@ -77,15 +77,15 @@
            
          //Closed loop control sampling time 20khz
          wire clk_mk;
-         divisor_freq reloj_20khz(.clk(clk), .freq_base(32'd300), .freq_sal(clk_mk));//aprox20k
-         //divisor_freq reloj_20khz(.clk(clk), .freq_base(32'd6000), .freq_sal(clk_mk));//aprox1k
+         //divisor_freq reloj_20khz(.clk(clk), .freq_base(32'd300), .freq_sal(clk_mk));//aprox20k
+         divisor_freq reloj_20khz(.clk(clk), .freq_base(32'd6000), .freq_sal(clk_mk));//aprox1k
         
         //100khz clock for 8 bit PWM
          wire clk_100k;
-         // f = 6 MHz / 2*(.freq_base(32'd10))
+         // f = 12 MHz / 2*(.freq_base(32'd10))
          //divisor_freq reloj_100k(.clk(clk), .freq_base(32'd60), .freq_sal(clk_100k));
 //        divisor_freq reloj_100k(.clk(clk), .freq_base(32'd10), .freq_sal(clk_100k));
-         divisor_freq reloj_100k(.clk(clk), .freq_base(32'd120), .freq_sal(clk_100k)); //50k pwm 
+         //divisor_freq reloj_100k(.clk(clk), .freq_base(32'd300), .freq_sal(clk_100k)); //50k pwm 
 
         //Baud Generator initialization
         divisor_freq gen_baud(.clk(clk), .freq_base(32'd104), .freq_sal(BaudTick));//fb=109-1 ... baud=55555
@@ -183,7 +183,11 @@
         reg [10:0]numberMVDT=10'd0312;                                              
         wire [9:0] uniMVDT, decMVDT, centMVDT, hundMVDT, tenThousMVDT;
         ROM_grados_numericos   ROM_MVDT(.grad(numberMVDT), .unidades(uniMVDT), .decenas(decMVDT),.centenas(centMVDT), .thousands(hundMVDT), .tenThousand(tenThousMVDT)); //outputs are registers   
-       
+    
+    // --------------------------------  Error = SP-PV    --------------------------       
+        reg [15:0] numberError=16'd0;                                              
+        wire [9:0] uniError, decError, centError, hundError, tenThousError;
+        ROM_grados_numericos   ROM_error(.grad(numberError), .unidades(uniError), .decenas(decError),.centenas(centError), .thousands(hundError), .tenThousand(tenThousError)); //outputs are registers      
      
 //+++++++++++++++++++++++++++++++++++  Send all the signals    +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
         //TX UART Instance for send all the signals  
@@ -232,7 +236,14 @@
                     16'b0000_0000_0001_1010: begin outData<=centMVDT; contData<=contData+16'b0000_0000_0000_0001;end
                     16'b0000_0000_0001_1011: begin outData<=decMVDT; contData<=contData+16'b0000_0000_0000_0001;end
                     16'b0000_0000_0001_1100: begin outData<=uniMVDT; contData<=contData+16'b0000_0000_0000_0001;end                    
-                    16'b0000_0000_0001_1101: begin outData<=16'b0000_0000_0000_1010;  contData<=16'b0000_0000_0000_0000;end  //LF plus restart counter
+                    16'b0000_0000_0001_1101: begin outData<=16'b0000_0000_0000_1010;  contData<=16'b0000_0000_0000_0000;end //LF plus restart counter
+                    
+//                    16'b0000_0000_0001_1111: begin outData<=tenThousError; contData<=contData+16'b0000_0000_0000_0001;end		
+//                    16'b0000_0000_0010_0000: begin outData<=hundError; contData<=contData+16'b0000_0000_0000_0001;end
+//                    16'b0000_0000_0010_0001: begin outData<=centError; contData<=contData+16'b0000_0000_0000_0001;end
+//                    16'b0000_0000_0010_0010: begin outData<=decError; contData<=contData+16'b0000_0000_0000_0001;end
+//                    16'b0000_0000_0010_0011: begin outData<=uniError; contData<=contData+16'b0000_0000_0000_0001;end                    
+//                    16'b0000_0000_0010_0100: begin outData<=16'b0000_0000_0000_1010;  contData<=16'b0000_0000_0000_0000;end  //LF plus restart counter
                                     
                     default:    outData<=1'b0;// outData<=16'b0000_0000_0000_0000;	
                     endcase
@@ -243,35 +254,29 @@
         
 // -----------------------    PID error calculation -------------------------------------------
             ///  error  calculation //
-            always @(posedge clk)
-               e_k_signo<=(set_point - data_out_adc_reg); // e(k)=R(s)-Y(s)
+//            always @(posedge clk)
+//               e_k_signo<=(set_point - data_out_adc_reg); // e(k)=R(s)-Y(s)
         
-            ////error abs////	
-            reg [16:0] e_k_unsigned;
-            always @(posedge clk)	
-               if (e_k_signo[16]==1'b1)  //en caso de que el error sea negativo
-                  e_k_unsigned<=((~e_k_signo)+(1'b1)); //bit de signo
-               else
-                  e_k_unsigned<=(e_k_signo);
+//            ////error abs////	
+//            reg [16:0] e_k_unsigned;
+//            always @(posedge clk)	
+//               if (e_k_signo[16]==1'b1)  //en caso de que el error sea negativo
+//                  e_k_unsigned<=((~e_k_signo)+(1'b1)); //bit de signo
+//               else
+//                  e_k_unsigned<=(e_k_signo);
             
-             //PI Controller
-              reg [31:0]KP=32'd1;         //proportional gain  3 works
-              reg [31:0]KI=32'd1;			//integral gain
-              reg [16:0] controlOut_unsigned;
-              wire [15:0] sample;   
-             controlador controlador_PID(.clk_mk(clk_mk),.CLOCK_50(clk),.error(e_k_unsigned[16:0]),
-                                         .m_k_out(sample[15:0]), .reset(1'b0));
+//             //PI Controller
+              
+//              reg [16:0] controlOut_unsigned;
+//              wire [15:0] sample;   
+//             controlador controlador_PID(.clk_mk(clk_mk),.CLOCK_50(clk),.error(e_k_unsigned[16:0]),
+//                                         .m_k_out(sample[15:0]), .reset(1'b0));
             
-            //assign control action to the output variable
-            always@(posedge clk)
-                controlOut_unsigned=sample+8'd00;
+//            //assign control action to the output variable
+//            always@(posedge clk)
+//                controlOut_unsigned=sample+8'd00;
                 
-            //Initialize PWM Generator (clk is 6mhz in this FPGA) 50khz PWM 
-            // pwm pwm(.clk(clk), .pwm_in(controlOut), .pwm_out(PWMModulation));
-             pwm8bits pwm8(.clk100k(clk_100k), .pwm_in(controlOut_unsigned), .pwm_out(PWMModulation)); //PWM operating with 8 bits resolution 
-            
-            //PWM outputs assignment
-            assign PWMOut=PWMModulation;    
+  
             
 // ------------------      bypass PI controller to do open-loop test -------------------------
 //            always@(posedge clk)
@@ -287,37 +292,73 @@
       wire  signed [16:0] error;  // sfix64_En32
       wire  signed ce_out;  // sfix64_En32
         
-        DT DT_inst(
-          .clk(clk),
-          .reset_x(1'b0),
-          .SP(set_point[16:0]),
-          .kp(32'd4),
-          .ti(32'd2),
-          .PV(PV[16:0]),  //process variable     (position)
-          .MV(MV[16:0]),  //manipulated variable (control action)
-          .p_action(p_action[16:0]),
-          .error(error[16:0]),
-          .i_action(i_action[16:0])
-        );
+//        DT DT_inst(
+//          .clk(clk),
+//          .reset_x(1'b0),
+//          .SP(set_point[16:0]),
+//          .kp(32'd4),
+//          .ti(32'd2),
+//          .PV(PV[16:0]),  //process variable     (position)
+//          .MV(MV[16:0]),  //manipulated variable (control action)
+//          .p_action(p_action[16:0]),
+//          .error(error[16:0]),
+//          .i_action(i_action[16:0])
+//        );
         
       
-        reg [10:0] DigitalTwin_PV_Print;
-        reg [10:0] DigitalTwin_MV_Print;
+//        reg [10:0] DigitalTwin_PV_Print;
+//        reg [10:0] DigitalTwin_MV_Print;
 
-        always@(posedge clk)
-            DigitalTwin_PV_Print=PV;
-        always@(posedge clk)
-            DigitalTwin_MV_Print=MV;
+//        always@(posedge clk)
+//            DigitalTwin_PV_Print=PV;
+//        always@(posedge clk)
+//            DigitalTwin_MV_Print=MV;
+            
+// ------------------------------ PID implementation ----------------------------------
 
+//      wire  signed [16:0] PV;  // sfix64_En32
+//      wire  signed [16:0] MV;  // sfix64_En32
+//      wire  signed [16:0] i_action;  // sfix64_En32
+//      wire  signed [16:0] p_action;  // sfix64_En32
+      reg [16:0] controlOut_unsigned;  
+      reg [15:0] error_pid;
+          
+      PID PID_inst(
+           .clk(clk_mk),
+           .SP(set_point[16:0]),
+           .kp(64'd1),
+           .ki(64'd2000000),
+           .PV(data_out_adc_reg[15:0]),
+           .MV(MV[16:0]),
+           .p_action(p_action[16:0]),
+           .i_action(i_action[16:0]),
+           .error(error[16:0])
+      );
+      
+      always@(posedge clk)
+      begin
+            controlOut_unsigned=MV;
+            error_pid=error;
+      end       
+            //Initialize PWM Generator (clk is 6mhz in this FPGA) 50khz PWM 
+            // pwm pwm(.clk(clk), .pwm_in(controlOut), .pwm_out(PWMModulation));
+             pwm8bits pwm8(.clk100k(clk), .pwm_in(controlOut_unsigned), .pwm_out(PWMModulation)); //PWM operating with 8 bits resolution 
+            //   pwm8bits pwm8(.clk100k(clk), .pwm_in(8'd200), .pwm_out(PWMModulation)); //PWM operating with 8 bits resolution 
+
+            //PWM outputs assignment
+            assign PWMOut=PWMModulation;  
 //  --------------------   Update variables for serial print    ------------------------------  
         
     always @(posedge freqSendError)
     begin
         numberSetpoint=set_point;   // Setpoint
         numberADC=data_out_adc_reg;   // Physical System Process variable
-        numberPVDT=DigitalTwin_PV_Print;   // Digital Twin Process Variable
+        numberPVDT=16'd0;   // Digital Twin Process Variable
         numberMV=controlOut_unsigned;      // Physical System Manipulated Variable
-        numberMVDT=DigitalTwin_MV_Print;   // Digital Twin Manipulated Variable
+        //numberMVDT=DigitalTwin_MV_Print;   // Digital Twin Manipulated Variable
+        numberMVDT=error_pid;   // Digital Twin Manipulated Variable
+        
+        
     end
          
     endmodule

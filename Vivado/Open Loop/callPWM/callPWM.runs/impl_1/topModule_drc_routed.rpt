@@ -1,0 +1,276 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
+| Date         : Thu Jun 22 23:38:16 2023
+| Host         : Milanesi-Dell running 64-bit major release  (build 9200)
+| Command      : report_drc -file topModule_drc_routed.rpt -pb topModule_drc_routed.pb -rpx topModule_drc_routed.rpx
+| Design       : topModule
+| Device       : xc7s50csga324-1
+| Speed File   : -1
+| Design State : Fully Routed
+---------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 48
++--------+----------+------------------+------------+
+| Rule   | Severity | Description      | Violations |
++--------+----------+------------------+------------+
+| DPIP-1 | Warning  | Input pipelining | 48         |
++--------+----------+------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+DPIP-1#1 Warning
+Input pipelining  
+DSP DT_inst/Product1_mul_temp input DT_inst/Product1_mul_temp/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#2 Warning
+Input pipelining  
+DSP DT_inst/Product1_mul_temp__0 input DT_inst/Product1_mul_temp__0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#3 Warning
+Input pipelining  
+DSP DT_inst/Product1_mul_temp__1 input DT_inst/Product1_mul_temp__1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#4 Warning
+Input pipelining  
+DSP DT_inst/Product1_mul_temp__2 input DT_inst/Product1_mul_temp__2/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#5 Warning
+Input pipelining  
+DSP DT_inst/Product2_mul_temp input DT_inst/Product2_mul_temp/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#6 Warning
+Input pipelining  
+DSP DT_inst/Product2_mul_temp__0 input DT_inst/Product2_mul_temp__0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#7 Warning
+Input pipelining  
+DSP DT_inst/Product2_mul_temp__1 input DT_inst/Product2_mul_temp__1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#8 Warning
+Input pipelining  
+DSP DT_inst/Product2_mul_temp__2 input DT_inst/Product2_mul_temp__2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#9 Warning
+Input pipelining  
+DSP DT_inst/Product_mul_temp input DT_inst/Product_mul_temp/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#10 Warning
+Input pipelining  
+DSP DT_inst/Product_mul_temp__0 input DT_inst/Product_mul_temp__0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#11 Warning
+Input pipelining  
+DSP DT_inst/Product_mul_temp__1 input DT_inst/Product_mul_temp__1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#12 Warning
+Input pipelining  
+DSP DT_inst/Product_mul_temp__2 input DT_inst/Product_mul_temp__2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#13 Warning
+Input pipelining  
+DSP DT_inst/gain1_mul_temp input DT_inst/gain1_mul_temp/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#14 Warning
+Input pipelining  
+DSP DT_inst/gain1_mul_temp__0 input DT_inst/gain1_mul_temp__0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#15 Warning
+Input pipelining  
+DSP DT_inst/gain1_mul_temp__1 input DT_inst/gain1_mul_temp__1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#16 Warning
+Input pipelining  
+DSP DT_inst/gain1_mul_temp__10 input DT_inst/gain1_mul_temp__10/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#17 Warning
+Input pipelining  
+DSP DT_inst/gain1_mul_temp__2 input DT_inst/gain1_mul_temp__2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#18 Warning
+Input pipelining  
+DSP DT_inst/gain1_mul_temp__3 input DT_inst/gain1_mul_temp__3/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#19 Warning
+Input pipelining  
+DSP DT_inst/gain1_mul_temp__4 input DT_inst/gain1_mul_temp__4/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#20 Warning
+Input pipelining  
+DSP DT_inst/gain1_mul_temp__5 input DT_inst/gain1_mul_temp__5/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#21 Warning
+Input pipelining  
+DSP DT_inst/gain1_mul_temp__6 input DT_inst/gain1_mul_temp__6/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#22 Warning
+Input pipelining  
+DSP DT_inst/gain1_mul_temp__7 input DT_inst/gain1_mul_temp__7/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#23 Warning
+Input pipelining  
+DSP DT_inst/gain1_mul_temp__8 input DT_inst/gain1_mul_temp__8/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#24 Warning
+Input pipelining  
+DSP DT_inst/gain1_mul_temp__9 input DT_inst/gain1_mul_temp__9/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#25 Warning
+Input pipelining  
+DSP DT_inst/gain_mul_temp input DT_inst/gain_mul_temp/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#26 Warning
+Input pipelining  
+DSP DT_inst/gain_mul_temp__0 input DT_inst/gain_mul_temp__0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#27 Warning
+Input pipelining  
+DSP DT_inst/gain_mul_temp__1 input DT_inst/gain_mul_temp__1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#28 Warning
+Input pipelining  
+DSP DT_inst/gain_mul_temp__10 input DT_inst/gain_mul_temp__10/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#29 Warning
+Input pipelining  
+DSP DT_inst/gain_mul_temp__2 input DT_inst/gain_mul_temp__2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#30 Warning
+Input pipelining  
+DSP DT_inst/gain_mul_temp__3 input DT_inst/gain_mul_temp__3/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#31 Warning
+Input pipelining  
+DSP DT_inst/gain_mul_temp__4 input DT_inst/gain_mul_temp__4/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#32 Warning
+Input pipelining  
+DSP DT_inst/gain_mul_temp__5 input DT_inst/gain_mul_temp__5/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#33 Warning
+Input pipelining  
+DSP DT_inst/gain_mul_temp__6 input DT_inst/gain_mul_temp__6/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#34 Warning
+Input pipelining  
+DSP DT_inst/gain_mul_temp__7 input DT_inst/gain_mul_temp__7/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#35 Warning
+Input pipelining  
+DSP DT_inst/gain_mul_temp__8 input DT_inst/gain_mul_temp__8/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#36 Warning
+Input pipelining  
+DSP DT_inst/gain_mul_temp__9 input DT_inst/gain_mul_temp__9/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#37 Warning
+Input pipelining  
+DSP DT_inst/nume_gain_b0_mul_temp input DT_inst/nume_gain_b0_mul_temp/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#38 Warning
+Input pipelining  
+DSP DT_inst/nume_gain_b0_mul_temp__0 input DT_inst/nume_gain_b0_mul_temp__0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#39 Warning
+Input pipelining  
+DSP DT_inst/nume_gain_b0_mul_temp__1 input DT_inst/nume_gain_b0_mul_temp__1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#40 Warning
+Input pipelining  
+DSP DT_inst/nume_gain_b0_mul_temp__2 input DT_inst/nume_gain_b0_mul_temp__2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#41 Warning
+Input pipelining  
+DSP DT_inst/nume_gain_b0_mul_temp__3 input DT_inst/nume_gain_b0_mul_temp__3/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#42 Warning
+Input pipelining  
+DSP DT_inst/nume_gain_b0_mul_temp__4 input DT_inst/nume_gain_b0_mul_temp__4/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#43 Warning
+Input pipelining  
+DSP DT_inst/nume_gain_b0_mul_temp__5 input DT_inst/nume_gain_b0_mul_temp__5/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#44 Warning
+Input pipelining  
+DSP DT_inst/nume_gain_b0_mul_temp__6 input DT_inst/nume_gain_b0_mul_temp__6/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#45 Warning
+Input pipelining  
+DSP controlador_PID/u_k_C1__0 input controlador_PID/u_k_C1__0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#46 Warning
+Input pipelining  
+DSP controlador_PID/u_k_C1__1 input controlador_PID/u_k_C1__1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#47 Warning
+Input pipelining  
+DSP controlador_PID/u_k_D1__0 input controlador_PID/u_k_D1__0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#48 Warning
+Input pipelining  
+DSP controlador_PID/u_k_D1__1 input controlador_PID/u_k_D1__1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+

@@ -1,0 +1,27 @@
+function RTW_SidParentMap() {
+    this.sidParentMap = new Array();
+    this.sidParentMap["flyback_dt:40"] = "flyback_dt:39";
+    this.sidParentMap["flyback_dt:77"] = "flyback_dt:39";
+    this.sidParentMap["flyback_dt:78"] = "flyback_dt:39";
+    this.sidParentMap["flyback_dt:79"] = "flyback_dt:39";
+    this.sidParentMap["flyback_dt:83"] = "flyback_dt:39";
+    this.sidParentMap["flyback_dt:138"] = "flyback_dt:39";
+    this.sidParentMap["flyback_dt:139"] = "flyback_dt:39";
+    this.sidParentMap["flyback_dt:137"] = "flyback_dt:39";
+    this.sidParentMap["flyback_dt:140"] = "flyback_dt:39";
+    this.sidParentMap["flyback_dt:142"] = "flyback_dt:39";
+    this.sidParentMap["flyback_dt:99"] = "flyback_dt:39";
+    this.sidParentMap["flyback_dt:91"] = "flyback_dt:39";
+    this.sidParentMap["flyback_dt:82"] = "flyback_dt:39";
+    this.sidParentMap["flyback_dt:84"] = "flyback_dt:39";
+    this.sidParentMap["flyback_dt:132"] = "flyback_dt:39";
+    this.sidParentMap["flyback_dt:116"] = "flyback_dt:39";
+    this.sidParentMap["flyback_dt:97"] = "flyback_dt:39";
+    this.sidParentMap["flyback_dt:64"] = "flyback_dt:39";
+    this.sidParentMap["flyback_dt:80"] = "flyback_dt:39";
+    this.sidParentMap["flyback_dt:134"] = "flyback_dt:39";
+    this.sidParentMap["flyback_dt:141"] = "flyback_dt:39";
+    this.sidParentMap["flyback_dt:136"] = "flyback_dt:39";
+    this.getParentSid = function(sid) { return this.sidParentMap[sid];}
+}
+    RTW_SidParentMap.instance = new RTW_SidParentMap();
