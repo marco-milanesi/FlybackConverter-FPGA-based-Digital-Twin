@@ -3,9 +3,9 @@ onerror resume
 vsim -voptargs=+acc work.DT_tb
 
 add wave sim:/DT_tb/u_DT/clk
-add wave sim:/DT_tb/u_DT/reset_x
 add wave sim:/DT_tb/u_DT/SP_DT
 add wave sim:/DT_tb/u_DT/kp_dt
+add wave sim:/DT_tb/u_DT/kp_divisor_dt
 add wave sim:/DT_tb/u_DT/ki_dt
 add wave sim:/DT_tb/u_DT/PV_DT
 add wave sim:/DT_tb/PV_DT_ref

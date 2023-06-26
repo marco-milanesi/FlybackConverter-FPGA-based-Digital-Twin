@@ -1,0 +1,10 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../PID_testbench.srcs/sources_1/imports/flyback_pid/PID.v" \
+"../../../../PID_testbench.srcs/sources_1/imports/flyback_pid/PID_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7s50csga324-1" LaunchTime="1687505151">
+<GenRun Id="impl_1" LaunchPart="xc7s50csga324-1" LaunchTime="1687636725">
   <File Type="ROUTE-PWR" Name="topModule_power_routed.rpt"/>
   <File Type="PA-TCL" Name="topModule.tcl"/>
   <File Type="BITSTR-MMI" Name="topModule.mmi"/>
@@ -90,6 +90,15 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/imports/Submodulos/DT.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../FPGA-based-Digital-Twin/Vivado/callPWMFixed/callPWM/callPWM.srcs/sources_1/imports/Submodulos/DT.v"/>
+        <Attr Name="ImportTime" Val="1685618915"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/imports/flyback_pid/PID.v">
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/../../../HDL Code Generation/PID/flyback_pid/PID.v"/>
@@ -148,16 +157,6 @@
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/../../../../FPGA-based-Digital-Twin/Vivado/callPWMFixed/callPWM/callPWM.srcs/sources_1/new/topModule.v"/>
         <Attr Name="ImportTime" Val="1686112947"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/imports/Submodulos/DT.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../../../FPGA-based-Digital-Twin/Vivado/callPWMFixed/callPWM/callPWM.srcs/sources_1/imports/Submodulos/DT.v"/>
-        <Attr Name="ImportTime" Val="1685618915"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>

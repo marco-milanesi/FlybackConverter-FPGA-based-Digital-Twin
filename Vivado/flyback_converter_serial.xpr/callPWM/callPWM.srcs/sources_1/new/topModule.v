@@ -284,50 +284,61 @@
             
     
 // ------------------------------ DT implementation ----------------------------------
+    
+      
+      wire  signed [63:0] PV_DT;  // sfix64_En16
+      wire  signed [63:0] MV_DT;  // sfix64_En16
+      wire  signed [63:0] p_action_dt;  // sfix64_En16
+      wire  signed [63:0] i_action_dt;  // sfix64_En16
+      wire  signed [63:0] error_dt;  // sfix64_En16
+  
+//      wire  signed [15:0] PV_DT;  // sfix16_En4
+//      wire  signed [15:0] MV_DT;  // sfix16_En4
+//      wire  signed [15:0] p_action_dt;  // sfix16_En4
+//      wire  signed [15:0] i_action_dt;  // sfix16_En4
+//      wire  signed [15:0] error_dt;  // sfix16_En4
 
-      wire  signed [16:0] PV;  // sfix64_En32
-      wire  signed [16:0] MV;  // sfix64_En32
-      wire  signed [16:0] i_action;  // sfix64_En32
-      wire  signed [16:0] p_action;  // sfix64_En32
-      wire  signed [16:0] error;  // sfix64_En32
-      wire  signed ce_out;  // sfix64_En32
         
-//        DT DT_inst(
-//          .clk(clk),
-//          .reset_x(1'b0),
-//          .SP(set_point[16:0]),
-//          .kp(32'd4),
-//          .ti(32'd2),
-//          .PV(PV[16:0]),  //process variable     (position)
-//          .MV(MV[16:0]),  //manipulated variable (control action)
-//          .p_action(p_action[16:0]),
-//          .error(error[16:0]),
-//          .i_action(i_action[16:0])
-//        );
+        DT DT_inst(
+          .clk(clk_mk),
+          .SP_DT(set_point[16:0]),
+          .kp_dt(64'd3),
+          .kp_divisor_dt(64'd1000),
+          .ki_dt(32'd550),
+          .PV_DT(PV_DT[63:0]),  //process variable     (position)
+          .MV_DT(MV_DT[63:0]),  //manipulated variable (control action)
+          .p_action_dt(p_action_dt[63:0]),
+          .i_action_dt(i_action_dt[63:0]),
+          .error_dt(error_dt[63:0])
+        );
+        
         
       
-//        reg [10:0] DigitalTwin_PV_Print;
-//        reg [10:0] DigitalTwin_MV_Print;
+        reg [10:0] DigitalTwin_PV_Print;
+        reg [10:0] DigitalTwin_MV_Print;
 
-//        always@(posedge clk)
-//            DigitalTwin_PV_Print=PV;
-//        always@(posedge clk)
-//            DigitalTwin_MV_Print=MV;
+        always@(posedge clk)
+            DigitalTwin_PV_Print=PV_DT;
+        always@(posedge clk)
+            DigitalTwin_MV_Print=MV_DT;
             
 // ------------------------------ PID implementation ----------------------------------
 
-//      wire  signed [16:0] PV;  // sfix64_En32
-//      wire  signed [16:0] MV;  // sfix64_En32
-//      wire  signed [16:0] i_action;  // sfix64_En32
-//      wire  signed [16:0] p_action;  // sfix64_En32
-      reg [16:0] controlOut_unsigned;  
-      reg [15:0] error_pid;
+     wire  signed [16:0] PV;  // sfix64_En32
+     wire  signed [16:0] MV;  // sfix64_En32
+     wire  signed [16:0] i_action;  // sfix64_En32
+     wire  signed [16:0] error;  // sfix64_En32
+     wire  signed [16:0] p_action;  // sfix64_En32
+     reg [16:0] controlOut_unsigned;  
+     reg [15:0] error_pid;
           
       PID PID_inst(
            .clk(clk_mk),
            .SP(set_point[16:0]),
-           .kp(64'd1),
-           .ki(64'd2000000),
+           .kp(16'd1),
+           .kp_divisor(16'd100),
+           .ki(16'd20000),
+           .ki_multiplier(16'd1000),
            .PV(data_out_adc_reg[15:0]),
            .MV(MV[16:0]),
            .p_action(p_action[16:0]),
@@ -335,6 +346,7 @@
            .error(error[16:0])
       );
       
+           
       always@(posedge clk)
       begin
             controlOut_unsigned=MV;

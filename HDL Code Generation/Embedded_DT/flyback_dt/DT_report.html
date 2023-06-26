@@ -48,11 +48,35 @@
  <div class="page_container"><div class="content_frame">
 <h1>HDL Code Generation Check Report for 'flyback_dt/DT'
 <a href="matlab:open_system('flyback_dt/DT');">open model 'flyback_dt/DT'</a><BR>
-Generated on 2023-06-22 20:37:06</h1>
-<H2>HDL check for 'flyback_dt' complete with 0 errors, 0 warnings, and 2 messages.</H2><BR>
+Generated on 2023-06-26 03:09:12</h1>
+<H2>HDL check for 'flyback_dt' complete with 0 errors, 4 warnings, and 2 messages.</H2><BR>
 <H3>The following table describes blocks for which errors, warnings or messages were reported.</H3><BR>
 <TABLE>
 <TR><TD> <B>Simulink Blocks and resources</B> </TD><TD> <B>Level</B> </TD><TD> <B>Description</B> </TD></TR><TR bgcolor="#F0F0F0"><TD>
+<a alt="hdlcoder:validate:useshiftaddArch" href="matlab:hilite(get_param(char([102 108 121 98 97 99 107 95 100 116]),'object'),'none');hilite_system(char([102 108 121 98 97 99 107 95 100 116 47 68 84 47 68 105 118 105 100 101]))">flyback_dt/DT/Divide</a>
+</TD>
+<TD>Warning</TD>
+<TD>Consider setting the architecture to "ShiftAdd" for improved timing in hardware and synthesis compatibility.</TD>
+</TR>
+<TR bgcolor="#FFFFFF"><TD>
+<a alt="hdlcoder:validate:useshiftaddArch" href="matlab:hilite(get_param(char([102 108 121 98 97 99 107 95 100 116]),'object'),'none');hilite_system(char([102 108 121 98 97 99 107 95 100 116 47 68 84 47 68 105 118 105 100 101 49]))">flyback_dt/DT/Divide1</a>
+</TD>
+<TD>Warning</TD>
+<TD>Consider setting the architecture to "ShiftAdd" for improved timing in hardware and synthesis compatibility.</TD>
+</TR>
+<TR bgcolor="#F0F0F0"><TD>
+<a alt="hdlcoder:validate:useshiftaddArch" href="matlab:hilite(get_param(char([102 108 121 98 97 99 107 95 100 116]),'object'),'none');hilite_system(char([102 108 121 98 97 99 107 95 100 116 47 68 84 47 68 105 118 105 100 101 50]))">flyback_dt/DT/Divide2</a>
+</TD>
+<TD>Warning</TD>
+<TD>Consider setting the architecture to "ShiftAdd" for improved timing in hardware and synthesis compatibility.</TD>
+</TR>
+<TR bgcolor="#FFFFFF"><TD>
+<a alt="hdlcoder:optimization:NoResetAndMinimizeClockEnable" href="matlab:hilite(get_param(char([102 108 121 98 97 99 107 95 100 116]),'object'),'none');hilite_system(char([102 108 121 98 97 99 107 95 100 116 47 68 84]))">flyback_dt/DT</a>
+</TD>
+<TD>Warning</TD>
+<TD>The design has registers with no reset, and the Minimize Clock Enable option is turned on. This can cause registers to acquire unintended initial state, and result in numeric differences with the original model after HDL code generation. Ensure that you use valid/enable signals in the design to protect the initial state.</TD>
+</TR>
+<TR bgcolor="#F0F0F0"><TD>
 <a alt="hdlcoder:workflow:AdaptivePipelineOffMessage" href="matlab:hilite(get_param(char([102 108 121 98 97 99 107 95 100 116]),'object'),'none');open_system(char([102 108 121 98 97 99 107 95 100 116]))">flyback_dt</a>
 </TD>
 <TD>Message</TD>

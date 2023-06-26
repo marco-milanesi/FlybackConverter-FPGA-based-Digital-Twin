@@ -27,10 +27,6 @@ Integrator1 */
 	this.urlHashMap["flyback_pid:132"] = "PID.v:94,95";
 	/* <S1>/Saturation */
 	this.urlHashMap["flyback_pid:116"] = "PID.v:128,129,130";
-	/* <S1>/SP_test */
-	this.urlHashMap["flyback_pid:180"] = "msg=&block=flyback_pid:180";
-	/* <S1>/PV_test */
-	this.urlHashMap["flyback_pid:182"] = "msg=&block=flyback_pid:182";
 	this.getUrlHash = function(sid) { return this.urlHashMap[sid];}
 }
 RTW_Sid2UrlHash.instance = new RTW_Sid2UrlHash();
