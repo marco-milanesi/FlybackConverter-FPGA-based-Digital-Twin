@@ -2,8 +2,8 @@
 # Vivado v2022.2 (64-bit)
 # SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Sat Jun 24 21:58:49 2023
-# Process ID: 15188
+# Start of session at: Mon Jun 26 22:08:29 2023
+# Process ID: 21844
 # Current directory: D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.runs/synth_1
 # Command line: vivado.exe -log topModule.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source topModule.tcl
 # Log file: D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.runs/synth_1/topModule.vds
@@ -11,7 +11,7 @@
 # Running On: Milanesi-Dell, OS: Windows, CPU Frequency: 2208 MHz, CPU Physical cores: 6, Host memory: 16879 MB
 #-----------------------------------------------------------
 source topModule.tcl -notrace
-create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 557.570 ; gain = 126.656
+create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 558.332 ; gain = 130.016
 Command: synth_design -top topModule -part xc7s50csga324-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7s50'
@@ -19,21 +19,21 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s50'
 INFO: [Device 21-403] Loading part xc7s50csga324-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 36504
+INFO: [Synth 8-7075] Helper process launched with PID 9596
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [D:/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 INFO: [Synth 8-11241] undeclared symbol 'BaudTick', assumed default net type 'wire' [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/new/topModule.v:91]
 INFO: [Synth 8-11241] undeclared symbol 'TxD_start', assumed default net type 'wire' [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/new/topModule.v:93]
 INFO: [Synth 8-11241] undeclared symbol 'BaudTickEncoder', assumed default net type 'wire' [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/new/topModule.v:96]
 INFO: [Synth 8-11241] undeclared symbol 'TxD_startEncoder', assumed default net type 'wire' [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/new/topModule.v:98]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1368.930 ; gain = 407.332
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:09 . Memory (MB): peak = 1368.336 ; gain = 406.434
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'topModule' [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/new/topModule.v:24]
 INFO: [Synth 8-6157] synthesizing module 'divisor_freq' [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/imports/Submodulos/divisor_freq.v:8]
 INFO: [Synth 8-6155] done synthesizing module 'divisor_freq' (0#1) [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/imports/Submodulos/divisor_freq.v:8]
 INFO: [Synth 8-6157] synthesizing module 'XADCdemo' [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/imports/hdl/XADCdemo.v:22]
-INFO: [Synth 8-6157] synthesizing module 'xadc_wiz_0' [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.runs/synth_1/.Xil/Vivado-15188-Milanesi-Dell/realtime/xadc_wiz_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'xadc_wiz_0' (0#1) [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.runs/synth_1/.Xil/Vivado-15188-Milanesi-Dell/realtime/xadc_wiz_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'xadc_wiz_0' [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.runs/synth_1/.Xil/Vivado-21844-Milanesi-Dell/realtime/xadc_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'xadc_wiz_0' (0#1) [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.runs/synth_1/.Xil/Vivado-21844-Milanesi-Dell/realtime/xadc_wiz_0_stub.v:5]
 WARNING: [Synth 8-7071] port 'vccaux_alarm_out' of module 'xadc_wiz_0' is unconnected for instance 'xadc' [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/imports/hdl/XADCdemo.v:58]
 WARNING: [Synth 8-7071] port 'vccint_alarm_out' of module 'xadc_wiz_0' is unconnected for instance 'xadc' [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/imports/hdl/XADCdemo.v:58]
 WARNING: [Synth 8-7023] instance 'xadc' of module 'xadc_wiz_0' has 33 connections declared, but only 31 given [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/imports/hdl/XADCdemo.v:58]
@@ -48,18 +48,18 @@ INFO: [Synth 8-6157] synthesizing module 'DT' [D:/Github/FlybackConverter-FPGA-b
 INFO: [Synth 8-6155] done synthesizing module 'DT' (0#1) [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/imports/Submodulos/DT.v:34]
 INFO: [Synth 8-6157] synthesizing module 'PID' [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/imports/flyback_pid/PID.v:34]
 INFO: [Synth 8-6155] done synthesizing module 'PID' (0#1) [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/imports/flyback_pid/PID.v:34]
-WARNING: [Synth 8-689] width (17) of port connection 'SP' does not match port width (16) of module 'PID' [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/new/topModule.v:330]
-WARNING: [Synth 8-689] width (17) of port connection 'MV' does not match port width (16) of module 'PID' [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/new/topModule.v:336]
-WARNING: [Synth 8-689] width (17) of port connection 'p_action' does not match port width (16) of module 'PID' [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/new/topModule.v:337]
-WARNING: [Synth 8-689] width (17) of port connection 'i_action' does not match port width (16) of module 'PID' [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/new/topModule.v:338]
-WARNING: [Synth 8-689] width (17) of port connection 'error' does not match port width (16) of module 'PID' [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/new/topModule.v:339]
+WARNING: [Synth 8-689] width (17) of port connection 'SP' does not match port width (16) of module 'PID' [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/new/topModule.v:337]
+WARNING: [Synth 8-689] width (17) of port connection 'MV' does not match port width (16) of module 'PID' [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/new/topModule.v:343]
+WARNING: [Synth 8-689] width (17) of port connection 'p_action' does not match port width (16) of module 'PID' [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/new/topModule.v:344]
+WARNING: [Synth 8-689] width (17) of port connection 'i_action' does not match port width (16) of module 'PID' [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/new/topModule.v:345]
+WARNING: [Synth 8-689] width (17) of port connection 'error' does not match port width (16) of module 'PID' [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/new/topModule.v:346]
 INFO: [Synth 8-6157] synthesizing module 'pwm8bits' [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/new/pwm8bits.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'pwm8bits' (0#1) [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/new/pwm8bits.v:23]
-WARNING: [Synth 8-689] width (17) of port connection 'pwm_in' does not match port width (8) of module 'pwm8bits' [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/new/topModule.v:350]
+WARNING: [Synth 8-689] width (17) of port connection 'pwm_in' does not match port width (8) of module 'pwm8bits' [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/new/topModule.v:357]
 INFO: [Synth 8-6155] done synthesizing module 'topModule' (0#1) [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/new/topModule.v:24]
-WARNING: [Synth 8-6014] Unused sequential element DigitalTwin_PV_Print_reg was removed.  [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/new/topModule.v:314]
-WARNING: [Synth 8-6014] Unused sequential element DigitalTwin_MV_Print_reg was removed.  [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/new/topModule.v:316]
-WARNING: [Synth 8-3936] Found unconnected internal register 'error_pid_reg' and it is trimmed from '16' to '11' bits. [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/new/topModule.v:346]
+WARNING: [Synth 8-6014] Unused sequential element DigitalTwin_PV_Print_reg was removed.  [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/new/topModule.v:321]
+WARNING: [Synth 8-6014] Unused sequential element DigitalTwin_MV_Print_reg was removed.  [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/new/topModule.v:323]
+WARNING: [Synth 8-3936] Found unconnected internal register 'error_pid_reg' and it is trimmed from '16' to '11' bits. [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/new/topModule.v:353]
 WARNING: [Synth 8-3848] Net DIR in module/entity topModule does not have driver. [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/new/topModule.v:49]
 WARNING: [Synth 8-3848] Net out in module/entity topModule does not have driver. [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/new/topModule.v:49]
 WARNING: [Synth 8-7129] Port DIR in module topModule is either unconnected or has no load
@@ -68,18 +68,18 @@ WARNING: [Synth 8-7129] Port A in module topModule is either unconnected or has 
 WARNING: [Synth 8-7129] Port B in module topModule is either unconnected or has no load
 WARNING: [Synth 8-7129] Port clearEncoder in module topModule is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1462.598 ; gain = 501.000
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:11 . Memory (MB): peak = 1464.449 ; gain = 502.547
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1462.598 ; gain = 501.000
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:11 . Memory (MB): peak = 1464.449 ; gain = 502.547
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1462.598 ; gain = 501.000
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:11 . Memory (MB): peak = 1464.449 ; gain = 502.547
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.042 . Memory (MB): peak = 1462.598 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.090 . Memory (MB): peak = 1464.449 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -96,28 +96,28 @@ Parsing XDC File [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyb
 Finished Parsing XDC File [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1569.480 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1520.973 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1569.480 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1520.973 ; gain = 0.000
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [D:/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1569.480 ; gain = 607.883
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:23 . Memory (MB): peak = 1520.973 ; gain = 559.070
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7s50csga324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1569.480 ; gain = 607.883
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:23 . Memory (MB): peak = 1520.973 ; gain = 559.070
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 Applied set_property KEEP_HIERARCHY = SOFT for u1/xadc. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1569.480 ; gain = 607.883
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:23 . Memory (MB): peak = 1520.973 ; gain = 559.070
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'transmisor_async'
 INFO: [Synth 8-802] inferred FSM for state register 'contData_reg' in module 'topModule'
@@ -174,7 +174,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'contData_reg' using encoding 'sequential' in module 'topModule'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 1569.480 ; gain = 607.883
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:25 . Memory (MB): peak = 1520.973 ; gain = 559.070
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-223] decloning instance 'gen_baud' (divisor_freq) to 'gen_baudEncoder'
 INFO: [Synth 8-223] decloning instance 'gen_baud' (divisor_freq) to 'gen_baudError'
@@ -186,7 +186,7 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input   65 Bit       Adders := 3     
+	   2 Input   65 Bit       Adders := 7     
 	   3 Input   64 Bit       Adders := 1     
 	   4 Input   64 Bit       Adders := 1     
 	   2 Input   64 Bit       Adders := 1     
@@ -207,16 +207,19 @@ Detailed RTL Component Info :
 	                1 Bit    Registers := 5     
 +---Multipliers : 
 	              54x64  Multipliers := 1     
-	              35x64  Multipliers := 3     
 	              36x64  Multipliers := 1     
+	              35x64  Multipliers := 4     
 	              33x64  Multipliers := 1     
 	              64x64  Multipliers := 1     
 	              34x64  Multipliers := 2     
 	              32x64  Multipliers := 2     
+	              50x64  Multipliers := 1     
 	              16x48  Multipliers := 2     
 +---Muxes : 
-	   2 Input   65 Bit        Muxes := 5     
+	   2 Input   65 Bit        Muxes := 9     
 	   2 Input   64 Bit        Muxes := 4     
+	   2 Input   48 Bit        Muxes := 2     
+	   2 Input   32 Bit        Muxes := 2     
 	   2 Input   18 Bit        Muxes := 3     
 	   2 Input   17 Bit        Muxes := 4     
 	   2 Input   16 Bit        Muxes := 4     
@@ -245,7 +248,31 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
-WARNING: [Synth 8-3936] Found unconnected internal register 'controlOut_unsigned_reg' and it is trimmed from '16' to '11' bits. [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/new/topModule.v:345]
+WARNING: [Synth 8-3936] Found unconnected internal register 'controlOut_unsigned_reg' and it is trimmed from '16' to '11' bits. [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/new/topModule.v:352]
+DSP Report: Generating DSP Product2_mul_temp, operation Mode is: (A:0xcccd)*B.
+DSP Report: operator Product2_mul_temp is absorbed into DSP Product2_mul_temp.
+DSP Report: operator Product2_mul_temp is absorbed into DSP Product2_mul_temp.
+DSP Report: Generating DSP Product2_mul_temp, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator Product2_mul_temp is absorbed into DSP Product2_mul_temp.
+DSP Report: operator Product2_mul_temp is absorbed into DSP Product2_mul_temp.
+DSP Report: Generating DSP Product2_mul_temp, operation Mode is: A*B.
+DSP Report: operator Product2_mul_temp is absorbed into DSP Product2_mul_temp.
+DSP Report: operator Product2_mul_temp is absorbed into DSP Product2_mul_temp.
+DSP Report: Generating DSP Product2_mul_temp, operation Mode is: PCIN+A*(B:0xcccd).
+DSP Report: operator Product2_mul_temp is absorbed into DSP Product2_mul_temp.
+DSP Report: operator Product2_mul_temp is absorbed into DSP Product2_mul_temp.
+DSP Report: Generating DSP Product2_mul_temp, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator Product2_mul_temp is absorbed into DSP Product2_mul_temp.
+DSP Report: operator Product2_mul_temp is absorbed into DSP Product2_mul_temp.
+DSP Report: Generating DSP Product2_mul_temp, operation Mode is: A*(B:0xcccd).
+DSP Report: operator Product2_mul_temp is absorbed into DSP Product2_mul_temp.
+DSP Report: operator Product2_mul_temp is absorbed into DSP Product2_mul_temp.
+DSP Report: Generating DSP Product2_mul_temp, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator Product2_mul_temp is absorbed into DSP Product2_mul_temp.
+DSP Report: operator Product2_mul_temp is absorbed into DSP Product2_mul_temp.
+DSP Report: Generating DSP Product2_mul_temp, operation Mode is: PCIN+A*(B:0xcccd).
+DSP Report: operator Product2_mul_temp is absorbed into DSP Product2_mul_temp.
+DSP Report: operator Product2_mul_temp is absorbed into DSP Product2_mul_temp.
 DSP Report: Generating DSP denom_gain1_mul_temp, operation Mode is: A*B2.
 DSP Report: register denom_gain1_mul_temp is absorbed into DSP denom_gain1_mul_temp.
 DSP Report: operator denom_gain1_mul_temp is absorbed into DSP denom_gain1_mul_temp.
@@ -716,8 +743,15 @@ WARNING: [Synth 8-7129] Port A in module topModule is either unconnected or has 
 WARNING: [Synth 8-7129] Port B in module topModule is either unconnected or has no load
 WARNING: [Synth 8-7129] Port clearEncoder in module topModule is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:40 ; elapsed = 00:00:49 . Memory (MB): peak = 1569.480 ; gain = 607.883
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:46 ; elapsed = 00:01:02 . Memory (MB): peak = 1521.785 ; gain = 559.883
 ---------------------------------------------------------------------------------
+WARNING: [Synth 8-3323] Resources of type DSP have been overutilized. Used = 126, Available = 120. Use report_utilization command for details.
+DSP Report: Generating DSP PID_inst/Product1_mul_temp, operation Mode is (post resource management): A*(B:0x0).
+DSP Report: operator PID_inst/Product1_mul_temp is absorbed into DSP PID_inst/Product1_mul_temp.
+DSP Report: operator PID_inst/Product1_mul_temp is absorbed into DSP PID_inst/Product1_mul_temp.
+DSP Report: Generating DSP PID_inst/Product1_mul_temp, operation Mode is (post resource management): (PCIN>>17)+A*B.
+DSP Report: operator PID_inst/Product1_mul_temp is absorbed into DSP PID_inst/Product1_mul_temp.
+DSP Report: operator PID_inst/Product1_mul_temp is absorbed into DSP PID_inst/Product1_mul_temp.
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
@@ -735,66 +769,74 @@ DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding R
 +------------+----------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 |Module Name | DSP Mapping                | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
 +------------+----------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|DT          | A*B2                       | 18     | 18     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
-|DT          | (PCIN>>17)+A*B2            | 18     | 13     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
-|DT          | (A:0x1a787)*B2             | 18     | 18     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
-|DT          | PCIN+A*B2                  | 18     | 18     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
-|DT          | (PCIN>>17)+(A:0x1a787)*B2  | 18     | 13     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
-|DT          | (A:0x1a787)*B2             | 18     | 18     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
-|DT          | (PCIN>>17)+(A:0x1a787)*B2  | 18     | 18     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
-|DT          | PCIN+A*B2                  | 18     | 18     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
-|DT          | A*B''                      | 19     | 18     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
-|DT          | (PCIN>>17)+A*B''           | 19     | 13     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
-|DT          | A''*(B:0xf766)             | 18     | 17     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
-|DT          | PCIN+A*B''                 | 19     | 18     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
-|DT          | (PCIN>>17)+(A:0xf766)*B''  | 17     | 13     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
-|DT          | A''*(B:0xf766)             | 18     | 17     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
-|DT          | (PCIN>>17)+A''*(B:0xf766)  | 18     | 17     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
-|DT          | PCIN+A*B''                 | 19     | 18     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
-|DT          | A*B''                      | 18     | 18     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
-|DT          | (PCIN>>17)+A*B''           | 18     | 13     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
-|DT          | A''*(B:0x6a7f)             | 18     | 16     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
-|DT          | PCIN+A*B''                 | 18     | 18     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
-|DT          | (PCIN>>17)+(A:0x6a7f)*B''  | 16     | 13     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
-|DT          | A''*(B:0x6a7f)             | 18     | 16     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
-|DT          | (PCIN>>17)+A''*(B:0x6a7f)  | 18     | 16     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
-|DT          | PCIN+A*B''                 | 18     | 18     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
-|DT          | A''*B                      | 18     | 16     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
-|DT          | (PCIN>>17)+A*B''           | 16     | 13     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
-|DT          | (A:0x11aa0)*B''            | 18     | 18     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
-|DT          | PCIN+A''*B                 | 18     | 16     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
-|DT          | (PCIN>>17)+(A:0x11aa0)*B'' | 18     | 13     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
-|DT          | (A:0x11aa0)*B''            | 18     | 18     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
-|DT          | (PCIN>>17)+(A:0x11aa0)*B'' | 18     | 18     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
-|DT          | PCIN+A''*B                 | 18     | 16     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
-|DT          | A*B                        | 18     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|DT          | (PCIN>>17)+A*B             | 18     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|DT          | PCIN+A*B                   | 18     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|DT          | (PCIN>>17)+A*B             | 13     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|DT          | A*B                        | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|DT          | PCIN+A*B                   | 18     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|DT          | (PCIN>>17)+A*B             | 18     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|DT          | PCIN+A*B                   | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|DT          | A*B                        | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|DT          | PCIN+A*B                   | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|DT          | (PCIN>>17)+A*B             | 18     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|DT          | PCIN+A*B                   | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|DT          | A*B                        | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|DT          | (PCIN>>17)+A*B             | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|DT          | PCIN+A*B                   | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|DT          | (PCIN>>17)+A*B             | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|DT          | A*B                        | 18     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|DT          | PCIN+A*B                   | 20     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|DT          | (PCIN>>17)+A*B             | 20     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|DT          | (A:0x168f1)*B              | 18     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|DT          | PCIN+A*B                   | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|DT          | PCIN+A*B                   | 20     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|DT          | (A:0x168f1)*B              | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|DT          | PCIN+A*B                   | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|DT          | PCIN+A*B                   | 20     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|DT          | (A:0x168f1)*B              | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|DT          | (PCIN>>17)+(A:0x168f1)*B   | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|DT          | PCIN+A*B                   | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|topModule   | (A:0xcccd)*B               | 13     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|topModule   | (PCIN>>17)+A*B             | 18     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|topModule   | A*B                        | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|topModule   | PCIN+A*(B:0xcccd)          | 18     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|topModule   | (PCIN>>17)+A*B             | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|topModule   | A*(B:0xcccd)               | 18     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|topModule   | (PCIN>>17)+A*B             | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|topModule   | PCIN+A*(B:0xcccd)          | 18     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|topModule   | A*B2                       | 18     | 18     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|topModule   | (PCIN>>17)+A*B2            | 18     | 13     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|topModule   | (A:0x1a787)*B2             | 18     | 18     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|topModule   | PCIN+A*B2                  | 18     | 18     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|topModule   | (PCIN>>17)+(A:0x1a787)*B2  | 18     | 13     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|topModule   | (A:0x1a787)*B2             | 18     | 18     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|topModule   | (PCIN>>17)+(A:0x1a787)*B2  | 18     | 18     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|topModule   | PCIN+A*B2                  | 18     | 18     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|topModule   | A*B''                      | 19     | 18     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
+|topModule   | (PCIN>>17)+A*B''           | 19     | 13     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
+|topModule   | A''*(B:0xf766)             | 18     | 17     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|topModule   | PCIN+A*B''                 | 19     | 18     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
+|topModule   | (PCIN>>17)+(A:0xf766)*B''  | 17     | 13     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
+|topModule   | A''*(B:0xf766)             | 18     | 17     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|topModule   | (PCIN>>17)+A''*(B:0xf766)  | 18     | 17     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|topModule   | PCIN+A*B''                 | 19     | 18     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
+|topModule   | A*B''                      | 18     | 18     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
+|topModule   | (PCIN>>17)+A*B''           | 18     | 13     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
+|topModule   | A''*(B:0x6a7f)             | 18     | 16     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|topModule   | PCIN+A*B''                 | 18     | 18     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
+|topModule   | (PCIN>>17)+(A:0x6a7f)*B''  | 16     | 13     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
+|topModule   | A''*(B:0x6a7f)             | 18     | 16     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|topModule   | (PCIN>>17)+A''*(B:0x6a7f)  | 18     | 16     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|topModule   | PCIN+A*B''                 | 18     | 18     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
+|topModule   | A''*B                      | 18     | 16     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|topModule   | (PCIN>>17)+A*B''           | 16     | 13     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
+|topModule   | (A:0x11aa0)*B''            | 18     | 18     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
+|topModule   | PCIN+A''*B                 | 18     | 16     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|topModule   | (PCIN>>17)+(A:0x11aa0)*B'' | 18     | 13     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
+|topModule   | (A:0x11aa0)*B''            | 18     | 18     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
+|topModule   | (PCIN>>17)+(A:0x11aa0)*B'' | 18     | 18     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
+|topModule   | PCIN+A''*B                 | 18     | 16     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|topModule   | A*B                        | 18     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|topModule   | (PCIN>>17)+A*B             | 18     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|topModule   | PCIN+A*B                   | 18     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|topModule   | (PCIN>>17)+A*B             | 13     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|topModule   | A*B                        | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|topModule   | PCIN+A*B                   | 18     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|topModule   | (PCIN>>17)+A*B             | 18     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|topModule   | PCIN+A*B                   | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|topModule   | A*B                        | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|topModule   | PCIN+A*B                   | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|topModule   | (PCIN>>17)+A*B             | 18     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|topModule   | PCIN+A*B                   | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|topModule   | A*B                        | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|topModule   | (PCIN>>17)+A*B             | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|topModule   | PCIN+A*B                   | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|topModule   | (PCIN>>17)+A*B             | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|topModule   | A*B                        | 18     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|topModule   | PCIN+A*B                   | 20     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|topModule   | (PCIN>>17)+A*B             | 20     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|topModule   | (A:0x168f1)*B              | 18     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|topModule   | PCIN+A*B                   | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|topModule   | PCIN+A*B                   | 20     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|topModule   | (A:0x168f1)*B              | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|topModule   | PCIN+A*B                   | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|topModule   | PCIN+A*B                   | 20     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|topModule   | (A:0x168f1)*B              | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|topModule   | (PCIN>>17)+(A:0x168f1)*B   | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|topModule   | PCIN+A*B                   | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
 |DT          | A*B                        | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
 |DT          | PCIN+A*B                   | 18     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
 |DT          | A*B                        | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
@@ -805,46 +847,46 @@ DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding R
 |DT          | (PCIN>>17)+A*B             | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
 |DT          | PCIN+A*B                   | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
 |DT          | (PCIN>>17)+A*B             | 18     | 18     | -      | -      | 30     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|DT          | A2*B                       | 18     | 17     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
-|DT          | (PCIN>>17)+A*B2            | 17     | 13     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
-|DT          | (A:0x158e2)*B2             | 18     | 18     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
-|DT          | PCIN+A2*B                  | 18     | 17     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
-|DT          | (PCIN>>17)+(A:0x158e2)*B2  | 18     | 13     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
-|DT          | (A:0x158e2)*B2             | 18     | 18     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
-|DT          | (PCIN>>17)+(A:0x158e2)*B2  | 18     | 18     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
-|DT          | PCIN+A2*B                  | 18     | 17     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
-|DT          | A*B''                      | 18     | 18     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
-|DT          | (PCIN>>17)+A*B''           | 18     | 13     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
-|DT          | (A:0x1404f)*B''            | 18     | 18     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
-|DT          | PCIN+A*B''                 | 18     | 18     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
-|DT          | (PCIN>>17)+(A:0x1404f)*B'' | 18     | 13     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
-|DT          | (A:0x1404f)*B''            | 18     | 18     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
-|DT          | (PCIN>>17)+(A:0x1404f)*B'' | 18     | 18     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
-|DT          | PCIN+A*B''                 | 18     | 18     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
-|DT          | A''*B                      | 18     | 17     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
-|DT          | (PCIN>>17)+A*B''           | 17     | 13     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
-|DT          | (A:0x1b3d0)*B''            | 18     | 18     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
-|DT          | PCIN+A''*B                 | 18     | 17     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
-|DT          | (PCIN>>17)+(A:0x1b3d0)*B'' | 18     | 13     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
-|DT          | (A:0x1b3d0)*B''            | 18     | 18     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
-|DT          | (PCIN>>17)+(A:0x1b3d0)*B'' | 18     | 18     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
-|DT          | PCIN+A''*B                 | 18     | 17     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
-|DT          | A''*B                      | 18     | 15     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
-|DT          | (PCIN>>17)+A*B''           | 15     | 13     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
-|DT          | A''*(B:0xc3ca)             | 18     | 17     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
-|DT          | PCIN+A''*B                 | 18     | 15     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
-|DT          | (PCIN>>17)+(A:0xc3ca)*B''  | 17     | 13     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
-|DT          | A''*(B:0xc3ca)             | 18     | 17     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
-|DT          | (PCIN>>17)+A''*(B:0xc3ca)  | 18     | 17     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
-|DT          | PCIN+A''*B                 | 18     | 15     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
-|DT          | A*B                        | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|DT          | (PCIN>>17)+A*B             | 15     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|DT          | (A:0x19653)*B              | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|DT          | PCIN+A*B                   | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|DT          | (PCIN>>17)+(A:0x19653)*B   | 18     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|DT          | (A:0x19653)*B              | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|DT          | (PCIN>>17)+(A:0x19653)*B   | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|DT          | PCIN+A*B                   | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|topModule   | A2*B                       | 18     | 17     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|topModule   | (PCIN>>17)+A*B2            | 17     | 13     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|topModule   | (A:0x158e2)*B2             | 18     | 18     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|topModule   | PCIN+A2*B                  | 18     | 17     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|topModule   | (PCIN>>17)+(A:0x158e2)*B2  | 18     | 13     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|topModule   | (A:0x158e2)*B2             | 18     | 18     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|topModule   | (PCIN>>17)+(A:0x158e2)*B2  | 18     | 18     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|topModule   | PCIN+A2*B                  | 18     | 17     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|topModule   | A*B''                      | 18     | 18     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
+|topModule   | (PCIN>>17)+A*B''           | 18     | 13     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
+|topModule   | (A:0x1404f)*B''            | 18     | 18     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
+|topModule   | PCIN+A*B''                 | 18     | 18     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
+|topModule   | (PCIN>>17)+(A:0x1404f)*B'' | 18     | 13     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
+|topModule   | (A:0x1404f)*B''            | 18     | 18     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
+|topModule   | (PCIN>>17)+(A:0x1404f)*B'' | 18     | 18     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
+|topModule   | PCIN+A*B''                 | 18     | 18     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
+|topModule   | A''*B                      | 18     | 17     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|topModule   | (PCIN>>17)+A*B''           | 17     | 13     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
+|topModule   | (A:0x1b3d0)*B''            | 18     | 18     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
+|topModule   | PCIN+A''*B                 | 18     | 17     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|topModule   | (PCIN>>17)+(A:0x1b3d0)*B'' | 18     | 13     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
+|topModule   | (A:0x1b3d0)*B''            | 18     | 18     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
+|topModule   | (PCIN>>17)+(A:0x1b3d0)*B'' | 18     | 18     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
+|topModule   | PCIN+A''*B                 | 18     | 17     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|topModule   | A''*B                      | 18     | 15     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|topModule   | (PCIN>>17)+A*B''           | 15     | 13     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
+|topModule   | A''*(B:0xc3ca)             | 18     | 17     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|topModule   | PCIN+A''*B                 | 18     | 15     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|topModule   | (PCIN>>17)+(A:0xc3ca)*B''  | 17     | 13     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
+|topModule   | A''*(B:0xc3ca)             | 18     | 17     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|topModule   | (PCIN>>17)+A''*(B:0xc3ca)  | 18     | 17     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|topModule   | PCIN+A''*B                 | 18     | 15     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
+|topModule   | A*B                        | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|topModule   | (PCIN>>17)+A*B             | 15     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|topModule   | (A:0x19653)*B              | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|topModule   | PCIN+A*B                   | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|topModule   | (PCIN>>17)+(A:0x19653)*B   | 18     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|topModule   | (A:0x19653)*B              | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|topModule   | (PCIN>>17)+(A:0x19653)*B   | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|topModule   | PCIN+A*B                   | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
 |PID         | (A:0x4e20)*(B:0x3e8)       | 16     | 11     | -      | -      | 27     | 0    | 0    | -    | -    | -     | 0    | 0    | 
 |topModule   | A*B                        | 16     | 14     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
 |topModule   | A*B                        | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
@@ -863,19 +905,19 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:48 ; elapsed = 00:00:59 . Memory (MB): peak = 1569.480 ; gain = 607.883
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:55 ; elapsed = 00:01:13 . Memory (MB): peak = 1533.113 ; gain = 571.211
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:48 ; elapsed = 00:00:59 . Memory (MB): peak = 1569.480 ; gain = 607.883
+Finished Timing Optimization : Time (s): cpu = 00:00:55 ; elapsed = 00:01:13 . Memory (MB): peak = 1533.113 ; gain = 571.211
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:49 ; elapsed = 00:01:00 . Memory (MB): peak = 1645.797 ; gain = 684.199
+Finished Technology Mapping : Time (s): cpu = 00:00:56 ; elapsed = 00:01:14 . Memory (MB): peak = 1642.363 ; gain = 680.461
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -893,37 +935,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:53 ; elapsed = 00:01:06 . Memory (MB): peak = 1660.621 ; gain = 699.023
+Finished IO Insertion : Time (s): cpu = 00:01:01 ; elapsed = 00:01:20 . Memory (MB): peak = 1656.141 ; gain = 694.238
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:53 ; elapsed = 00:01:06 . Memory (MB): peak = 1660.621 ; gain = 699.023
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:01 ; elapsed = 00:01:20 . Memory (MB): peak = 1656.141 ; gain = 694.238
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:53 ; elapsed = 00:01:06 . Memory (MB): peak = 1660.621 ; gain = 699.023
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:01 ; elapsed = 00:01:20 . Memory (MB): peak = 1656.141 ; gain = 694.238
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:53 ; elapsed = 00:01:06 . Memory (MB): peak = 1660.621 ; gain = 699.023
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:01 ; elapsed = 00:01:20 . Memory (MB): peak = 1656.141 ; gain = 694.238
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:53 ; elapsed = 00:01:06 . Memory (MB): peak = 1660.621 ; gain = 699.023
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:01 ; elapsed = 00:01:20 . Memory (MB): peak = 1656.141 ; gain = 694.238
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:53 ; elapsed = 00:01:06 . Memory (MB): peak = 1660.621 ; gain = 699.023
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:01 ; elapsed = 00:01:20 . Memory (MB): peak = 1656.141 ; gain = 694.238
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -933,13 +975,8 @@ DSP Final Report (the ' indicates corresponding REG is set)
 +------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 |Module Name | DSP Mapping  | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
 +------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|PID         | A*B          | 15     | 10     | -      | -      | 27     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|topModule   | A*B          | 30     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|topModule   | A*B          | 0      | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|topModule   | PCIN>>17+A*B | 17     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|PID         | A*B          | 30     | 15     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|topModule   | A*B          | 0      | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|topModule   | A*B          | 17     | 0      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|topModule   | A*B          | 14     | 0      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|topModule   | PCIN>>17+A*B | 17     | 14     | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
 +------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 
 
@@ -956,14 +993,14 @@ Report Cell Usage:
 +------+---------+------+
 |1     |xadc_wiz |     1|
 |2     |BUFG     |     2|
-|3     |CARRY4   |   180|
-|4     |DSP48E1  |     7|
-|5     |LUT1     |    56|
-|6     |LUT2     |   413|
-|7     |LUT3     |   187|
-|8     |LUT4     |   181|
+|3     |CARRY4   |   259|
+|4     |DSP48E1  |     2|
+|5     |LUT1     |    72|
+|6     |LUT2     |   444|
+|7     |LUT3     |   237|
+|8     |LUT4     |   228|
 |9     |LUT5     |   121|
-|10    |LUT6     |   264|
+|10    |LUT6     |   265|
 |11    |MUXF7    |     6|
 |12    |MUXF8    |     3|
 |13    |FDRE     |   209|
@@ -973,27 +1010,26 @@ Report Cell Usage:
 |17    |OBUFT    |     2|
 +------+---------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:53 ; elapsed = 00:01:06 . Memory (MB): peak = 1660.621 ; gain = 699.023
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:01 ; elapsed = 00:01:20 . Memory (MB): peak = 1656.141 ; gain = 694.238
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 7 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:45 ; elapsed = 00:01:04 . Memory (MB): peak = 1660.621 ; gain = 592.141
-Synthesis Optimization Complete : Time (s): cpu = 00:00:53 ; elapsed = 00:01:06 . Memory (MB): peak = 1660.621 ; gain = 699.023
+Synthesis finished with 0 errors, 0 critical warnings and 8 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:53 ; elapsed = 00:01:16 . Memory (MB): peak = 1656.141 ; gain = 637.715
+Synthesis Optimization Complete : Time (s): cpu = 00:01:01 ; elapsed = 00:01:20 . Memory (MB): peak = 1656.141 ; gain = 694.238
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 1668.867 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 196 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 1659.590 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 270 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-WARNING: [Netlist 29-101] Netlist 'topModule' is not ideal for floorplanning, since the cellview 'topModule' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1668.906 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1661.723 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete, checksum: 8776e5d1
+Synth Design complete, checksum: 47d906cd
 INFO: [Common 17-83] Releasing license: Synthesis
 49 Infos, 30 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:56 ; elapsed = 00:01:11 . Memory (MB): peak = 1668.906 ; gain = 1080.082
+synth_design: Time (s): cpu = 00:01:04 ; elapsed = 00:01:36 . Memory (MB): peak = 1661.723 ; gain = 1071.547
 INFO: [Common 17-1381] The checkpoint 'D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.runs/synth_1/topModule.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file topModule_utilization_synth.rpt -pb topModule_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sat Jun 24 22:00:10 2023...
+INFO: [Common 17-206] Exiting Vivado at Mon Jun 26 22:10:19 2023...

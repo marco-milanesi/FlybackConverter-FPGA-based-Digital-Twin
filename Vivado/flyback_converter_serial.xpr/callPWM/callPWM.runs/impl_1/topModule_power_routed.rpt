@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-| Date             : Sat Jun 24 22:01:25 2023
+| Date             : Mon Jun 26 22:12:09 2023
 | Host             : Milanesi-Dell running 64-bit major release  (build 9200)
 | Command          : report_power -file topModule_power_routed.rpt -pb topModule_power_summary_routed.pb -rpx topModule_power_routed.rpx
 | Design           : topModule
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+----------------------------------+
-| Total On-Chip Power (W)  | 32.736 (Junction temp exceeded!) |
+| Total On-Chip Power (W)  | 33.010 (Junction temp exceeded!) |
 | Design Power Budget (W)  | Unspecified*                     |
 | Power Budget Margin (W)  | NA                               |
-| Dynamic (W)              | 32.250                           |
+| Dynamic (W)              | 32.524                           |
 | Device Static (W)        | 0.486                            |
 | Effective TJA (C/W)      | 4.9                              |
 | Max Ambient (C)          | 0.0                              |
@@ -52,19 +52,19 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |    14.469 |     1649 |       --- |             --- |
-|   LUT as Logic |    13.629 |      950 |     32600 |            2.91 |
-|   CARRY4       |     0.682 |      180 |      8150 |            2.21 |
+| Slice Logic    |    15.354 |     1805 |       --- |             --- |
+|   LUT as Logic |    14.331 |     1008 |     32600 |            3.09 |
+|   CARRY4       |     0.865 |      234 |      8150 |            2.87 |
 |   Register     |     0.115 |      218 |     65200 |            0.33 |
 |   BUFG         |     0.027 |        2 |        32 |            6.25 |
 |   F7/F8 Muxes  |     0.016 |        9 |     32600 |            0.03 |
-|   Others       |     0.000 |       19 |       --- |             --- |
-| Signals        |    10.716 |     1262 |       --- |             --- |
-| DSPs           |     1.845 |        7 |       120 |            5.83 |
+|   Others       |     0.000 |       44 |       --- |             --- |
+| Signals        |    11.629 |     1415 |       --- |             --- |
+| DSPs           |     0.322 |        2 |       120 |            1.67 |
 | I/O            |     5.098 |       30 |       210 |           14.29 |
 | XADC           |     0.121 |        1 |       --- |             --- |
 | Static Power   |     0.486 |          |           |                 |
-| Total          |    32.736 |          |           |                 |
+| Total          |    33.010 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -74,7 +74,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |    27.482 |      27.142 |      0.341 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |    27.757 |      27.416 |      0.341 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.237 |       0.184 |      0.053 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     1.421 |       1.420 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -139,15 +139,15 @@ Table of Contents
 +----------------+-----------+
 | Name           | Power (W) |
 +----------------+-----------+
-| topModule      |    32.250 |
-|   PID_inst     |     3.092 |
-|   clk_TxDstart |     0.108 |
-|   errorTx      |     0.057 |
-|   gen_baud     |     0.047 |
-|   pwm8         |     0.199 |
-|   reloj_20khz  |     0.079 |
-|   u1           |     0.215 |
-|     xadc       |     0.159 |
+| topModule      |    32.524 |
+|   PID_inst     |     3.217 |
+|   clk_TxDstart |     0.097 |
+|   errorTx      |     0.060 |
+|   gen_baud     |     0.048 |
+|   pwm8         |     0.209 |
+|   reloj_20khz  |     0.070 |
+|   u1           |     0.208 |
+|     xadc       |     0.158 |
 +----------------+-----------+
 
 
