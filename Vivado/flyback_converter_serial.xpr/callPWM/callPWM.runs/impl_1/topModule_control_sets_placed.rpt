@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-| Date         : Mon Jun 26 22:11:36 2023
+| Date         : Tue Jun 27 00:05:59 2023
 | Host         : Milanesi-Dell running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file topModule_control_sets_placed.rpt
 | Design       : topModule
@@ -27,7 +27,7 @@ Table of Contents
 |    Minimum number of control sets                        |    11 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    22 |
+| Unused register locations in slices containing registers |    19 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -58,10 +58,10 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |             151 |           55 |
+| No           | No                    | No                     |             114 |           45 |
 | No           | No                    | Yes                    |               0 |            0 |
 | No           | Yes                   | No                     |              56 |           14 |
-| Yes          | No                    | No                     |              11 |            3 |
+| Yes          | No                    | No                     |              11 |            4 |
 | Yes          | No                    | Yes                    |               0 |            0 |
 | Yes          | Yes                   | No                     |               0 |            0 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
@@ -74,16 +74,16 @@ Table of Contents
 |               Clock Signal              |            Enable Signal           |         Set/Reset Signal        | Slice Load Count | Bel Load Count | Bels / Slice |
 +-----------------------------------------+------------------------------------+---------------------------------+------------------+----------------+--------------+
 |  FSM_sequential_contData_reg[4]_i_2_n_0 | FSM_sequential_contData[4]_i_1_n_0 |                                 |                1 |              5 |         5.00 |
-|  clk_IBUF_BUFG                          | u1/ready_rising                    |                                 |                2 |              6 |         3.00 |
 |  errorTx/TxD_ready                      |                                    |                                 |                2 |              6 |         3.00 |
+|  clk_IBUF_BUFG                          | u1/ready_rising                    |                                 |                3 |              6 |         2.00 |
 |  clk_IBUF_BUFG                          |                                    | gen_baud/cont1[0]_i_1__1_n_0    |                2 |              7 |         3.50 |
 |  clk_IBUF_BUFG                          |                                    | PID_inst/CO[0]                  |                2 |              8 |         4.00 |
 |  gen_baud/CLK                           |                                    | clk_TxDstart/SR[0]              |                2 |             12 |         6.00 |
 |  clk_IBUF_BUFG                          |                                    | reloj_20khz/cont1[0]_i_1__0_n_0 |                4 |             13 |         3.25 |
 |  clk_IBUF_BUFG                          |                                    | clk_TxDstart/clear              |                4 |             16 |         4.00 |
-|  reloj_20khz/clk_mk                     |                                    |                                 |                4 |             16 |         4.00 |
-|  FSM_sequential_contData_reg[4]_i_2_n_0 |                                    |                                 |               24 |             57 |         2.38 |
-|  clk_IBUF_BUFG                          |                                    |                                 |               25 |             72 |         2.88 |
+|  reloj_20khz/CLK                        |                                    |                                 |                6 |             24 |         4.00 |
+|  FSM_sequential_contData_reg[4]_i_2_n_0 |                                    |                                 |               18 |             39 |         2.17 |
+|  clk_IBUF_BUFG                          |                                    |                                 |               19 |             45 |         2.37 |
 +-----------------------------------------+------------------------------------+---------------------------------+------------------+----------------+--------------+
 
 

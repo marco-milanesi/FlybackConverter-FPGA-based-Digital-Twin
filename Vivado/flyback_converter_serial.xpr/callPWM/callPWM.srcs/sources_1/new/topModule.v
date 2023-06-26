@@ -104,7 +104,7 @@
     
     // ------------------------------- XDC implementation starts --------------------------------
     
-        wire [15:0] data_out_adc_top;
+        wire [16:0] data_out_adc_top;
         
             XADCdemo u1 (
            .CLK100MHZ(clk),
@@ -130,10 +130,10 @@
            .data_out_adc(data_out_adc_top)
         );
         
-        reg [15:0] data_out_adc_reg;
+        reg [16:0] data_out_adc_reg;
         
         always @(posedge clk) begin
-           data_out_adc_reg <= data_out_adc_top;
+           data_out_adc_reg <= data_out_adc_top/1000;
         end
     
 //-------------------------------Setpoint selection in degrees ----------------------------------------------
@@ -143,14 +143,14 @@
         begin
         // V desired = V*2^16
             case(SPSW)
-                3'b000:     set_point<=16'd4965;      // 0.25 V
-                3'b001:     set_point<=16'd9930;		// 0.5 V
-                3'b010:     set_point<=16'd14895; 	// 0.75 V
-                3'b011:     set_point<=16'd19859;		// 1 V
-                3'b100:     set_point<=16'd24824;     // 1.25 V
-                3'b101:     set_point<=16'd29789;		// 1.5 V
-                3'b110:     set_point<=16'd34754;     // 1.75 V		
-                3'b111:     set_point<=16'd39719;     // 2 V
+                3'b000:     set_point<=16'd4965/1000;      // 0.25 V
+                3'b001:     set_point<=16'd9930/1000;		// 0.5 V
+                3'b010:     set_point<=16'd14895/1000; 	// 0.75 V
+                3'b011:     set_point<=16'd19859/1000;		// 1 V
+                3'b100:     set_point<=16'd24824/1000;     // 1.25 V
+                3'b101:     set_point<=16'd29789/1000;		// 1.5 V
+                3'b110:     set_point<=16'd34754/1000;     // 1.75 V		
+                3'b111:     set_point<=16'd39719/1000;     // 2 V
                 default:  set_point<=16'd0000;	
             endcase
         end
@@ -254,12 +254,12 @@
         
 // -----------------------    PID error calculation -------------------------------------------
             ///  error  calculation //
-//            always @(posedge clk)
-//               e_k_signo<=(set_point - data_out_adc_reg); // e(k)=R(s)-Y(s)
+            always @(posedge clk_mk)
+               e_k_signo<=(set_point - data_out_adc_reg); // e(k)=R(s)-Y(s)
         
 //            ////error abs////	
 //            reg [16:0] e_k_unsigned;
-//            always @(posedge clk)	
+//            always @(posedge clk_mk)	
 //               if (e_k_signo[16]==1'b1)  //en caso de que el error sea negativo
 //                  e_k_unsigned<=((~e_k_signo)+(1'b1)); //bit de signo
 //               else
@@ -330,7 +330,7 @@
      wire  signed [16:0] error;  // sfix64_En32
      wire  signed [16:0] p_action;  // sfix64_En32
      reg [16:0] controlOut_unsigned;  
-     reg [15:0] error_pid;
+     reg [16:0] error_pid;
           
       PID PID_inst(
            .clk(clk_mk),
@@ -338,7 +338,7 @@
            .kp(16'd1),
            .kp_divisor(16'd100),
            .ki(16'd20000),
-           .ki_multiplier(16'd1000),
+           .ki_multiplier(16'd10),
            .PV(data_out_adc_reg[15:0]),
            .MV(MV[16:0]),
            .p_action(p_action[16:0]),
@@ -368,7 +368,7 @@
         numberPVDT=16'd0;   // Digital Twin Process Variable
         numberMV=controlOut_unsigned;      // Physical System Manipulated Variable
         //numberMVDT=DigitalTwin_MV_Print;   // Digital Twin Manipulated Variable
-        numberMVDT=error_pid;   // Digital Twin Manipulated Variable
+        numberMVDT=e_k_signo;   // Digital Twin Manipulated Variable
         
         
     end
