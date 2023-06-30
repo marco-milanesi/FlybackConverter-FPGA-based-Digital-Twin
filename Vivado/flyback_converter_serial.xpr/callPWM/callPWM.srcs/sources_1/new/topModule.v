@@ -133,7 +133,7 @@
         reg [16:0] data_out_adc_reg;
         
         always @(posedge clk) begin
-           data_out_adc_reg <= data_out_adc_top/1000;
+           data_out_adc_reg <= data_out_adc_top/255;
         end
     
 //-------------------------------Setpoint selection in degrees ----------------------------------------------
@@ -143,14 +143,14 @@
         begin
         // V desired = V*2^16
             case(SPSW)
-                3'b000:     set_point<=16'd4965/1000;      // 0.25 V
-                3'b001:     set_point<=16'd9930/1000;		// 0.5 V
-                3'b010:     set_point<=16'd14895/1000; 	// 0.75 V
-                3'b011:     set_point<=16'd19859/1000;		// 1 V
-                3'b100:     set_point<=16'd24824/1000;     // 1.25 V
-                3'b101:     set_point<=16'd29789/1000;		// 1.5 V
-                3'b110:     set_point<=16'd34754/1000;     // 1.75 V		
-                3'b111:     set_point<=16'd39719/1000;     // 2 V
+                3'b000:     set_point<=16'd4965/255;      // 0.25 V
+                3'b001:     set_point<=16'd9930/255;		// 0.5 V
+                3'b010:     set_point<=16'd14895/255; 	// 0.75 V
+                3'b011:     set_point<=16'd19859/255;		// 1 V
+                3'b100:     set_point<=16'd24824/255;     // 1.25 V
+                3'b101:     set_point<=16'd29789/255;		// 1.5 V
+                3'b110:     set_point<=16'd34754/255;     // 1.75 V		
+                3'b111:     set_point<=16'd39719/255;     // 2 V
                 default:  set_point<=16'd0000;	
             endcase
         end
@@ -254,7 +254,7 @@
         
 // -----------------------    PID error calculation -------------------------------------------
             ///  error  calculation //
-            always @(posedge clk_mk)
+            always @(posedge clk)
                e_k_signo<=(set_point - data_out_adc_reg); // e(k)=R(s)-Y(s)
         
 //            ////error abs////	
@@ -269,7 +269,7 @@
               
 //              reg [16:0] controlOut_unsigned;
 //              wire [15:0] sample;   
-//             controlador controlador_PID(.clk_mk(clk_mk),.CLOCK_50(clk),.error(e_k_unsigned[16:0]),
+//             controlador controlador_PID(.clk_mk(clk_mk),.CLOCK_50(clk_mk),.error(e_k_signo[16:0]),
 //                                         .m_k_out(sample[15:0]), .reset(1'b0));
             
 //            //assign control action to the output variable
@@ -292,15 +292,9 @@
       wire  signed [63:0] i_action_dt;  // sfix64_En16
       wire  signed [63:0] error_dt;  // sfix64_En16
   
-//      wire  signed [15:0] PV_DT;  // sfix16_En4
-//      wire  signed [15:0] MV_DT;  // sfix16_En4
-//      wire  signed [15:0] p_action_dt;  // sfix16_En4
-//      wire  signed [15:0] i_action_dt;  // sfix16_En4
-//      wire  signed [15:0] error_dt;  // sfix16_En4
-
         
         DT DT_inst(
-          .clk(clk_mk),
+          .clk(clk),
           .SP_DT(set_point[16:0]),
           .kp_dt(64'd3),
           .kp_divisor_dt(64'd1000),
@@ -322,35 +316,61 @@
         always@(posedge clk)
             DigitalTwin_MV_Print=MV_DT;
             
+//// Counter 
+    
+//    wire  [15:0] counter_out;  // uint16  
+//    reg  [15:0] counter_out_print;
+    
+//    Counter_SUB Counter_SUB_inst(
+//           .clk(clk_mk),
+//           .counter_out(counter_out[15:0])
+//           );
+
+//    always@(posedge clk)
+//      begin
+//            counter_out_print=counter_out;
+//      end
+
+            
+            
+            
 // ------------------------------ PID implementation ----------------------------------
 
-     wire  signed [16:0] PV;  // sfix64_En32
-     wire  signed [16:0] MV;  // sfix64_En32
-     wire  signed [16:0] i_action;  // sfix64_En32
-     wire  signed [16:0] error;  // sfix64_En32
-     wire  signed [16:0] p_action;  // sfix64_En32
-     reg [16:0] controlOut_unsigned;  
-     reg [16:0] error_pid;
-          
+  wire   signed [15:0] error;  // int16
+  wire   signed [15:0] kp;  // int16
+  wire   signed [15:0] kp_divisor;  // int16
+  wire   signed [15:0] ki;  // int16
+  wire   signed [15:0] ki_multiplier;  // int16
+  wire   signed [15:0] alpha1_port;  // int16
+  wire   signed [15:0] Tt;  // int16
+  wire   signed [15:0] Tt_divisor;  // int16
+  wire  signed [7:0] MV;  // int8
+  wire  signed [15:0] p_action;  // int16
+  wire  signed [15:0] i_action;  // int16
+  reg [16:0] controlOut_unsigned;  
+     
+     
+     
       PID PID_inst(
-           .clk(clk_mk),
-           .SP(set_point[16:0]),
+           .clk(clk),
+           .error(e_k_signo[15:0]),
            .kp(16'd1),
-           .kp_divisor(16'd100),
+           .kp_divisor(16'd1),
            .ki(16'd20000),
-           .ki_multiplier(16'd10),
-           .PV(data_out_adc_reg[15:0]),
-           .MV(MV[16:0]),
-           .p_action(p_action[16:0]),
-           .i_action(i_action[16:0]),
-           .error(error[16:0])
+           .ki_multiplier(16'd100), 
+           .alpha1_port(16'd0),
+           .Tt(16'd1),
+           .Tt_divisor(16'd65000),
+           .MV(MV[7:0]),
+           .p_action(p_action[15:0]),
+           .i_action(i_action[15:0])
       );
       
+      
            
-      always@(posedge clk)
+      always@(posedge clk_mk)
       begin
             controlOut_unsigned=MV;
-            error_pid=error;
       end       
             //Initialize PWM Generator (clk is 6mhz in this FPGA) 50khz PWM 
             // pwm pwm(.clk(clk), .pwm_in(controlOut), .pwm_out(PWMModulation));
@@ -365,7 +385,7 @@
     begin
         numberSetpoint=set_point;   // Setpoint
         numberADC=data_out_adc_reg;   // Physical System Process variable
-        numberPVDT=16'd0;   // Digital Twin Process Variable
+        numberPVDT=DigitalTwin_PV_Print;   // Digital Twin Process Variable
         numberMV=controlOut_unsigned;      // Physical System Manipulated Variable
         //numberMVDT=DigitalTwin_MV_Print;   // Digital Twin Manipulated Variable
         numberMVDT=e_k_signo;   // Digital Twin Manipulated Variable
