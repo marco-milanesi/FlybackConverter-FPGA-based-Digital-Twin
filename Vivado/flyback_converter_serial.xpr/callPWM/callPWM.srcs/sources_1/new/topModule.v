@@ -133,7 +133,7 @@
         reg [16:0] data_out_adc_reg;
         
         always @(posedge clk) begin
-           data_out_adc_reg <= data_out_adc_top/255;
+           data_out_adc_reg <= data_out_adc_top/1000;
         end
     
 //-------------------------------Setpoint selection in degrees ----------------------------------------------
@@ -143,14 +143,14 @@
         begin
         // V desired = V*2^16
             case(SPSW)
-                3'b000:     set_point<=16'd4965/255;      // 0.25 V
-                3'b001:     set_point<=16'd9930/255;		// 0.5 V
-                3'b010:     set_point<=16'd14895/255; 	// 0.75 V
-                3'b011:     set_point<=16'd19859/255;		// 1 V
-                3'b100:     set_point<=16'd24824/255;     // 1.25 V
-                3'b101:     set_point<=16'd29789/255;		// 1.5 V
-                3'b110:     set_point<=16'd34754/255;     // 1.75 V		
-                3'b111:     set_point<=16'd39719/255;     // 2 V
+                3'b000:     set_point<=16'd4965/1000;      // 0.25 V
+                3'b001:     set_point<=16'd9930/1000;		// 0.5 V
+                3'b010:     set_point<=16'd14895/1000; 	// 0.75 V
+                3'b011:     set_point<=16'd19859/1000;		// 1 V
+                3'b100:     set_point<=16'd24824/1000;     // 1.25 V
+                3'b101:     set_point<=16'd29789/1000;		// 1.5 V
+                3'b110:     set_point<=16'd34754/1000;     // 1.75 V		
+                3'b111:     set_point<=16'd39719/1000;     // 2 V
                 default:  set_point<=16'd0000;	
             endcase
         end
@@ -354,13 +354,13 @@
       PID PID_inst(
            .clk(clk),
            .error(e_k_signo[15:0]),
-           .kp(16'd1),
+           .kp(16'd400),
            .kp_divisor(16'd1),
            .ki(16'd20000),
            .ki_multiplier(16'd100), 
-           .alpha1_port(16'd0),
+           .alpha1_port(16'd1),
            .Tt(16'd1),
-           .Tt_divisor(16'd65000),
+           .Tt_divisor(16'd20000),
            .MV(MV[7:0]),
            .p_action(p_action[15:0]),
            .i_action(i_action[15:0])

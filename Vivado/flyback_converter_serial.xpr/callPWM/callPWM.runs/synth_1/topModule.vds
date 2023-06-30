@@ -2,8 +2,8 @@
 # Vivado v2022.2 (64-bit)
 # SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Fri Jun 30 05:23:15 2023
-# Process ID: 19248
+# Start of session at: Fri Jun 30 06:13:33 2023
+# Process ID: 16768
 # Current directory: D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.runs/synth_1
 # Command line: vivado.exe -log topModule.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source topModule.tcl
 # Log file: D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.runs/synth_1/topModule.vds
@@ -11,7 +11,7 @@
 # Running On: Milanesi-Dell, OS: Windows, CPU Frequency: 2208 MHz, CPU Physical cores: 6, Host memory: 16879 MB
 #-----------------------------------------------------------
 source topModule.tcl -notrace
-create_project: Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 558.461 ; gain = 127.449
+create_project: Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 557.090 ; gain = 124.543
 Command: synth_design -top topModule -part xc7s50csga324-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7s50'
@@ -19,21 +19,21 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s50'
 INFO: [Device 21-403] Loading part xc7s50csga324-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 17420
+INFO: [Synth 8-7075] Helper process launched with PID 10024
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [D:/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 INFO: [Synth 8-11241] undeclared symbol 'BaudTick', assumed default net type 'wire' [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/new/topModule.v:91]
 INFO: [Synth 8-11241] undeclared symbol 'TxD_start', assumed default net type 'wire' [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/new/topModule.v:93]
 INFO: [Synth 8-11241] undeclared symbol 'BaudTickEncoder', assumed default net type 'wire' [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/new/topModule.v:96]
 INFO: [Synth 8-11241] undeclared symbol 'TxD_startEncoder', assumed default net type 'wire' [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/new/topModule.v:98]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 1369.391 ; gain = 407.797
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 1369.988 ; gain = 408.469
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'topModule' [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/new/topModule.v:24]
 INFO: [Synth 8-6157] synthesizing module 'divisor_freq' [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/imports/Submodulos/divisor_freq.v:8]
 INFO: [Synth 8-6155] done synthesizing module 'divisor_freq' (0#1) [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/imports/Submodulos/divisor_freq.v:8]
 INFO: [Synth 8-6157] synthesizing module 'XADCdemo' [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/imports/hdl/XADCdemo.v:22]
-INFO: [Synth 8-6157] synthesizing module 'xadc_wiz_0' [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.runs/synth_1/.Xil/Vivado-19248-Milanesi-Dell/realtime/xadc_wiz_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'xadc_wiz_0' (0#1) [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.runs/synth_1/.Xil/Vivado-19248-Milanesi-Dell/realtime/xadc_wiz_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'xadc_wiz_0' [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.runs/synth_1/.Xil/Vivado-16768-Milanesi-Dell/realtime/xadc_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'xadc_wiz_0' (0#1) [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.runs/synth_1/.Xil/Vivado-16768-Milanesi-Dell/realtime/xadc_wiz_0_stub.v:5]
 WARNING: [Synth 8-7071] port 'vccaux_alarm_out' of module 'xadc_wiz_0' is unconnected for instance 'xadc' [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/imports/hdl/XADCdemo.v:58]
 WARNING: [Synth 8-7071] port 'vccint_alarm_out' of module 'xadc_wiz_0' is unconnected for instance 'xadc' [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/imports/hdl/XADCdemo.v:58]
 WARNING: [Synth 8-7023] instance 'xadc' of module 'xadc_wiz_0' has 33 connections declared, but only 31 given [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/imports/hdl/XADCdemo.v:58]
@@ -64,18 +64,18 @@ WARNING: [Synth 8-7129] Port A in module topModule is either unconnected or has 
 WARNING: [Synth 8-7129] Port B in module topModule is either unconnected or has no load
 WARNING: [Synth 8-7129] Port clearEncoder in module topModule is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:10 . Memory (MB): peak = 1464.867 ; gain = 503.273
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:09 . Memory (MB): peak = 1464.215 ; gain = 502.695
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:10 . Memory (MB): peak = 1464.867 ; gain = 503.273
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 1464.215 ; gain = 502.695
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:10 . Memory (MB): peak = 1464.867 ; gain = 503.273
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 1464.215 ; gain = 502.695
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.058 . Memory (MB): peak = 1464.867 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.068 . Memory (MB): peak = 1464.215 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -92,28 +92,28 @@ Parsing XDC File [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyb
 Finished Parsing XDC File [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1571.426 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1557.422 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1571.426 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1557.422 ; gain = 0.000
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [D:/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:21 . Memory (MB): peak = 1571.426 ; gain = 609.832
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:19 . Memory (MB): peak = 1557.422 ; gain = 595.902
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7s50csga324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:21 . Memory (MB): peak = 1571.426 ; gain = 609.832
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:19 . Memory (MB): peak = 1557.422 ; gain = 595.902
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 Applied set_property KEEP_HIERARCHY = SOFT for u1/xadc. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:21 . Memory (MB): peak = 1571.426 ; gain = 609.832
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:19 . Memory (MB): peak = 1557.422 ; gain = 595.902
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'transmisor_async'
 INFO: [Synth 8-802] inferred FSM for state register 'contData_reg' in module 'topModule'
@@ -170,7 +170,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'contData_reg' using encoding 'sequential' in module 'topModule'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:22 . Memory (MB): peak = 1571.426 ; gain = 609.832
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:21 . Memory (MB): peak = 1557.422 ; gain = 595.902
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-223] decloning instance 'gen_baud' (divisor_freq) to 'gen_baudEncoder'
 INFO: [Synth 8-223] decloning instance 'gen_baud' (divisor_freq) to 'gen_baudError'
@@ -198,10 +198,9 @@ Detailed RTL Component Info :
 	               16 Bit    Registers := 3     
 	               11 Bit    Registers := 4     
 	               10 Bit    Registers := 1     
-	                9 Bit    Registers := 2     
-	                8 Bit    Registers := 4     
-	                7 Bit    Registers := 1     
-	                6 Bit    Registers := 1     
+	                8 Bit    Registers := 2     
+	                7 Bit    Registers := 3     
+	                6 Bit    Registers := 3     
 	                1 Bit    Registers := 5     
 +---Multipliers : 
 	              54x64  Multipliers := 1     
@@ -223,8 +222,8 @@ Detailed RTL Component Info :
 	  12 Input   12 Bit        Muxes := 1     
 	  11 Input   10 Bit        Muxes := 30    
 	  30 Input   10 Bit        Muxes := 1     
-	   8 Input    8 Bit        Muxes := 1     
 	   7 Input    6 Bit        Muxes := 1     
+	   8 Input    6 Bit        Muxes := 1     
 	  30 Input    5 Bit        Muxes := 1     
 	   2 Input    1 Bit        Muxes := 1     
 	  12 Input    1 Bit        Muxes := 1     
@@ -734,7 +733,7 @@ WARNING: [Synth 8-7129] Port A in module topModule is either unconnected or has 
 WARNING: [Synth 8-7129] Port B in module topModule is either unconnected or has no load
 WARNING: [Synth 8-7129] Port clearEncoder in module topModule is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:53 . Memory (MB): peak = 1571.426 ; gain = 609.832
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:46 . Memory (MB): peak = 1557.422 ; gain = 595.902
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-3323] Resources of type DSP have been overutilized. Used = 124, Available = 120. Use report_utilization command for details.
 DSP Report: Generating DSP Add2_out1, operation Mode is (post resource management): C+(D-A)*(B:0x7fff).
@@ -892,19 +891,19 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:34 ; elapsed = 00:01:05 . Memory (MB): peak = 1571.426 ; gain = 609.832
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:33 ; elapsed = 00:00:57 . Memory (MB): peak = 1557.422 ; gain = 595.902
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:01:05 . Memory (MB): peak = 1571.426 ; gain = 609.832
+Finished Timing Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:57 . Memory (MB): peak = 1557.422 ; gain = 595.902
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:35 ; elapsed = 00:01:06 . Memory (MB): peak = 1600.828 ; gain = 639.234
+Finished Technology Mapping : Time (s): cpu = 00:00:33 ; elapsed = 00:00:57 . Memory (MB): peak = 1584.684 ; gain = 623.164
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -922,37 +921,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:38 ; elapsed = 00:01:12 . Memory (MB): peak = 1615.590 ; gain = 653.996
+Finished IO Insertion : Time (s): cpu = 00:00:37 ; elapsed = 00:01:03 . Memory (MB): peak = 1599.473 ; gain = 637.953
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:38 ; elapsed = 00:01:12 . Memory (MB): peak = 1615.590 ; gain = 653.996
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:37 ; elapsed = 00:01:03 . Memory (MB): peak = 1599.473 ; gain = 637.953
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:38 ; elapsed = 00:01:12 . Memory (MB): peak = 1615.590 ; gain = 653.996
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:37 ; elapsed = 00:01:03 . Memory (MB): peak = 1599.473 ; gain = 637.953
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:38 ; elapsed = 00:01:12 . Memory (MB): peak = 1615.590 ; gain = 653.996
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:37 ; elapsed = 00:01:03 . Memory (MB): peak = 1599.473 ; gain = 637.953
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:38 ; elapsed = 00:01:12 . Memory (MB): peak = 1615.590 ; gain = 653.996
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:37 ; elapsed = 00:01:03 . Memory (MB): peak = 1599.473 ; gain = 637.953
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:38 ; elapsed = 00:01:12 . Memory (MB): peak = 1615.590 ; gain = 653.996
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:37 ; elapsed = 00:01:03 . Memory (MB): peak = 1599.473 ; gain = 637.953
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -981,41 +980,41 @@ Report Cell Usage:
 |2     |BUFG     |     2|
 |3     |CARRY4   |   216|
 |4     |DSP48E1  |     1|
-|5     |LUT1     |   119|
-|6     |LUT2     |   403|
-|7     |LUT3     |   158|
+|5     |LUT1     |   117|
+|6     |LUT2     |   390|
+|7     |LUT3     |   155|
 |8     |LUT4     |   128|
-|9     |LUT5     |   120|
-|10    |LUT6     |   205|
-|11    |MUXF7    |     4|
-|12    |MUXF8    |     2|
-|13    |FDRE     |   194|
+|9     |LUT5     |   110|
+|10    |LUT6     |   180|
+|11    |MUXF7    |     9|
+|12    |MUXF8    |     3|
+|13    |FDRE     |   183|
 |14    |FDSE     |     9|
 |15    |IBUF     |    22|
 |16    |OBUF     |     8|
 |17    |OBUFT    |     2|
 +------+---------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:38 ; elapsed = 00:01:12 . Memory (MB): peak = 1615.590 ; gain = 653.996
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:37 ; elapsed = 00:01:03 . Memory (MB): peak = 1599.473 ; gain = 637.953
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 8 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:32 ; elapsed = 00:01:10 . Memory (MB): peak = 1615.590 ; gain = 547.438
-Synthesis Optimization Complete : Time (s): cpu = 00:00:38 ; elapsed = 00:01:12 . Memory (MB): peak = 1615.590 ; gain = 653.996
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:31 ; elapsed = 00:01:01 . Memory (MB): peak = 1599.473 ; gain = 544.746
+Synthesis Optimization Complete : Time (s): cpu = 00:00:37 ; elapsed = 00:01:04 . Memory (MB): peak = 1599.473 ; gain = 637.953
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.021 . Memory (MB): peak = 1627.688 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 223 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 1611.535 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 229 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1631.316 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1615.176 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete, checksum: 91b81358
+Synth Design complete, checksum: 1cef319a
 INFO: [Common 17-83] Releasing license: Synthesis
 49 Infos, 26 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:41 ; elapsed = 00:01:18 . Memory (MB): peak = 1631.316 ; gain = 1042.031
+synth_design: Time (s): cpu = 00:00:40 ; elapsed = 00:01:09 . Memory (MB): peak = 1615.176 ; gain = 1026.684
 INFO: [Common 17-1381] The checkpoint 'D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.runs/synth_1/topModule.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file topModule_utilization_synth.rpt -pb topModule_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Jun 30 05:24:46 2023...
+INFO: [Common 17-206] Exiting Vivado at Fri Jun 30 06:14:54 2023...
