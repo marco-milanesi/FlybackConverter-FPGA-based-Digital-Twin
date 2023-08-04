@@ -56,9 +56,8 @@
         wire PWMModulation;
         wire KEY[1:0];
         wire [15:0]controlOut;
-        integer speed1=16'd32500;
-        integer speed2=16'd2500;
-        reg [16:0] e_k_signo;
+        
+        
         
         ////////serial transmitter RS232 Only///////////////////
         
@@ -83,9 +82,8 @@
         //100khz clock for 8 bit PWM
          wire clk_100k;
          // f = 12 MHz / 2*(.freq_base(32'd10))
-         //divisor_freq reloj_100k(.clk(clk), .freq_base(32'd60), .freq_sal(clk_100k));
-//        divisor_freq reloj_100k(.clk(clk), .freq_base(32'd10), .freq_sal(clk_100k));
-         //divisor_freq reloj_100k(.clk(clk), .freq_base(32'd300), .freq_sal(clk_100k)); //50k pwm 
+         divisor_freq reloj_100k(.clk(clk), .freq_base(32'd60), .freq_sal(clk_100k));
+//        
 
         //Baud Generator initialization
         divisor_freq gen_baud(.clk(clk), .freq_base(32'd104), .freq_sal(BaudTick));//fb=109-1 ... baud=55555
@@ -133,7 +131,7 @@
         reg [16:0] data_out_adc_reg;
         
         always @(posedge clk) begin
-           data_out_adc_reg <= data_out_adc_top/1000;
+           data_out_adc_reg <= data_out_adc_top/80;
         end
     
 //-------------------------------Setpoint selection in degrees ----------------------------------------------
@@ -143,14 +141,14 @@
         begin
         // V desired = V*2^16
             case(SPSW)
-                3'b000:     set_point<=16'd4965/1000;      // 0.25 V
-                3'b001:     set_point<=16'd9930/1000;		// 0.5 V
-                3'b010:     set_point<=16'd14895/1000; 	// 0.75 V
-                3'b011:     set_point<=16'd19859/1000;		// 1 V
-                3'b100:     set_point<=16'd24824/1000;     // 1.25 V
-                3'b101:     set_point<=16'd29789/1000;		// 1.5 V
-                3'b110:     set_point<=16'd34754/1000;     // 1.75 V		
-                3'b111:     set_point<=16'd39719/1000;     // 2 V
+                3'b000:     set_point<=16'd4965/80;      // 0.25 V
+                3'b001:     set_point<=16'd9930/80;		// 0.5 V
+                3'b010:     set_point<=16'd14895/80; 	// 0.75 V
+                3'b011:     set_point<=16'd19859/80;		// 1 V
+                3'b100:     set_point<=16'd24824/80;     // 1.25 V
+                3'b101:     set_point<=16'd29789/80;		// 1.5 V
+                3'b110:     set_point<=16'd34754/80;     // 1.75 V		
+                3'b111:     set_point<=16'd39719/80;     // 2 V
                 default:  set_point<=16'd0000;	
             endcase
         end
@@ -170,17 +168,17 @@
     
     // ----------------------------------    PV Digital Twin   ------------------------------------------     
         //ROM to translate into ASCII characters for encoder signal
-        reg [10:0] numberPVDT=16'd0; 
+        reg [15:0] numberPVDT=16'd0; 
         wire [9:0] uniPVDT, decPVDT, centPVDT, hundPVDT, tenThousPVDT;
         ROM_grados_numericos   ROM_de_grados(.grad(numberPVDT), .unidades(uniPVDT), .decenas(decPVDT),.centenas(centPVDT),.thousands(hundPVDT), .tenThousand(tenThousPVDT)); //outputs are registers
         
     // --------------------------------  Manipulated Variable    --------------------------
-        reg [10:0]numberMV=10'd0312;
+        reg [7:0]numberMV=8'd0;
         wire [9:0] uniMV, decMV, centMV, hundMV, tenThousMV;
         ROM_grados_numericos   ROM_MV(.grad(numberMV), .unidades(uniMV), .decenas(decMV),.centenas(centMV), .thousands(hundMV), .tenThousand(tenThousMV)); //outputs are registers                                              
      
     // --------------------------------  Digital Twin MV    --------------------------       
-        reg [10:0]numberMVDT=10'd0312;                                              
+        reg [7:0]numberMVDT=8'd0;                                              
         wire [9:0] uniMVDT, decMVDT, centMVDT, hundMVDT, tenThousMVDT;
         ROM_grados_numericos   ROM_MVDT(.grad(numberMVDT), .unidades(uniMVDT), .decenas(decMVDT),.centenas(centMVDT), .thousands(hundMVDT), .tenThousand(tenThousMVDT)); //outputs are registers   
     
@@ -188,6 +186,18 @@
         reg [15:0] numberError=16'd0;                                              
         wire [9:0] uniError, decError, centError, hundError, tenThousError;
         ROM_grados_numericos   ROM_error(.grad(numberError), .unidades(uniError), .decenas(decError),.centenas(centError), .thousands(hundError), .tenThousand(tenThousError)); //outputs are registers      
+     
+     // --------------------------------  Proportional Action    --------------------------       
+        reg [15:0] numberP_Action=16'd0;                                              
+        wire [9:0] uniP_Action, decP_Action, centP_Action, hundP_Action, tenThousP_Action;
+        ROM_grados_numericos   ROM_P_Action(.grad(numberP_Action), .unidades(uniP_Action), .decenas(decP_Action),.centenas(centP_Action), .thousands(hundP_Action), .tenThousand(tenThousP_Action)); //outputs are registers      
+     
+      // --------------------------------  Integral Action    --------------------------       
+        reg [15:0] numberI_Action=16'd0;                                              
+        wire [9:0] uniI_Action, decI_Action, centI_Action, hundI_Action, tenThousI_Action;
+        ROM_grados_numericos   ROM_I_Action(.grad(numberI_Action), .unidades(uniI_Action), .decenas(decI_Action),.centenas(centI_Action), .thousands(hundI_Action), .tenThousand(tenThousI_Action)); //outputs are registers      
+     
+     
      
 //+++++++++++++++++++++++++++++++++++  Send all the signals    +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
         //TX UART Instance for send all the signals  
@@ -236,14 +246,28 @@
                     16'b0000_0000_0001_1010: begin outData<=centMVDT; contData<=contData+16'b0000_0000_0000_0001;end
                     16'b0000_0000_0001_1011: begin outData<=decMVDT; contData<=contData+16'b0000_0000_0000_0001;end
                     16'b0000_0000_0001_1100: begin outData<=uniMVDT; contData<=contData+16'b0000_0000_0000_0001;end                    
-                    16'b0000_0000_0001_1101: begin outData<=16'b0000_0000_0000_1010;  contData<=16'b0000_0000_0000_0000;end //LF plus restart counter
+                    16'b0000_0000_0001_1101: begin outData<=16'b0000_0000_0010_0000;  contData<=contData+16'b0000_0000_0000_0001;end //space plus one counter
                     
-//                    16'b0000_0000_0001_1111: begin outData<=tenThousError; contData<=contData+16'b0000_0000_0000_0001;end		
-//                    16'b0000_0000_0010_0000: begin outData<=hundError; contData<=contData+16'b0000_0000_0000_0001;end
-//                    16'b0000_0000_0010_0001: begin outData<=centError; contData<=contData+16'b0000_0000_0000_0001;end
-//                    16'b0000_0000_0010_0010: begin outData<=decError; contData<=contData+16'b0000_0000_0000_0001;end
-//                    16'b0000_0000_0010_0011: begin outData<=uniError; contData<=contData+16'b0000_0000_0000_0001;end                    
-//                    16'b0000_0000_0010_0100: begin outData<=16'b0000_0000_0000_1010;  contData<=16'b0000_0000_0000_0000;end  //LF plus restart counter
+                    16'b0000_0000_0001_1110: begin outData<=tenThousError; contData<=contData+16'b0000_0000_0000_0001;end		
+                    16'b0000_0000_0001_1111: begin outData<=hundError; contData<=contData+16'b0000_0000_0000_0001;end
+                    16'b0000_0000_0010_0000: begin outData<=centError; contData<=contData+16'b0000_0000_0000_0001;end
+                    16'b0000_0000_0010_0001: begin outData<=decError; contData<=contData+16'b0000_0000_0000_0001;end
+                    16'b0000_0000_0010_0010: begin outData<=uniError; contData<=contData+16'b0000_0000_0000_0001;end                    
+                    16'b0000_0000_0010_0011: begin outData<=16'b0000_0000_0010_0000;  contData<=contData+16'b0000_0000_0000_0001;end //space plus one counter
+                    
+                    16'b0000_0000_0010_0100: begin outData<=tenThousP_Action; contData<=contData+16'b0000_0000_0000_0001;end		
+                    16'b0000_0000_0010_0101: begin outData<=hundP_Action; contData<=contData+16'b0000_0000_0000_0001;end
+                    16'b0000_0000_0010_0110: begin outData<=centP_Action; contData<=contData+16'b0000_0000_0000_0001;end
+                    16'b0000_0000_0010_0111: begin outData<=decP_Action; contData<=contData+16'b0000_0000_0000_0001;end
+                    16'b0000_0000_0010_1000: begin outData<=uniP_Action; contData<=contData+16'b0000_0000_0000_0001;end                    
+                    16'b0000_0000_0010_1001: begin outData<=16'b0000_0000_0010_0000;  contData<=contData+16'b0000_0000_0000_0001;end //space plus one counter
+                    
+                    16'b0000_0000_0010_1010: begin outData<=tenThousI_Action; contData<=contData+16'b0000_0000_0000_0001;end		
+                    16'b0000_0000_0010_1011: begin outData<=hundI_Action; contData<=contData+16'b0000_0000_0000_0001;end
+                    16'b0000_0000_0010_1100: begin outData<=centI_Action; contData<=contData+16'b0000_0000_0000_0001;end
+                    16'b0000_0000_0010_1101: begin outData<=decI_Action; contData<=contData+16'b0000_0000_0000_0001;end
+                    16'b0000_0000_0010_1110: begin outData<=uniI_Action; contData<=contData+16'b0000_0000_0000_0001;end                    
+                    16'b0000_0000_0010_1111: begin outData<=16'b0000_0000_0000_1010;  contData<=16'b0000_0000_0000_0000;end  //LF plus restart counter
                                     
                     default:    outData<=1'b0;// outData<=16'b0000_0000_0000_0000;	
                     endcase
@@ -253,58 +277,53 @@
     
         
 // -----------------------    PID error calculation -------------------------------------------
+            reg [15:0] e_k_signo;
             ///  error  calculation //
             always @(posedge clk)
                e_k_signo<=(set_point - data_out_adc_reg); // e(k)=R(s)-Y(s)
         
 //            ////error abs////	
-//            reg [16:0] e_k_unsigned;
-//            always @(posedge clk_mk)	
-//               if (e_k_signo[16]==1'b1)  //en caso de que el error sea negativo
-//                  e_k_unsigned<=((~e_k_signo)+(1'b1)); //bit de signo
-//               else
-//                  e_k_unsigned<=(e_k_signo);
+            reg [16:0] e_k_unsigned;
+            always @(posedge clk_mk)	
+               if (e_k_signo[16]==1'b1)  //en caso de que el error sea negativo
+                  e_k_unsigned<=((~e_k_signo)+(1'b1)); //bit de signo
+               else
+                  e_k_unsigned<=(e_k_signo);
             
-//             //PI Controller
-              
-//              reg [16:0] controlOut_unsigned;
-//              wire [15:0] sample;   
-//             controlador controlador_PID(.clk_mk(clk_mk),.CLOCK_50(clk_mk),.error(e_k_signo[16:0]),
-//                                         .m_k_out(sample[15:0]), .reset(1'b0));
+            reg [15:0] e_dt;
+            wire  signed [31:0] PV_DT;  // int32
             
-//            //assign control action to the output variable
-//            always@(posedge clk)
-//                controlOut_unsigned=sample+8'd00;
-                
-  
-            
-// ------------------      bypass PI controller to do open-loop test -------------------------
-//            always@(posedge clk)
-//            controlOut_unsigned=set_point;
+            always @(posedge clk)
+               e_dt<=(set_point - PV_DT); // e(k)=R(s)-Y(s)
+
             
     
 // ------------------------------ DT implementation ----------------------------------
-    
+
+       
+      wire  signed [7:0] MV_DT;  // int32
+      wire  signed [15:0] p_action_dt;  // int32
+      wire  signed [15:0] i_action_dt;  // int32    
       
-      wire  signed [63:0] PV_DT;  // sfix64_En16
-      wire  signed [63:0] MV_DT;  // sfix64_En16
-      wire  signed [63:0] p_action_dt;  // sfix64_En16
-      wire  signed [63:0] i_action_dt;  // sfix64_En16
-      wire  signed [63:0] error_dt;  // sfix64_En16
-  
+
+        
         
         DT DT_inst(
-          .clk(clk),
-          .SP_DT(set_point[16:0]),
-          .kp_dt(64'd3),
-          .kp_divisor_dt(64'd1000),
-          .ki_dt(32'd550),
-          .PV_DT(PV_DT[63:0]),  //process variable     (position)
-          .MV_DT(MV_DT[63:0]),  //manipulated variable (control action)
-          .p_action_dt(p_action_dt[63:0]),
-          .i_action_dt(i_action_dt[63:0]),
-          .error_dt(error_dt[63:0])
-        );
+           .clk(clk),
+           .error_DT(e_dt[15:0]),
+           .kp_DT(16'd300),
+           .kp_divisor_DT(16'd1),
+           .ki_DT(16'd20000),
+           .ki_multiplier_DT(16'd100),
+           .alpha1_port_DT(16'd1),
+           .Tt_DT(16'd1),
+           .Tt_divisor_DT(16'd10000),
+           .PV_DT(PV_DT[16:0]),
+           .MV_DT(MV_DT[7:0]),
+           .p_action_dt(p_action_dt[15:0]),
+           .i_action_dt(i_action_dt[15:0])
+           );
+        
         
         
       
@@ -316,61 +335,48 @@
         always@(posedge clk)
             DigitalTwin_MV_Print=MV_DT;
             
-//// Counter 
-    
-//    wire  [15:0] counter_out;  // uint16  
-//    reg  [15:0] counter_out_print;
-    
-//    Counter_SUB Counter_SUB_inst(
-//           .clk(clk_mk),
-//           .counter_out(counter_out[15:0])
-//           );
-
-//    always@(posedge clk)
-//      begin
-//            counter_out_print=counter_out;
-//      end
-
-            
+           
             
             
 // ------------------------------ PID implementation ----------------------------------
 
-  wire   signed [15:0] error;  // int16
-  wire   signed [15:0] kp;  // int16
-  wire   signed [15:0] kp_divisor;  // int16
-  wire   signed [15:0] ki;  // int16
-  wire   signed [15:0] ki_multiplier;  // int16
-  wire   signed [15:0] alpha1_port;  // int16
-  wire   signed [15:0] Tt;  // int16
-  wire   signed [15:0] Tt_divisor;  // int16
-  wire  signed [7:0] MV;  // int8
-  wire  signed [15:0] p_action;  // int16
-  wire  signed [15:0] i_action;  // int16
+  
+//  wire  signed [7:0] saturated_MV;  // int16
+  wire  signed [7:0] unsaturated_MV;  // int16
+  wire  signed [31:0] p_action;  // int16
+  wire  signed [31:0] i_action;  // int16
   reg [16:0] controlOut_unsigned;  
      
      
      
-      PID PID_inst(
+//      PID PID_inst(
+//           .clk(clk),
+//           .error(e_k_unsigned[16:0]),
+//           .kp(32'd1),
+//           .kp_divisor(32'd1),
+//           .ki(32'd200),
+//           .ki_multiplier(32'd1), 
+//           .alpha1_port(32'd1),
+//           .Tt(32'd1),
+//           .Tt_divisor(32'd10000),
+//           .saturated_MV(saturated_MV[7:0]),
+//           .p_action(p_action[31:0]),
+//           .i_action(i_action[31:0]),
+//           .unsaturated_MV(unsaturated_MV[7:0])
+//      );
+    
+    wire  signed [15:0] saturated_MV;  // int8
+    
+    IOPID IOPID_inst(
            .clk(clk),
-           .error(e_k_signo[15:0]),
-           .kp(16'd400),
-           .kp_divisor(16'd1),
-           .ki(16'd20000),
-           .ki_multiplier(16'd100), 
-           .alpha1_port(16'd1),
-           .Tt(16'd1),
-           .Tt_divisor(16'd20000),
-           .MV(MV[7:0]),
-           .p_action(p_action[15:0]),
-           .i_action(i_action[15:0])
-      );
-      
-      
+           .error(e_k_unsigned[16:0]),
+           .saturated_MV(saturated_MV[15:0])
+           );
+     
            
-      always@(posedge clk_mk)
+      always@(posedge clk)
       begin
-            controlOut_unsigned=MV;
+            controlOut_unsigned=saturated_MV;
       end       
             //Initialize PWM Generator (clk is 6mhz in this FPGA) 50khz PWM 
             // pwm pwm(.clk(clk), .pwm_in(controlOut), .pwm_out(PWMModulation));
@@ -386,9 +392,12 @@
         numberSetpoint=set_point;   // Setpoint
         numberADC=data_out_adc_reg;   // Physical System Process variable
         numberPVDT=DigitalTwin_PV_Print;   // Digital Twin Process Variable
-        numberMV=controlOut_unsigned;      // Physical System Manipulated Variable
-        //numberMVDT=DigitalTwin_MV_Print;   // Digital Twin Manipulated Variable
-        numberMVDT=e_k_signo;   // Digital Twin Manipulated Variable
+        numberMV=saturated_MV;      // Physical System Manipulated Variable
+        numberMVDT=unsaturated_MV;   // Digital Twin Manipulated Variable
+        numberError=e_k_unsigned;   // Digital Twin Manipulated Variable
+        numberP_Action = p_action;
+        numberI_Action = i_action;
+        
         
         
     end

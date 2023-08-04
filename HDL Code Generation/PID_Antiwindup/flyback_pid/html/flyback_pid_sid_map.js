@@ -13,6 +13,7 @@ function RTW_SidParentMap() {
     this.sidParentMap["flyback_pid:191"] = "flyback_pid:39";
     this.sidParentMap["flyback_pid:138"] = "flyback_pid:39";
     this.sidParentMap["flyback_pid:139"] = "flyback_pid:39";
+    this.sidParentMap["flyback_pid:202"] = "flyback_pid:39";
     this.sidParentMap["flyback_pid:142"] = "flyback_pid:39";
     this.sidParentMap["flyback_pid:91"] = "flyback_pid:39";
     this.sidParentMap["flyback_pid:185"] = "flyback_pid:39";
@@ -22,10 +23,11 @@ function RTW_SidParentMap() {
     this.sidParentMap["flyback_pid:84"] = "flyback_pid:39";
     this.sidParentMap["flyback_pid:189"] = "flyback_pid:39";
     this.sidParentMap["flyback_pid:193"] = "flyback_pid:39";
-    this.sidParentMap["flyback_pid:116"] = "flyback_pid:39";
+    this.sidParentMap["flyback_pid:210"] = "flyback_pid:39";
     this.sidParentMap["flyback_pid:80"] = "flyback_pid:39";
     this.sidParentMap["flyback_pid:134"] = "flyback_pid:39";
     this.sidParentMap["flyback_pid:141"] = "flyback_pid:39";
+    this.sidParentMap["flyback_pid:203"] = "flyback_pid:39";
     this.getParentSid = function(sid) { return this.sidParentMap[sid];}
 }
     RTW_SidParentMap.instance = new RTW_SidParentMap();

@@ -173,10 +173,10 @@ error
 
 </td>
 <td align="center" valign="top" style="border-style: none">
-int16
+int32
 </td>
 <td align="center" valign="top" style="border-style: none">
-16
+32
 </td>
 
 </tr>
@@ -188,10 +188,10 @@ kp
 
 </td>
 <td align="center" valign="top" style="border-style: none">
-int16
+int32
 </td>
 <td align="center" valign="top" style="border-style: none">
-16
+32
 </td>
 
 </tr>
@@ -203,10 +203,10 @@ kp_divisor
 
 </td>
 <td align="center" valign="top" style="border-style: none">
-int16
+int32
 </td>
 <td align="center" valign="top" style="border-style: none">
-16
+32
 </td>
 
 </tr>
@@ -218,10 +218,10 @@ ki
 
 </td>
 <td align="center" valign="top" style="border-style: none">
-int16
+int32
 </td>
 <td align="center" valign="top" style="border-style: none">
-16
+32
 </td>
 
 </tr>
@@ -233,10 +233,10 @@ ki_multiplier
 
 </td>
 <td align="center" valign="top" style="border-style: none">
-int16
+int32
 </td>
 <td align="center" valign="top" style="border-style: none">
-16
+32
 </td>
 
 </tr>
@@ -245,10 +245,10 @@ int16
 alpha1_port
 </td>
 <td align="center" valign="top" style="border-style: none">
-int16
+int32
 </td>
 <td align="center" valign="top" style="border-style: none">
-16
+32
 </td>
 
 </tr>
@@ -260,10 +260,10 @@ Tt
 
 </td>
 <td align="center" valign="top" style="border-style: none">
-int16
+int32
 </td>
 <td align="center" valign="top" style="border-style: none">
-16
+32
 </td>
 
 </tr>
@@ -275,10 +275,10 @@ Tt_divisor
 
 </td>
 <td align="center" valign="top" style="border-style: none">
-int16
+int32
 </td>
 <td align="center" valign="top" style="border-style: none">
-16
+32
 </td>
 
 </tr>
@@ -303,7 +303,7 @@ Output ports
 <tr style="background-color: #ffffff">
 <td align="left" valign="top" style="border-style: none">
 <a href="matlab:coder.internal.code2model('flyback_pid:80')" name="code2model" class="code2model">
-MV
+saturated_MV
 </a>
 
 </td>
@@ -323,10 +323,10 @@ p_action
 
 </td>
 <td align="center" valign="top" style="border-style: none">
-int16
+int32
 </td>
 <td align="center" valign="top" style="border-style: none">
-16
+32
 </td>
 
 </tr>
@@ -338,10 +338,25 @@ i_action
 
 </td>
 <td align="center" valign="top" style="border-style: none">
-int16
+int32
 </td>
 <td align="center" valign="top" style="border-style: none">
-16
+32
+</td>
+
+</tr>
+<tr style="background-color: #eeeeff">
+<td align="left" valign="top" style="border-style: none">
+<a href="matlab:coder.internal.code2model('flyback_pid:203')" name="code2model" class="code2model">
+unsaturated_MV
+</a>
+
+</td>
+<td align="center" valign="top" style="border-style: none">
+int8
+</td>
+<td align="center" valign="top" style="border-style: none">
+8
 </td>
 
 </tr>

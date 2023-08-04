@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7s50csga324-1" LaunchTime="1688098409">
+<GenRun Id="synth_1" LaunchPart="xc7s50csga324-1" LaunchTime="1689028988">
   <File Type="PA-TCL" Name="topModule.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="topModule_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="topModule_reports.tcl"/>
@@ -29,10 +29,10 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/imports/flyback_pid/PID.v">
+    <File Path="$PSRCDIR/sources_1/imports/iopid/IOPID.v">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../../HDL Code Generation/PID/flyback_pid/PID.v"/>
-        <Attr Name="ImportTime" Val="1688093622"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../HDL Code Generation/IOPID_FOMCON/iopid/IOPID.v"/>
+        <Attr Name="ImportTime" Val="1688681072"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -92,31 +92,31 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/imports/flyback_pid/PID.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../HDL Code Generation/PID_Antiwindup/flyback_pid/PID.v"/>
+        <Attr Name="ImportTime" Val="1688579600"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Submodulos/ADC_CTRL.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../FPGA-based-Digital-Twin/Vivado/PIDController/Submodulos/ADC_CTRL.v"/>
+        <Attr Name="ImportTime" Val="1669747896"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/imports/counter/Counter_SUB.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PPRDIR/../../../HDL Code Generation/Counter/counter/Counter_SUB.v"/>
         <Attr Name="ImportTime" Val="1688065617"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/imports/Submodulos/controlador.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../../../FPGA-based-Digital-Twin/Vivado/PIDController/Submodulos/controlador.v"/>
-        <Attr Name="ImportTime" Val="1669747896"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/imports/Submodulos/rotary_decoder.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../../../FPGA-based-Digital-Twin/Vivado/PIDController/Submodulos/rotary_decoder.v"/>
-        <Attr Name="ImportTime" Val="1669747896"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -132,10 +132,10 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/imports/Submodulos/ADC_CTRL.v">
+    <File Path="$PSRCDIR/sources_1/imports/Submodulos/controlador.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../../../FPGA-based-Digital-Twin/Vivado/PIDController/Submodulos/ADC_CTRL.v"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../FPGA-based-Digital-Twin/Vivado/PIDController/Submodulos/controlador.v"/>
         <Attr Name="ImportTime" Val="1669747896"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -166,6 +166,16 @@
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="ImportPath" Val="$PPRDIR/../../../../FPGA-based-Digital-Twin/Vivado/PIDController/Submodulos/pwm.v"/>
+        <Attr Name="ImportTime" Val="1669747896"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Submodulos/rotary_decoder.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../FPGA-based-Digital-Twin/Vivado/PIDController/Submodulos/rotary_decoder.v"/>
         <Attr Name="ImportTime" Val="1669747896"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>

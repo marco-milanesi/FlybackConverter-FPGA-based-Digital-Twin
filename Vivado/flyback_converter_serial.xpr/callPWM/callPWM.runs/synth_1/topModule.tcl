@@ -90,7 +90,7 @@ OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib {
   D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/imports/Submodulos/DT.v
-  D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/imports/flyback_pid/PID.v
+  D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/imports/iopid/IOPID.v
   D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/imports/Submodulos/ROM_grados_numericos.v
   D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/imports/hdl/XADCdemo.v
   D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/imports/Submodulos/divisor_freq.v

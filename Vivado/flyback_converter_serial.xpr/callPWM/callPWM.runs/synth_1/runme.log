@@ -10,7 +10,7 @@
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 
 source topModule.tcl -notrace
-create_project: Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 557.090 ; gain = 124.543
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 558.789 ; gain = 126.434
 Command: synth_design -top topModule -part xc7s50csga324-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7s50'
@@ -18,63 +18,67 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s50'
 INFO: [Device 21-403] Loading part xc7s50csga324-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 10024
+INFO: [Synth 8-7075] Helper process launched with PID 19548
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [D:/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
-INFO: [Synth 8-11241] undeclared symbol 'BaudTick', assumed default net type 'wire' [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/new/topModule.v:91]
-INFO: [Synth 8-11241] undeclared symbol 'TxD_start', assumed default net type 'wire' [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/new/topModule.v:93]
-INFO: [Synth 8-11241] undeclared symbol 'BaudTickEncoder', assumed default net type 'wire' [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/new/topModule.v:96]
-INFO: [Synth 8-11241] undeclared symbol 'TxD_startEncoder', assumed default net type 'wire' [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/new/topModule.v:98]
+INFO: [Synth 8-11241] undeclared symbol 'BaudTick', assumed default net type 'wire' [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/new/topModule.v:89]
+INFO: [Synth 8-11241] undeclared symbol 'TxD_start', assumed default net type 'wire' [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/new/topModule.v:91]
+INFO: [Synth 8-11241] undeclared symbol 'BaudTickEncoder', assumed default net type 'wire' [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/new/topModule.v:94]
+INFO: [Synth 8-11241] undeclared symbol 'TxD_startEncoder', assumed default net type 'wire' [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/new/topModule.v:96]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 1369.988 ; gain = 408.469
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1368.594 ; gain = 407.734
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'topModule' [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/new/topModule.v:24]
 INFO: [Synth 8-6157] synthesizing module 'divisor_freq' [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/imports/Submodulos/divisor_freq.v:8]
 INFO: [Synth 8-6155] done synthesizing module 'divisor_freq' (0#1) [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/imports/Submodulos/divisor_freq.v:8]
 INFO: [Synth 8-6157] synthesizing module 'XADCdemo' [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/imports/hdl/XADCdemo.v:22]
-INFO: [Synth 8-6157] synthesizing module 'xadc_wiz_0' [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.runs/synth_1/.Xil/Vivado-16768-Milanesi-Dell/realtime/xadc_wiz_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'xadc_wiz_0' (0#1) [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.runs/synth_1/.Xil/Vivado-16768-Milanesi-Dell/realtime/xadc_wiz_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'xadc_wiz_0' [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.runs/synth_1/.Xil/Vivado-10248-Milanesi-Dell/realtime/xadc_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'xadc_wiz_0' (0#1) [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.runs/synth_1/.Xil/Vivado-10248-Milanesi-Dell/realtime/xadc_wiz_0_stub.v:5]
 WARNING: [Synth 8-7071] port 'vccaux_alarm_out' of module 'xadc_wiz_0' is unconnected for instance 'xadc' [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/imports/hdl/XADCdemo.v:58]
 WARNING: [Synth 8-7071] port 'vccint_alarm_out' of module 'xadc_wiz_0' is unconnected for instance 'xadc' [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/imports/hdl/XADCdemo.v:58]
 WARNING: [Synth 8-7023] instance 'xadc' of module 'xadc_wiz_0' has 33 connections declared, but only 31 given [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/imports/hdl/XADCdemo.v:58]
 INFO: [Synth 8-6155] done synthesizing module 'XADCdemo' (0#1) [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/imports/hdl/XADCdemo.v:22]
-WARNING: [Synth 8-689] width (17) of port connection 'data_out_adc' does not match port width (16) of module 'XADCdemo' [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/new/topModule.v:130]
-INFO: [Synth 8-226] default block is never used [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/new/topModule.v:145]
+WARNING: [Synth 8-689] width (17) of port connection 'data_out_adc' does not match port width (16) of module 'XADCdemo' [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/new/topModule.v:128]
+INFO: [Synth 8-226] default block is never used [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/new/topModule.v:143]
 INFO: [Synth 8-6157] synthesizing module 'ROM_grados_numericos' [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/imports/Submodulos/ROM_grados_numericos.v:8]
 INFO: [Synth 8-6155] done synthesizing module 'ROM_grados_numericos' (0#1) [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/imports/Submodulos/ROM_grados_numericos.v:8]
 INFO: [Synth 8-6157] synthesizing module 'transmisor_async' [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/imports/Submodulos/transmisor_async.v:7]
 INFO: [Synth 8-6155] done synthesizing module 'transmisor_async' (0#1) [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/imports/Submodulos/transmisor_async.v:7]
-WARNING: [Synth 8-689] width (10) of port connection 'TxD_data' does not match port width (8) of module 'transmisor_async' [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/new/topModule.v:196]
+WARNING: [Synth 8-689] width (10) of port connection 'TxD_data' does not match port width (8) of module 'transmisor_async' [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/new/topModule.v:206]
+WARNING: [Synth 8-324] index 16 out of range [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/new/topModule.v:288]
 INFO: [Synth 8-6157] synthesizing module 'DT' [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/imports/Submodulos/DT.v:34]
 INFO: [Synth 8-6155] done synthesizing module 'DT' (0#1) [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/imports/Submodulos/DT.v:34]
-INFO: [Synth 8-6157] synthesizing module 'PID' [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/imports/flyback_pid/PID.v:34]
-INFO: [Synth 8-6155] done synthesizing module 'PID' (0#1) [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/imports/flyback_pid/PID.v:34]
+WARNING: [Synth 8-689] width (17) of port connection 'PV_DT' does not match port width (16) of module 'DT' [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/new/topModule.v:321]
+INFO: [Synth 8-6157] synthesizing module 'IOPID' [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/imports/iopid/IOPID.v:34]
+INFO: [Synth 8-6155] done synthesizing module 'IOPID' (0#1) [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/imports/iopid/IOPID.v:34]
 INFO: [Synth 8-6157] synthesizing module 'pwm8bits' [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/new/pwm8bits.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'pwm8bits' (0#1) [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/new/pwm8bits.v:23]
-WARNING: [Synth 8-689] width (17) of port connection 'pwm_in' does not match port width (8) of module 'pwm8bits' [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/new/topModule.v:377]
+WARNING: [Synth 8-689] width (17) of port connection 'pwm_in' does not match port width (8) of module 'pwm8bits' [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/new/topModule.v:383]
 INFO: [Synth 8-6155] done synthesizing module 'topModule' (0#1) [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/new/topModule.v:24]
-WARNING: [Synth 8-6014] Unused sequential element DigitalTwin_MV_Print_reg was removed.  [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/new/topModule.v:317]
-WARNING: [Synth 8-3936] Found unconnected internal register 'e_k_signo_reg' and it is trimmed from '17' to '16' bits. [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/new/topModule.v:258]
-WARNING: [Synth 8-3936] Found unconnected internal register 'data_out_adc_reg_reg' and it is trimmed from '17' to '16' bits. [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/new/topModule.v:136]
+WARNING: [Synth 8-6014] Unused sequential element DigitalTwin_MV_Print_reg was removed.  [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/new/topModule.v:336]
+WARNING: [Synth 8-3936] Found unconnected internal register 'data_out_adc_reg_reg' and it is trimmed from '17' to '16' bits. [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/new/topModule.v:134]
 WARNING: [Synth 8-3848] Net DIR in module/entity topModule does not have driver. [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/new/topModule.v:49]
 WARNING: [Synth 8-3848] Net out in module/entity topModule does not have driver. [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/new/topModule.v:49]
+WARNING: [Synth 8-3848] Net unsaturated_MV in module/entity topModule does not have driver. [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/new/topModule.v:345]
+WARNING: [Synth 8-3848] Net p_action in module/entity topModule does not have driver. [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/new/topModule.v:346]
+WARNING: [Synth 8-3848] Net i_action in module/entity topModule does not have driver. [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/new/topModule.v:347]
 WARNING: [Synth 8-7129] Port DIR in module topModule is either unconnected or has no load
 WARNING: [Synth 8-7129] Port out in module topModule is either unconnected or has no load
 WARNING: [Synth 8-7129] Port A in module topModule is either unconnected or has no load
 WARNING: [Synth 8-7129] Port B in module topModule is either unconnected or has no load
 WARNING: [Synth 8-7129] Port clearEncoder in module topModule is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:09 . Memory (MB): peak = 1464.215 ; gain = 502.695
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1464.859 ; gain = 504.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 1464.215 ; gain = 502.695
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1464.859 ; gain = 504.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 1464.215 ; gain = 502.695
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1464.859 ; gain = 504.000
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.068 . Memory (MB): peak = 1464.215 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.030 . Memory (MB): peak = 1464.859 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -91,28 +95,28 @@ Parsing XDC File [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyb
 Finished Parsing XDC File [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1557.422 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1551.246 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1557.422 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1551.246 ; gain = 0.000
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [D:/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:19 . Memory (MB): peak = 1557.422 ; gain = 595.902
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1551.246 ; gain = 590.387
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7s50csga324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:19 . Memory (MB): peak = 1557.422 ; gain = 595.902
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1551.246 ; gain = 590.387
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 Applied set_property KEEP_HIERARCHY = SOFT for u1/xadc. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:19 . Memory (MB): peak = 1557.422 ; gain = 595.902
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1551.246 ; gain = 590.387
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'transmisor_async'
 INFO: [Synth 8-802] inferred FSM for state register 'contData_reg' in module 'topModule'
@@ -136,40 +140,58 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
-                iSTATE15 |                            00000 |                 0000000000000000
-                iSTATE12 |                            00001 |                 0000000000000001
-                 iSTATE8 |                            00010 |                 0000000000000010
-                 iSTATE6 |                            00011 |                 0000000000000011
-                iSTATE28 |                            00100 |                 0000000000000100
-                iSTATE26 |                            00101 |                 0000000000000101
-                iSTATE22 |                            00110 |                 0000000000000110
-                iSTATE19 |                            00111 |                 0000000000000111
-                iSTATE25 |                            01000 |                 0000000000001000
-                iSTATE24 |                            01001 |                 0000000000001001
-                iSTATE17 |                            01010 |                 0000000000001010
-                iSTATE14 |                            01011 |                 0000000000001011
-                 iSTATE3 |                            01100 |                 0000000000001100
-                 iSTATE2 |                            01101 |                 0000000000001101
-                  iSTATE |                            01110 |                 0000000000001110
-                iSTATE27 |                            01111 |                 0000000000001111
-                 iSTATE9 |                            10000 |                 0000000000010000
-                 iSTATE7 |                            10001 |                 0000000000010001
-                 iSTATE5 |                            10010 |                 0000000000010010
-                 iSTATE4 |                            10011 |                 0000000000010011
-                iSTATE23 |                            10100 |                 0000000000010100
-                iSTATE21 |                            10101 |                 0000000000010101
-                iSTATE16 |                            10110 |                 0000000000010110
-                iSTATE13 |                            10111 |                 0000000000010111
-                iSTATE20 |                            11000 |                 0000000000011000
-                iSTATE18 |                            11001 |                 0000000000011001
-                iSTATE11 |                            11010 |                 0000000000011010
-                iSTATE10 |                            11011 |                 0000000000011011
-                 iSTATE1 |                            11100 |                 0000000000011100
-                 iSTATE0 |                            11101 |                 0000000000011101
+                iSTATE46 | 000000000000000000000000000000000000000000000001 |                 0000000000000000
+                iSTATE45 | 000000000000000000000000000000000000000000000010 |                 0000000000000001
+                iSTATE44 | 000000000000000000000000000000000000000000000100 |                 0000000000000010
+                iSTATE43 | 000000000000000000000000000000000000000000001000 |                 0000000000000011
+                iSTATE30 | 000000000000000000000000000000000000000000010000 |                 0000000000000100
+                iSTATE28 | 000000000000000000000000000000000000000000100000 |                 0000000000000101
+                iSTATE26 | 000000000000000000000000000000000000000001000000 |                 0000000000000110
+                iSTATE23 | 000000000000000000000000000000000000000010000000 |                 0000000000000111
+                iSTATE29 | 000000000000000000000000000000000000000100000000 |                 0000000000001000
+                iSTATE27 | 000000000000000000000000000000000000001000000000 |                 0000000000001001
+                iSTATE24 | 000000000000000000000000000000000000010000000000 |                 0000000000001010
+                iSTATE21 | 000000000000000000000000000000000000100000000000 |                 0000000000001011
+                iSTATE14 | 000000000000000000000000000000000001000000000000 |                 0000000000001100
+                iSTATE13 | 000000000000000000000000000000000010000000000000 |                 0000000000001101
+                iSTATE12 | 000000000000000000000000000000000100000000000000 |                 0000000000001110
+                 iSTATE7 | 000000000000000000000000000000001000000000000000 |                 0000000000001111
+                iSTATE25 | 000000000000000000000000000000010000000000000000 |                 0000000000010000
+                iSTATE22 | 000000000000000000000000000000100000000000000000 |                 0000000000010001
+                iSTATE18 | 000000000000000000000000000001000000000000000000 |                 0000000000010010
+                iSTATE17 | 000000000000000000000000000010000000000000000000 |                 0000000000010011
+                iSTATE11 | 000000000000000000000000000100000000000000000000 |                 0000000000010100
+                 iSTATE8 | 000000000000000000000000001000000000000000000000 |                 0000000000010101
+                 iSTATE4 | 000000000000000000000000010000000000000000000000 |                 0000000000010110
+                 iSTATE1 | 000000000000000000000000100000000000000000000000 |                 0000000000010111
+                 iSTATE9 | 000000000000000000000001000000000000000000000000 |                 0000000000011000
+                 iSTATE5 | 000000000000000000000010000000000000000000000000 |                 0000000000011001
+                 iSTATE2 | 000000000000000000000100000000000000000000000000 |                 0000000000011010
+                  iSTATE | 000000000000000000001000000000000000000000000000 |                 0000000000011011
+                iSTATE41 | 000000000000000000010000000000000000000000000000 |                 0000000000011100
+                iSTATE38 | 000000000000000000100000000000000000000000000000 |                 0000000000011101
+                iSTATE35 | 000000000000000001000000000000000000000000000000 |                 0000000000011110
+                iSTATE32 | 000000000000000010000000000000000000000000000000 |                 0000000000011111
+                iSTATE10 | 000000000000000100000000000000000000000000000000 |                 0000000000100000
+                 iSTATE6 | 000000000000001000000000000000000000000000000000 |                 0000000000100001
+                 iSTATE3 | 000000000000010000000000000000000000000000000000 |                 0000000000100010
+                 iSTATE0 | 000000000000100000000000000000000000000000000000 |                 0000000000100011
+                iSTATE42 | 000000000001000000000000000000000000000000000000 |                 0000000000100100
+                iSTATE40 | 000000000010000000000000000000000000000000000000 |                 0000000000100101
+                iSTATE36 | 000000000100000000000000000000000000000000000000 |                 0000000000100110
+                iSTATE34 | 000000001000000000000000000000000000000000000000 |                 0000000000100111
+                iSTATE39 | 000000010000000000000000000000000000000000000000 |                 0000000000101000
+                iSTATE37 | 000000100000000000000000000000000000000000000000 |                 0000000000101001
+                iSTATE33 | 000001000000000000000000000000000000000000000000 |                 0000000000101010
+                iSTATE31 | 000010000000000000000000000000000000000000000000 |                 0000000000101011
+                iSTATE20 | 000100000000000000000000000000000000000000000000 |                 0000000000101100
+                iSTATE19 | 001000000000000000000000000000000000000000000000 |                 0000000000101101
+                iSTATE16 | 010000000000000000000000000000000000000000000000 |                 0000000000101110
+                iSTATE15 | 100000000000000000000000000000000000000000000000 |                 0000000000101111
 ---------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'contData_reg' using encoding 'sequential' in module 'topModule'
+INFO: [Synth 8-3354] encoded FSM with state register 'contData_reg' using encoding 'one-hot' in module 'topModule'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:21 . Memory (MB): peak = 1557.422 ; gain = 595.902
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1551.246 ; gain = 590.387
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-223] decloning instance 'gen_baud' (divisor_freq) to 'gen_baudEncoder'
 INFO: [Synth 8-223] decloning instance 'gen_baud' (divisor_freq) to 'gen_baudError'
@@ -181,52 +203,40 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input   65 Bit       Adders := 7     
-	   3 Input   64 Bit       Adders := 1     
-	   4 Input   64 Bit       Adders := 1     
-	   2 Input   64 Bit       Adders := 1     
-	   6 Input   64 Bit       Adders := 1     
-	   5 Input   64 Bit       Adders := 1     
-	   2 Input   18 Bit       Adders := 9     
+	   2 Input   34 Bit       Adders := 4     
+	   2 Input   32 Bit       Adders := 3     
+	   2 Input   18 Bit       Adders := 13    
 	   2 Input   16 Bit       Adders := 1     
-	   3 Input   16 Bit       Adders := 1     
+	   4 Input   16 Bit       Adders := 1     
+	   3 Input   16 Bit       Adders := 2     
 	   2 Input    8 Bit       Adders := 1     
 +---Registers : 
-	               64 Bit    Registers := 5     
-	               17 Bit    Registers := 1     
-	               16 Bit    Registers := 3     
-	               11 Bit    Registers := 4     
-	               10 Bit    Registers := 1     
-	                8 Bit    Registers := 2     
-	                7 Bit    Registers := 3     
-	                6 Bit    Registers := 3     
-	                1 Bit    Registers := 5     
+	               32 Bit    Registers := 1     
+	               16 Bit    Registers := 12    
+	               11 Bit    Registers := 2     
+	               10 Bit    Registers := 3     
+	                9 Bit    Registers := 2     
+	                8 Bit    Registers := 4     
+	                7 Bit    Registers := 1     
+	                6 Bit    Registers := 1     
+	                1 Bit    Registers := 6     
 +---Multipliers : 
-	              54x64  Multipliers := 1     
-	              36x64  Multipliers := 1     
-	              35x64  Multipliers := 4     
-	              33x64  Multipliers := 1     
-	              64x64  Multipliers := 1     
-	              34x64  Multipliers := 2     
-	              32x64  Multipliers := 2     
-	              50x64  Multipliers := 1     
+	              32x32  Multipliers := 2     
 +---Muxes : 
-	   2 Input   65 Bit        Muxes := 9     
-	   2 Input   64 Bit        Muxes := 4     
-	   2 Input   48 Bit        Muxes := 2     
-	   2 Input   32 Bit        Muxes := 2     
-	   2 Input   18 Bit        Muxes := 9     
-	   2 Input   17 Bit        Muxes := 12    
-	   2 Input   16 Bit        Muxes := 8     
+	   2 Input   34 Bit        Muxes := 4     
+	   2 Input   33 Bit        Muxes := 4     
+	   2 Input   32 Bit        Muxes := 6     
+	   2 Input   18 Bit        Muxes := 13    
+	   2 Input   17 Bit        Muxes := 16    
+	   2 Input   16 Bit        Muxes := 16    
 	  12 Input   12 Bit        Muxes := 1     
-	  11 Input   10 Bit        Muxes := 30    
-	  30 Input   10 Bit        Muxes := 1     
+	  11 Input   10 Bit        Muxes := 40    
+	  48 Input   10 Bit        Muxes := 1     
+	   8 Input    9 Bit        Muxes := 1     
 	   7 Input    6 Bit        Muxes := 1     
-	   8 Input    6 Bit        Muxes := 1     
-	  30 Input    5 Bit        Muxes := 1     
 	   2 Input    1 Bit        Muxes := 1     
 	  12 Input    1 Bit        Muxes := 1     
-	  30 Input    1 Bit        Muxes := 1     
+	  48 Input    1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -243,480 +253,16 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
-WARNING: [Synth 8-3936] Found unconnected internal register 'controlOut_unsigned_reg' and it is trimmed from '17' to '11' bits. [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/new/topModule.v:373]
-DSP Report: Generating DSP Product2_mul_temp, operation Mode is: (A:0xcccd)*B.
-DSP Report: operator Product2_mul_temp is absorbed into DSP Product2_mul_temp.
-DSP Report: operator Product2_mul_temp is absorbed into DSP Product2_mul_temp.
-DSP Report: Generating DSP Product2_mul_temp, operation Mode is: (PCIN>>17)+A*B.
-DSP Report: operator Product2_mul_temp is absorbed into DSP Product2_mul_temp.
-DSP Report: operator Product2_mul_temp is absorbed into DSP Product2_mul_temp.
-DSP Report: Generating DSP Product2_mul_temp, operation Mode is: A*B.
-DSP Report: operator Product2_mul_temp is absorbed into DSP Product2_mul_temp.
-DSP Report: operator Product2_mul_temp is absorbed into DSP Product2_mul_temp.
-DSP Report: Generating DSP Product2_mul_temp, operation Mode is: PCIN+A*(B:0xcccd).
-DSP Report: operator Product2_mul_temp is absorbed into DSP Product2_mul_temp.
-DSP Report: operator Product2_mul_temp is absorbed into DSP Product2_mul_temp.
-DSP Report: Generating DSP Product2_mul_temp, operation Mode is: (PCIN>>17)+A*B.
-DSP Report: operator Product2_mul_temp is absorbed into DSP Product2_mul_temp.
-DSP Report: operator Product2_mul_temp is absorbed into DSP Product2_mul_temp.
-DSP Report: Generating DSP Product2_mul_temp, operation Mode is: A*(B:0xcccd).
-DSP Report: operator Product2_mul_temp is absorbed into DSP Product2_mul_temp.
-DSP Report: operator Product2_mul_temp is absorbed into DSP Product2_mul_temp.
-DSP Report: Generating DSP Product2_mul_temp, operation Mode is: (PCIN>>17)+A*B.
-DSP Report: operator Product2_mul_temp is absorbed into DSP Product2_mul_temp.
-DSP Report: operator Product2_mul_temp is absorbed into DSP Product2_mul_temp.
-DSP Report: Generating DSP Product2_mul_temp, operation Mode is: PCIN+A*(B:0xcccd).
-DSP Report: operator Product2_mul_temp is absorbed into DSP Product2_mul_temp.
-DSP Report: operator Product2_mul_temp is absorbed into DSP Product2_mul_temp.
-DSP Report: Generating DSP denom_gain1_mul_temp, operation Mode is: A*B2.
-DSP Report: register denom_gain1_mul_temp is absorbed into DSP denom_gain1_mul_temp.
-DSP Report: operator denom_gain1_mul_temp is absorbed into DSP denom_gain1_mul_temp.
-DSP Report: operator denom_gain1_mul_temp is absorbed into DSP denom_gain1_mul_temp.
-DSP Report: Generating DSP denom_gain1_mul_temp, operation Mode is: (PCIN>>17)+A*B2.
-DSP Report: register denom_gain1_mul_temp is absorbed into DSP denom_gain1_mul_temp.
-DSP Report: operator denom_gain1_mul_temp is absorbed into DSP denom_gain1_mul_temp.
-DSP Report: operator denom_gain1_mul_temp is absorbed into DSP denom_gain1_mul_temp.
-DSP Report: Generating DSP denom_gain1_mul_temp, operation Mode is: (A:0x1a787)*B2.
-DSP Report: register denom_gain1_mul_temp is absorbed into DSP denom_gain1_mul_temp.
-DSP Report: operator denom_gain1_mul_temp is absorbed into DSP denom_gain1_mul_temp.
-DSP Report: operator denom_gain1_mul_temp is absorbed into DSP denom_gain1_mul_temp.
-DSP Report: Generating DSP denom_gain1_mul_temp, operation Mode is: PCIN+A*B2.
-DSP Report: register denom_gain1_mul_temp is absorbed into DSP denom_gain1_mul_temp.
-DSP Report: operator denom_gain1_mul_temp is absorbed into DSP denom_gain1_mul_temp.
-DSP Report: operator denom_gain1_mul_temp is absorbed into DSP denom_gain1_mul_temp.
-DSP Report: Generating DSP denom_gain1_mul_temp, operation Mode is: (PCIN>>17)+(A:0x1a787)*B2.
-DSP Report: register denom_gain1_mul_temp is absorbed into DSP denom_gain1_mul_temp.
-DSP Report: operator denom_gain1_mul_temp is absorbed into DSP denom_gain1_mul_temp.
-DSP Report: operator denom_gain1_mul_temp is absorbed into DSP denom_gain1_mul_temp.
-DSP Report: Generating DSP denom_gain1_mul_temp, operation Mode is: (A:0x1a787)*B2.
-DSP Report: register denom_gain1_mul_temp is absorbed into DSP denom_gain1_mul_temp.
-DSP Report: operator denom_gain1_mul_temp is absorbed into DSP denom_gain1_mul_temp.
-DSP Report: operator denom_gain1_mul_temp is absorbed into DSP denom_gain1_mul_temp.
-DSP Report: Generating DSP denom_gain1_mul_temp, operation Mode is: (PCIN>>17)+(A:0x1a787)*B2.
-DSP Report: register denom_gain1_mul_temp is absorbed into DSP denom_gain1_mul_temp.
-DSP Report: operator denom_gain1_mul_temp is absorbed into DSP denom_gain1_mul_temp.
-DSP Report: operator denom_gain1_mul_temp is absorbed into DSP denom_gain1_mul_temp.
-DSP Report: Generating DSP denom_gain1_mul_temp, operation Mode is: PCIN+A*B2.
-DSP Report: register denom_gain1_mul_temp is absorbed into DSP denom_gain1_mul_temp.
-DSP Report: operator denom_gain1_mul_temp is absorbed into DSP denom_gain1_mul_temp.
-DSP Report: operator denom_gain1_mul_temp is absorbed into DSP denom_gain1_mul_temp.
-DSP Report: Generating DSP denom_gain2_mul_temp, operation Mode is: A*B''.
-DSP Report: register denom_gain2_mul_temp is absorbed into DSP denom_gain2_mul_temp.
-DSP Report: register denom_gain2_mul_temp is absorbed into DSP denom_gain2_mul_temp.
-DSP Report: operator denom_gain2_mul_temp is absorbed into DSP denom_gain2_mul_temp.
-DSP Report: operator denom_gain2_mul_temp is absorbed into DSP denom_gain2_mul_temp.
-DSP Report: Generating DSP denom_gain2_mul_temp, operation Mode is: (PCIN>>17)+A*B''.
-DSP Report: register denom_gain2_mul_temp is absorbed into DSP denom_gain2_mul_temp.
-DSP Report: register denom_gain2_mul_temp is absorbed into DSP denom_gain2_mul_temp.
-DSP Report: operator denom_gain2_mul_temp is absorbed into DSP denom_gain2_mul_temp.
-DSP Report: operator denom_gain2_mul_temp is absorbed into DSP denom_gain2_mul_temp.
-DSP Report: Generating DSP denom_gain2_mul_temp, operation Mode is: A''*(B:0xf766).
-DSP Report: register denom_gain2_mul_temp is absorbed into DSP denom_gain2_mul_temp.
-DSP Report: register denom_gain2_mul_temp is absorbed into DSP denom_gain2_mul_temp.
-DSP Report: operator denom_gain2_mul_temp is absorbed into DSP denom_gain2_mul_temp.
-DSP Report: operator denom_gain2_mul_temp is absorbed into DSP denom_gain2_mul_temp.
-DSP Report: Generating DSP denom_gain2_mul_temp, operation Mode is: PCIN+A*B''.
-DSP Report: register denom_gain2_mul_temp is absorbed into DSP denom_gain2_mul_temp.
-DSP Report: register denom_gain2_mul_temp is absorbed into DSP denom_gain2_mul_temp.
-DSP Report: operator denom_gain2_mul_temp is absorbed into DSP denom_gain2_mul_temp.
-DSP Report: operator denom_gain2_mul_temp is absorbed into DSP denom_gain2_mul_temp.
-DSP Report: Generating DSP denom_gain2_mul_temp, operation Mode is: (PCIN>>17)+(A:0xf766)*B''.
-DSP Report: register denom_gain2_mul_temp is absorbed into DSP denom_gain2_mul_temp.
-DSP Report: register denom_gain2_mul_temp is absorbed into DSP denom_gain2_mul_temp.
-DSP Report: operator denom_gain2_mul_temp is absorbed into DSP denom_gain2_mul_temp.
-DSP Report: operator denom_gain2_mul_temp is absorbed into DSP denom_gain2_mul_temp.
-DSP Report: Generating DSP denom_gain2_mul_temp, operation Mode is: A''*(B:0xf766).
-DSP Report: register denom_gain2_mul_temp is absorbed into DSP denom_gain2_mul_temp.
-DSP Report: register denom_gain2_mul_temp is absorbed into DSP denom_gain2_mul_temp.
-DSP Report: operator denom_gain2_mul_temp is absorbed into DSP denom_gain2_mul_temp.
-DSP Report: operator denom_gain2_mul_temp is absorbed into DSP denom_gain2_mul_temp.
-DSP Report: Generating DSP denom_gain2_mul_temp, operation Mode is: (PCIN>>17)+A''*(B:0xf766).
-DSP Report: register denom_gain2_mul_temp is absorbed into DSP denom_gain2_mul_temp.
-DSP Report: register denom_gain2_mul_temp is absorbed into DSP denom_gain2_mul_temp.
-DSP Report: operator denom_gain2_mul_temp is absorbed into DSP denom_gain2_mul_temp.
-DSP Report: operator denom_gain2_mul_temp is absorbed into DSP denom_gain2_mul_temp.
-DSP Report: Generating DSP denom_gain2_mul_temp, operation Mode is: PCIN+A*B''.
-DSP Report: register denom_gain2_mul_temp is absorbed into DSP denom_gain2_mul_temp.
-DSP Report: register denom_gain2_mul_temp is absorbed into DSP denom_gain2_mul_temp.
-DSP Report: operator denom_gain2_mul_temp is absorbed into DSP denom_gain2_mul_temp.
-DSP Report: operator denom_gain2_mul_temp is absorbed into DSP denom_gain2_mul_temp.
-DSP Report: Generating DSP denom_gain3_mul_temp, operation Mode is: A*B''.
-DSP Report: register denom_gain3_mul_temp is absorbed into DSP denom_gain3_mul_temp.
-DSP Report: register denom_gain3_mul_temp is absorbed into DSP denom_gain3_mul_temp.
-DSP Report: operator denom_gain3_mul_temp is absorbed into DSP denom_gain3_mul_temp.
-DSP Report: operator denom_gain3_mul_temp is absorbed into DSP denom_gain3_mul_temp.
-DSP Report: Generating DSP denom_gain3_mul_temp, operation Mode is: (PCIN>>17)+A*B''.
-DSP Report: register denom_gain3_mul_temp is absorbed into DSP denom_gain3_mul_temp.
-DSP Report: register denom_gain3_mul_temp is absorbed into DSP denom_gain3_mul_temp.
-DSP Report: operator denom_gain3_mul_temp is absorbed into DSP denom_gain3_mul_temp.
-DSP Report: operator denom_gain3_mul_temp is absorbed into DSP denom_gain3_mul_temp.
-DSP Report: Generating DSP denom_gain3_mul_temp, operation Mode is: A''*(B:0x6a7f).
-DSP Report: register denom_gain3_mul_temp is absorbed into DSP denom_gain3_mul_temp.
-DSP Report: register denom_gain3_mul_temp is absorbed into DSP denom_gain3_mul_temp.
-DSP Report: operator denom_gain3_mul_temp is absorbed into DSP denom_gain3_mul_temp.
-DSP Report: operator denom_gain3_mul_temp is absorbed into DSP denom_gain3_mul_temp.
-DSP Report: Generating DSP denom_gain3_mul_temp, operation Mode is: PCIN+A*B''.
-DSP Report: register denom_gain3_mul_temp is absorbed into DSP denom_gain3_mul_temp.
-DSP Report: register denom_gain3_mul_temp is absorbed into DSP denom_gain3_mul_temp.
-DSP Report: operator denom_gain3_mul_temp is absorbed into DSP denom_gain3_mul_temp.
-DSP Report: operator denom_gain3_mul_temp is absorbed into DSP denom_gain3_mul_temp.
-DSP Report: Generating DSP denom_gain3_mul_temp, operation Mode is: (PCIN>>17)+(A:0x6a7f)*B''.
-DSP Report: register denom_gain3_mul_temp is absorbed into DSP denom_gain3_mul_temp.
-DSP Report: register denom_gain3_mul_temp is absorbed into DSP denom_gain3_mul_temp.
-DSP Report: operator denom_gain3_mul_temp is absorbed into DSP denom_gain3_mul_temp.
-DSP Report: operator denom_gain3_mul_temp is absorbed into DSP denom_gain3_mul_temp.
-DSP Report: Generating DSP denom_gain3_mul_temp, operation Mode is: A''*(B:0x6a7f).
-DSP Report: register denom_gain3_mul_temp is absorbed into DSP denom_gain3_mul_temp.
-DSP Report: register denom_gain3_mul_temp is absorbed into DSP denom_gain3_mul_temp.
-DSP Report: operator denom_gain3_mul_temp is absorbed into DSP denom_gain3_mul_temp.
-DSP Report: operator denom_gain3_mul_temp is absorbed into DSP denom_gain3_mul_temp.
-DSP Report: Generating DSP denom_gain3_mul_temp, operation Mode is: (PCIN>>17)+A''*(B:0x6a7f).
-DSP Report: register denom_gain3_mul_temp is absorbed into DSP denom_gain3_mul_temp.
-DSP Report: register denom_gain3_mul_temp is absorbed into DSP denom_gain3_mul_temp.
-DSP Report: operator denom_gain3_mul_temp is absorbed into DSP denom_gain3_mul_temp.
-DSP Report: operator denom_gain3_mul_temp is absorbed into DSP denom_gain3_mul_temp.
-DSP Report: Generating DSP denom_gain3_mul_temp, operation Mode is: PCIN+A*B''.
-DSP Report: register denom_gain3_mul_temp is absorbed into DSP denom_gain3_mul_temp.
-DSP Report: register denom_gain3_mul_temp is absorbed into DSP denom_gain3_mul_temp.
-DSP Report: operator denom_gain3_mul_temp is absorbed into DSP denom_gain3_mul_temp.
-DSP Report: operator denom_gain3_mul_temp is absorbed into DSP denom_gain3_mul_temp.
-DSP Report: Generating DSP denom_gain4_mul_temp, operation Mode is: A''*B.
-DSP Report: register denom_gain4_mul_temp is absorbed into DSP denom_gain4_mul_temp.
-DSP Report: register denom_gain4_mul_temp is absorbed into DSP denom_gain4_mul_temp.
-DSP Report: operator denom_gain4_mul_temp is absorbed into DSP denom_gain4_mul_temp.
-DSP Report: operator denom_gain4_mul_temp is absorbed into DSP denom_gain4_mul_temp.
-DSP Report: Generating DSP denom_gain4_mul_temp, operation Mode is: (PCIN>>17)+A*B''.
-DSP Report: register denom_gain4_mul_temp is absorbed into DSP denom_gain4_mul_temp.
-DSP Report: register denom_gain4_mul_temp is absorbed into DSP denom_gain4_mul_temp.
-DSP Report: operator denom_gain4_mul_temp is absorbed into DSP denom_gain4_mul_temp.
-DSP Report: operator denom_gain4_mul_temp is absorbed into DSP denom_gain4_mul_temp.
-DSP Report: Generating DSP denom_gain4_mul_temp, operation Mode is: (A:0x11aa0)*B''.
-DSP Report: register denom_gain4_mul_temp is absorbed into DSP denom_gain4_mul_temp.
-DSP Report: register denom_gain4_mul_temp is absorbed into DSP denom_gain4_mul_temp.
-DSP Report: operator denom_gain4_mul_temp is absorbed into DSP denom_gain4_mul_temp.
-DSP Report: operator denom_gain4_mul_temp is absorbed into DSP denom_gain4_mul_temp.
-DSP Report: Generating DSP denom_gain4_mul_temp, operation Mode is: PCIN+A''*B.
-DSP Report: register denom_gain4_mul_temp is absorbed into DSP denom_gain4_mul_temp.
-DSP Report: register denom_gain4_mul_temp is absorbed into DSP denom_gain4_mul_temp.
-DSP Report: operator denom_gain4_mul_temp is absorbed into DSP denom_gain4_mul_temp.
-DSP Report: operator denom_gain4_mul_temp is absorbed into DSP denom_gain4_mul_temp.
-DSP Report: Generating DSP denom_gain4_mul_temp, operation Mode is: (PCIN>>17)+(A:0x11aa0)*B''.
-DSP Report: register denom_gain4_mul_temp is absorbed into DSP denom_gain4_mul_temp.
-DSP Report: register denom_gain4_mul_temp is absorbed into DSP denom_gain4_mul_temp.
-DSP Report: operator denom_gain4_mul_temp is absorbed into DSP denom_gain4_mul_temp.
-DSP Report: operator denom_gain4_mul_temp is absorbed into DSP denom_gain4_mul_temp.
-DSP Report: Generating DSP denom_gain4_mul_temp, operation Mode is: (A:0x11aa0)*B''.
-DSP Report: register denom_gain4_mul_temp is absorbed into DSP denom_gain4_mul_temp.
-DSP Report: register denom_gain4_mul_temp is absorbed into DSP denom_gain4_mul_temp.
-DSP Report: operator denom_gain4_mul_temp is absorbed into DSP denom_gain4_mul_temp.
-DSP Report: operator denom_gain4_mul_temp is absorbed into DSP denom_gain4_mul_temp.
-DSP Report: Generating DSP denom_gain4_mul_temp, operation Mode is: (PCIN>>17)+(A:0x11aa0)*B''.
-DSP Report: register denom_gain4_mul_temp is absorbed into DSP denom_gain4_mul_temp.
-DSP Report: register denom_gain4_mul_temp is absorbed into DSP denom_gain4_mul_temp.
-DSP Report: operator denom_gain4_mul_temp is absorbed into DSP denom_gain4_mul_temp.
-DSP Report: operator denom_gain4_mul_temp is absorbed into DSP denom_gain4_mul_temp.
-DSP Report: Generating DSP denom_gain4_mul_temp, operation Mode is: PCIN+A''*B.
-DSP Report: register denom_gain4_mul_temp is absorbed into DSP denom_gain4_mul_temp.
-DSP Report: register denom_gain4_mul_temp is absorbed into DSP denom_gain4_mul_temp.
-DSP Report: operator denom_gain4_mul_temp is absorbed into DSP denom_gain4_mul_temp.
-DSP Report: operator denom_gain4_mul_temp is absorbed into DSP denom_gain4_mul_temp.
-DSP Report: Generating DSP Product1_mul_temp, operation Mode is: A*B.
-DSP Report: operator Product1_mul_temp is absorbed into DSP Product1_mul_temp.
-DSP Report: operator Product1_mul_temp is absorbed into DSP Product1_mul_temp.
-DSP Report: Generating DSP Product1_mul_temp, operation Mode is: (PCIN>>17)+A*B.
-DSP Report: operator Product1_mul_temp is absorbed into DSP Product1_mul_temp.
-DSP Report: operator Product1_mul_temp is absorbed into DSP Product1_mul_temp.
-DSP Report: Generating DSP Product1_mul_temp, operation Mode is: PCIN+A*B.
-DSP Report: operator Product1_mul_temp is absorbed into DSP Product1_mul_temp.
-DSP Report: operator Product1_mul_temp is absorbed into DSP Product1_mul_temp.
-DSP Report: Generating DSP Product1_mul_temp, operation Mode is: (PCIN>>17)+A*B.
-DSP Report: operator Product1_mul_temp is absorbed into DSP Product1_mul_temp.
-DSP Report: operator Product1_mul_temp is absorbed into DSP Product1_mul_temp.
-DSP Report: Generating DSP Product1_mul_temp, operation Mode is: A*B.
-DSP Report: operator Product1_mul_temp is absorbed into DSP Product1_mul_temp.
-DSP Report: operator Product1_mul_temp is absorbed into DSP Product1_mul_temp.
-DSP Report: Generating DSP Product1_mul_temp, operation Mode is: PCIN+A*B.
-DSP Report: operator Product1_mul_temp is absorbed into DSP Product1_mul_temp.
-DSP Report: operator Product1_mul_temp is absorbed into DSP Product1_mul_temp.
-DSP Report: Generating DSP Product1_mul_temp, operation Mode is: (PCIN>>17)+A*B.
-DSP Report: operator Product1_mul_temp is absorbed into DSP Product1_mul_temp.
-DSP Report: operator Product1_mul_temp is absorbed into DSP Product1_mul_temp.
-DSP Report: Generating DSP Product1_mul_temp, operation Mode is: PCIN+A*B.
-DSP Report: operator Product1_mul_temp is absorbed into DSP Product1_mul_temp.
-DSP Report: operator Product1_mul_temp is absorbed into DSP Product1_mul_temp.
-DSP Report: Generating DSP Product1_mul_temp, operation Mode is: A*B.
-DSP Report: operator Product1_mul_temp is absorbed into DSP Product1_mul_temp.
-DSP Report: operator Product1_mul_temp is absorbed into DSP Product1_mul_temp.
-DSP Report: Generating DSP Product1_mul_temp, operation Mode is: PCIN+A*B.
-DSP Report: operator Product1_mul_temp is absorbed into DSP Product1_mul_temp.
-DSP Report: operator Product1_mul_temp is absorbed into DSP Product1_mul_temp.
-DSP Report: Generating DSP Product1_mul_temp, operation Mode is: (PCIN>>17)+A*B.
-DSP Report: operator Product1_mul_temp is absorbed into DSP Product1_mul_temp.
-DSP Report: operator Product1_mul_temp is absorbed into DSP Product1_mul_temp.
-DSP Report: Generating DSP Product1_mul_temp, operation Mode is: PCIN+A*B.
-DSP Report: operator Product1_mul_temp is absorbed into DSP Product1_mul_temp.
-DSP Report: operator Product1_mul_temp is absorbed into DSP Product1_mul_temp.
-DSP Report: Generating DSP Product1_mul_temp, operation Mode is: A*B.
-DSP Report: operator Product1_mul_temp is absorbed into DSP Product1_mul_temp.
-DSP Report: operator Product1_mul_temp is absorbed into DSP Product1_mul_temp.
-DSP Report: Generating DSP Product1_mul_temp, operation Mode is: (PCIN>>17)+A*B.
-DSP Report: operator Product1_mul_temp is absorbed into DSP Product1_mul_temp.
-DSP Report: operator Product1_mul_temp is absorbed into DSP Product1_mul_temp.
-DSP Report: Generating DSP Product1_mul_temp, operation Mode is: PCIN+A*B.
-DSP Report: operator Product1_mul_temp is absorbed into DSP Product1_mul_temp.
-DSP Report: operator Product1_mul_temp is absorbed into DSP Product1_mul_temp.
-DSP Report: Generating DSP Product1_mul_temp, operation Mode is: (PCIN>>17)+A*B.
-DSP Report: operator Product1_mul_temp is absorbed into DSP Product1_mul_temp.
-DSP Report: operator Product1_mul_temp is absorbed into DSP Product1_mul_temp.
-DSP Report: Generating DSP gain_mul_temp, operation Mode is: A*B.
-DSP Report: operator gain_mul_temp is absorbed into DSP gain_mul_temp.
-DSP Report: operator gain_mul_temp is absorbed into DSP gain_mul_temp.
-DSP Report: Generating DSP gain_mul_temp, operation Mode is: PCIN+A*B.
-DSP Report: operator gain_mul_temp is absorbed into DSP gain_mul_temp.
-DSP Report: operator gain_mul_temp is absorbed into DSP gain_mul_temp.
-DSP Report: Generating DSP gain_mul_temp, operation Mode is: (PCIN>>17)+A*B.
-DSP Report: operator gain_mul_temp is absorbed into DSP gain_mul_temp.
-DSP Report: operator gain_mul_temp is absorbed into DSP gain_mul_temp.
-DSP Report: Generating DSP gain_mul_temp, operation Mode is: (A:0x168f1)*B.
-DSP Report: operator gain_mul_temp is absorbed into DSP gain_mul_temp.
-DSP Report: operator gain_mul_temp is absorbed into DSP gain_mul_temp.
-DSP Report: Generating DSP gain_mul_temp, operation Mode is: PCIN+A*B.
-DSP Report: operator gain_mul_temp is absorbed into DSP gain_mul_temp.
-DSP Report: operator gain_mul_temp is absorbed into DSP gain_mul_temp.
-DSP Report: Generating DSP gain_mul_temp, operation Mode is: PCIN+A*B.
-DSP Report: operator gain_mul_temp is absorbed into DSP gain_mul_temp.
-DSP Report: operator gain_mul_temp is absorbed into DSP gain_mul_temp.
-DSP Report: Generating DSP gain_mul_temp, operation Mode is: (A:0x168f1)*B.
-DSP Report: operator gain_mul_temp is absorbed into DSP gain_mul_temp.
-DSP Report: operator gain_mul_temp is absorbed into DSP gain_mul_temp.
-DSP Report: Generating DSP gain_mul_temp, operation Mode is: PCIN+A*B.
-DSP Report: operator gain_mul_temp is absorbed into DSP gain_mul_temp.
-DSP Report: operator gain_mul_temp is absorbed into DSP gain_mul_temp.
-DSP Report: Generating DSP gain_mul_temp, operation Mode is: PCIN+A*B.
-DSP Report: operator gain_mul_temp is absorbed into DSP gain_mul_temp.
-DSP Report: operator gain_mul_temp is absorbed into DSP gain_mul_temp.
-DSP Report: Generating DSP gain_mul_temp, operation Mode is: (A:0x168f1)*B.
-DSP Report: operator gain_mul_temp is absorbed into DSP gain_mul_temp.
-DSP Report: operator gain_mul_temp is absorbed into DSP gain_mul_temp.
-DSP Report: Generating DSP gain_mul_temp, operation Mode is: (PCIN>>17)+(A:0x168f1)*B.
-DSP Report: operator gain_mul_temp is absorbed into DSP gain_mul_temp.
-DSP Report: operator gain_mul_temp is absorbed into DSP gain_mul_temp.
-DSP Report: Generating DSP gain_mul_temp, operation Mode is: PCIN+A*B.
-DSP Report: operator gain_mul_temp is absorbed into DSP gain_mul_temp.
-DSP Report: operator gain_mul_temp is absorbed into DSP gain_mul_temp.
-DSP Report: Generating DSP Product_mul_temp, operation Mode is: A*B.
-DSP Report: operator Product_mul_temp is absorbed into DSP Product_mul_temp.
-DSP Report: operator Product_mul_temp is absorbed into DSP Product_mul_temp.
-DSP Report: Generating DSP Product_mul_temp, operation Mode is: PCIN+A*B.
-DSP Report: operator Product_mul_temp is absorbed into DSP Product_mul_temp.
-DSP Report: operator Product_mul_temp is absorbed into DSP Product_mul_temp.
-DSP Report: Generating DSP Product_mul_temp, operation Mode is: A*B.
-DSP Report: operator Product_mul_temp is absorbed into DSP Product_mul_temp.
-DSP Report: operator Product_mul_temp is absorbed into DSP Product_mul_temp.
-DSP Report: Generating DSP Product_mul_temp, operation Mode is: PCIN+A*B.
-DSP Report: operator Product_mul_temp is absorbed into DSP Product_mul_temp.
-DSP Report: operator Product_mul_temp is absorbed into DSP Product_mul_temp.
-DSP Report: Generating DSP Product_mul_temp, operation Mode is: (PCIN>>17)+A*B.
-DSP Report: operator Product_mul_temp is absorbed into DSP Product_mul_temp.
-DSP Report: operator Product_mul_temp is absorbed into DSP Product_mul_temp.
-DSP Report: Generating DSP Product_mul_temp, operation Mode is: PCIN+A*B.
-DSP Report: operator Product_mul_temp is absorbed into DSP Product_mul_temp.
-DSP Report: operator Product_mul_temp is absorbed into DSP Product_mul_temp.
-DSP Report: Generating DSP Product_mul_temp, operation Mode is: A*B.
-DSP Report: operator Product_mul_temp is absorbed into DSP Product_mul_temp.
-DSP Report: operator Product_mul_temp is absorbed into DSP Product_mul_temp.
-DSP Report: Generating DSP Product_mul_temp, operation Mode is: (PCIN>>17)+A*B.
-DSP Report: operator Product_mul_temp is absorbed into DSP Product_mul_temp.
-DSP Report: operator Product_mul_temp is absorbed into DSP Product_mul_temp.
-DSP Report: Generating DSP Product_mul_temp, operation Mode is: PCIN+A*B.
-DSP Report: operator Product_mul_temp is absorbed into DSP Product_mul_temp.
-DSP Report: operator Product_mul_temp is absorbed into DSP Product_mul_temp.
-DSP Report: Generating DSP Product_mul_temp, operation Mode is: (PCIN>>17)+A*B.
-DSP Report: operator Product_mul_temp is absorbed into DSP Product_mul_temp.
-DSP Report: operator Product_mul_temp is absorbed into DSP Product_mul_temp.
-DSP Report: Generating DSP nume_gain1_mul_temp, operation Mode is: A2*B.
-DSP Report: register nume_gain1_mul_temp is absorbed into DSP nume_gain1_mul_temp.
-DSP Report: operator nume_gain1_mul_temp is absorbed into DSP nume_gain1_mul_temp.
-DSP Report: operator nume_gain1_mul_temp is absorbed into DSP nume_gain1_mul_temp.
-DSP Report: Generating DSP nume_gain1_mul_temp, operation Mode is: (PCIN>>17)+A*B2.
-DSP Report: register nume_gain1_mul_temp is absorbed into DSP nume_gain1_mul_temp.
-DSP Report: operator nume_gain1_mul_temp is absorbed into DSP nume_gain1_mul_temp.
-DSP Report: operator nume_gain1_mul_temp is absorbed into DSP nume_gain1_mul_temp.
-DSP Report: Generating DSP nume_gain1_mul_temp, operation Mode is: (A:0x158e2)*B2.
-DSP Report: register nume_gain1_mul_temp is absorbed into DSP nume_gain1_mul_temp.
-DSP Report: operator nume_gain1_mul_temp is absorbed into DSP nume_gain1_mul_temp.
-DSP Report: operator nume_gain1_mul_temp is absorbed into DSP nume_gain1_mul_temp.
-DSP Report: Generating DSP nume_gain1_mul_temp, operation Mode is: PCIN+A2*B.
-DSP Report: register nume_gain1_mul_temp is absorbed into DSP nume_gain1_mul_temp.
-DSP Report: operator nume_gain1_mul_temp is absorbed into DSP nume_gain1_mul_temp.
-DSP Report: operator nume_gain1_mul_temp is absorbed into DSP nume_gain1_mul_temp.
-DSP Report: Generating DSP nume_gain1_mul_temp, operation Mode is: (PCIN>>17)+(A:0x158e2)*B2.
-DSP Report: register nume_gain1_mul_temp is absorbed into DSP nume_gain1_mul_temp.
-DSP Report: operator nume_gain1_mul_temp is absorbed into DSP nume_gain1_mul_temp.
-DSP Report: operator nume_gain1_mul_temp is absorbed into DSP nume_gain1_mul_temp.
-DSP Report: Generating DSP nume_gain1_mul_temp, operation Mode is: (A:0x158e2)*B2.
-DSP Report: register nume_gain1_mul_temp is absorbed into DSP nume_gain1_mul_temp.
-DSP Report: operator nume_gain1_mul_temp is absorbed into DSP nume_gain1_mul_temp.
-DSP Report: operator nume_gain1_mul_temp is absorbed into DSP nume_gain1_mul_temp.
-DSP Report: Generating DSP nume_gain1_mul_temp, operation Mode is: (PCIN>>17)+(A:0x158e2)*B2.
-DSP Report: register nume_gain1_mul_temp is absorbed into DSP nume_gain1_mul_temp.
-DSP Report: operator nume_gain1_mul_temp is absorbed into DSP nume_gain1_mul_temp.
-DSP Report: operator nume_gain1_mul_temp is absorbed into DSP nume_gain1_mul_temp.
-DSP Report: Generating DSP nume_gain1_mul_temp, operation Mode is: PCIN+A2*B.
-DSP Report: register nume_gain1_mul_temp is absorbed into DSP nume_gain1_mul_temp.
-DSP Report: operator nume_gain1_mul_temp is absorbed into DSP nume_gain1_mul_temp.
-DSP Report: operator nume_gain1_mul_temp is absorbed into DSP nume_gain1_mul_temp.
-DSP Report: Generating DSP nume_gain2_mul_temp, operation Mode is: A*B''.
-DSP Report: register nume_gain2_mul_temp is absorbed into DSP nume_gain2_mul_temp.
-DSP Report: register nume_gain2_mul_temp is absorbed into DSP nume_gain2_mul_temp.
-DSP Report: operator nume_gain2_mul_temp is absorbed into DSP nume_gain2_mul_temp.
-DSP Report: operator nume_gain2_mul_temp is absorbed into DSP nume_gain2_mul_temp.
-DSP Report: Generating DSP nume_gain2_mul_temp, operation Mode is: (PCIN>>17)+A*B''.
-DSP Report: register nume_gain2_mul_temp is absorbed into DSP nume_gain2_mul_temp.
-DSP Report: register nume_gain2_mul_temp is absorbed into DSP nume_gain2_mul_temp.
-DSP Report: operator nume_gain2_mul_temp is absorbed into DSP nume_gain2_mul_temp.
-DSP Report: operator nume_gain2_mul_temp is absorbed into DSP nume_gain2_mul_temp.
-DSP Report: Generating DSP nume_gain2_mul_temp, operation Mode is: (A:0x1404f)*B''.
-DSP Report: register nume_gain2_mul_temp is absorbed into DSP nume_gain2_mul_temp.
-DSP Report: register nume_gain2_mul_temp is absorbed into DSP nume_gain2_mul_temp.
-DSP Report: operator nume_gain2_mul_temp is absorbed into DSP nume_gain2_mul_temp.
-DSP Report: operator nume_gain2_mul_temp is absorbed into DSP nume_gain2_mul_temp.
-DSP Report: Generating DSP nume_gain2_mul_temp, operation Mode is: PCIN+A*B''.
-DSP Report: register nume_gain2_mul_temp is absorbed into DSP nume_gain2_mul_temp.
-DSP Report: register nume_gain2_mul_temp is absorbed into DSP nume_gain2_mul_temp.
-DSP Report: operator nume_gain2_mul_temp is absorbed into DSP nume_gain2_mul_temp.
-DSP Report: operator nume_gain2_mul_temp is absorbed into DSP nume_gain2_mul_temp.
-DSP Report: Generating DSP nume_gain2_mul_temp, operation Mode is: (PCIN>>17)+(A:0x1404f)*B''.
-DSP Report: register nume_gain2_mul_temp is absorbed into DSP nume_gain2_mul_temp.
-DSP Report: register nume_gain2_mul_temp is absorbed into DSP nume_gain2_mul_temp.
-DSP Report: operator nume_gain2_mul_temp is absorbed into DSP nume_gain2_mul_temp.
-DSP Report: operator nume_gain2_mul_temp is absorbed into DSP nume_gain2_mul_temp.
-DSP Report: Generating DSP nume_gain2_mul_temp, operation Mode is: (A:0x1404f)*B''.
-DSP Report: register nume_gain2_mul_temp is absorbed into DSP nume_gain2_mul_temp.
-DSP Report: register nume_gain2_mul_temp is absorbed into DSP nume_gain2_mul_temp.
-DSP Report: operator nume_gain2_mul_temp is absorbed into DSP nume_gain2_mul_temp.
-DSP Report: operator nume_gain2_mul_temp is absorbed into DSP nume_gain2_mul_temp.
-DSP Report: Generating DSP nume_gain2_mul_temp, operation Mode is: (PCIN>>17)+(A:0x1404f)*B''.
-DSP Report: register nume_gain2_mul_temp is absorbed into DSP nume_gain2_mul_temp.
-DSP Report: register nume_gain2_mul_temp is absorbed into DSP nume_gain2_mul_temp.
-DSP Report: operator nume_gain2_mul_temp is absorbed into DSP nume_gain2_mul_temp.
-DSP Report: operator nume_gain2_mul_temp is absorbed into DSP nume_gain2_mul_temp.
-DSP Report: Generating DSP nume_gain2_mul_temp, operation Mode is: PCIN+A*B''.
-DSP Report: register nume_gain2_mul_temp is absorbed into DSP nume_gain2_mul_temp.
-DSP Report: register nume_gain2_mul_temp is absorbed into DSP nume_gain2_mul_temp.
-DSP Report: operator nume_gain2_mul_temp is absorbed into DSP nume_gain2_mul_temp.
-DSP Report: operator nume_gain2_mul_temp is absorbed into DSP nume_gain2_mul_temp.
-DSP Report: Generating DSP nume_gain3_mul_temp, operation Mode is: A''*B.
-DSP Report: register nume_gain3_mul_temp is absorbed into DSP nume_gain3_mul_temp.
-DSP Report: register nume_gain3_mul_temp is absorbed into DSP nume_gain3_mul_temp.
-DSP Report: operator nume_gain3_mul_temp is absorbed into DSP nume_gain3_mul_temp.
-DSP Report: operator nume_gain3_mul_temp is absorbed into DSP nume_gain3_mul_temp.
-DSP Report: Generating DSP nume_gain3_mul_temp, operation Mode is: (PCIN>>17)+A*B''.
-DSP Report: register nume_gain3_mul_temp is absorbed into DSP nume_gain3_mul_temp.
-DSP Report: register nume_gain3_mul_temp is absorbed into DSP nume_gain3_mul_temp.
-DSP Report: operator nume_gain3_mul_temp is absorbed into DSP nume_gain3_mul_temp.
-DSP Report: operator nume_gain3_mul_temp is absorbed into DSP nume_gain3_mul_temp.
-DSP Report: Generating DSP nume_gain3_mul_temp, operation Mode is: (A:0x1b3d0)*B''.
-DSP Report: register nume_gain3_mul_temp is absorbed into DSP nume_gain3_mul_temp.
-DSP Report: register nume_gain3_mul_temp is absorbed into DSP nume_gain3_mul_temp.
-DSP Report: operator nume_gain3_mul_temp is absorbed into DSP nume_gain3_mul_temp.
-DSP Report: operator nume_gain3_mul_temp is absorbed into DSP nume_gain3_mul_temp.
-DSP Report: Generating DSP nume_gain3_mul_temp, operation Mode is: PCIN+A''*B.
-DSP Report: register nume_gain3_mul_temp is absorbed into DSP nume_gain3_mul_temp.
-DSP Report: register nume_gain3_mul_temp is absorbed into DSP nume_gain3_mul_temp.
-DSP Report: operator nume_gain3_mul_temp is absorbed into DSP nume_gain3_mul_temp.
-DSP Report: operator nume_gain3_mul_temp is absorbed into DSP nume_gain3_mul_temp.
-DSP Report: Generating DSP nume_gain3_mul_temp, operation Mode is: (PCIN>>17)+(A:0x1b3d0)*B''.
-DSP Report: register nume_gain3_mul_temp is absorbed into DSP nume_gain3_mul_temp.
-DSP Report: register nume_gain3_mul_temp is absorbed into DSP nume_gain3_mul_temp.
-DSP Report: operator nume_gain3_mul_temp is absorbed into DSP nume_gain3_mul_temp.
-DSP Report: operator nume_gain3_mul_temp is absorbed into DSP nume_gain3_mul_temp.
-DSP Report: Generating DSP nume_gain3_mul_temp, operation Mode is: (A:0x1b3d0)*B''.
-DSP Report: register nume_gain3_mul_temp is absorbed into DSP nume_gain3_mul_temp.
-DSP Report: register nume_gain3_mul_temp is absorbed into DSP nume_gain3_mul_temp.
-DSP Report: operator nume_gain3_mul_temp is absorbed into DSP nume_gain3_mul_temp.
-DSP Report: operator nume_gain3_mul_temp is absorbed into DSP nume_gain3_mul_temp.
-DSP Report: Generating DSP nume_gain3_mul_temp, operation Mode is: (PCIN>>17)+(A:0x1b3d0)*B''.
-DSP Report: register nume_gain3_mul_temp is absorbed into DSP nume_gain3_mul_temp.
-DSP Report: register nume_gain3_mul_temp is absorbed into DSP nume_gain3_mul_temp.
-DSP Report: operator nume_gain3_mul_temp is absorbed into DSP nume_gain3_mul_temp.
-DSP Report: operator nume_gain3_mul_temp is absorbed into DSP nume_gain3_mul_temp.
-DSP Report: Generating DSP nume_gain3_mul_temp, operation Mode is: PCIN+A''*B.
-DSP Report: register nume_gain3_mul_temp is absorbed into DSP nume_gain3_mul_temp.
-DSP Report: register nume_gain3_mul_temp is absorbed into DSP nume_gain3_mul_temp.
-DSP Report: operator nume_gain3_mul_temp is absorbed into DSP nume_gain3_mul_temp.
-DSP Report: operator nume_gain3_mul_temp is absorbed into DSP nume_gain3_mul_temp.
-DSP Report: Generating DSP nume_gain4_mul_temp, operation Mode is: A''*B.
-DSP Report: register nume_gain4_mul_temp is absorbed into DSP nume_gain4_mul_temp.
-DSP Report: register nume_gain4_mul_temp is absorbed into DSP nume_gain4_mul_temp.
-DSP Report: operator nume_gain4_mul_temp is absorbed into DSP nume_gain4_mul_temp.
-DSP Report: operator nume_gain4_mul_temp is absorbed into DSP nume_gain4_mul_temp.
-DSP Report: Generating DSP nume_gain4_mul_temp, operation Mode is: (PCIN>>17)+A*B''.
-DSP Report: register nume_gain4_mul_temp is absorbed into DSP nume_gain4_mul_temp.
-DSP Report: register nume_gain4_mul_temp is absorbed into DSP nume_gain4_mul_temp.
-DSP Report: operator nume_gain4_mul_temp is absorbed into DSP nume_gain4_mul_temp.
-DSP Report: operator nume_gain4_mul_temp is absorbed into DSP nume_gain4_mul_temp.
-DSP Report: Generating DSP nume_gain4_mul_temp, operation Mode is: A''*(B:0xc3ca).
-DSP Report: register nume_gain4_mul_temp is absorbed into DSP nume_gain4_mul_temp.
-DSP Report: register nume_gain4_mul_temp is absorbed into DSP nume_gain4_mul_temp.
-DSP Report: operator nume_gain4_mul_temp is absorbed into DSP nume_gain4_mul_temp.
-DSP Report: operator nume_gain4_mul_temp is absorbed into DSP nume_gain4_mul_temp.
-DSP Report: Generating DSP nume_gain4_mul_temp, operation Mode is: PCIN+A''*B.
-DSP Report: register nume_gain4_mul_temp is absorbed into DSP nume_gain4_mul_temp.
-DSP Report: register nume_gain4_mul_temp is absorbed into DSP nume_gain4_mul_temp.
-DSP Report: operator nume_gain4_mul_temp is absorbed into DSP nume_gain4_mul_temp.
-DSP Report: operator nume_gain4_mul_temp is absorbed into DSP nume_gain4_mul_temp.
-DSP Report: Generating DSP nume_gain4_mul_temp, operation Mode is: (PCIN>>17)+(A:0xc3ca)*B''.
-DSP Report: register nume_gain4_mul_temp is absorbed into DSP nume_gain4_mul_temp.
-DSP Report: register nume_gain4_mul_temp is absorbed into DSP nume_gain4_mul_temp.
-DSP Report: operator nume_gain4_mul_temp is absorbed into DSP nume_gain4_mul_temp.
-DSP Report: operator nume_gain4_mul_temp is absorbed into DSP nume_gain4_mul_temp.
-DSP Report: Generating DSP nume_gain4_mul_temp, operation Mode is: A''*(B:0xc3ca).
-DSP Report: register nume_gain4_mul_temp is absorbed into DSP nume_gain4_mul_temp.
-DSP Report: register nume_gain4_mul_temp is absorbed into DSP nume_gain4_mul_temp.
-DSP Report: operator nume_gain4_mul_temp is absorbed into DSP nume_gain4_mul_temp.
-DSP Report: operator nume_gain4_mul_temp is absorbed into DSP nume_gain4_mul_temp.
-DSP Report: Generating DSP nume_gain4_mul_temp, operation Mode is: (PCIN>>17)+A''*(B:0xc3ca).
-DSP Report: register nume_gain4_mul_temp is absorbed into DSP nume_gain4_mul_temp.
-DSP Report: register nume_gain4_mul_temp is absorbed into DSP nume_gain4_mul_temp.
-DSP Report: operator nume_gain4_mul_temp is absorbed into DSP nume_gain4_mul_temp.
-DSP Report: operator nume_gain4_mul_temp is absorbed into DSP nume_gain4_mul_temp.
-DSP Report: Generating DSP nume_gain4_mul_temp, operation Mode is: PCIN+A''*B.
-DSP Report: register nume_gain4_mul_temp is absorbed into DSP nume_gain4_mul_temp.
-DSP Report: register nume_gain4_mul_temp is absorbed into DSP nume_gain4_mul_temp.
-DSP Report: operator nume_gain4_mul_temp is absorbed into DSP nume_gain4_mul_temp.
-DSP Report: operator nume_gain4_mul_temp is absorbed into DSP nume_gain4_mul_temp.
-DSP Report: Generating DSP nume_gain_b0_mul_temp, operation Mode is: A*B.
-DSP Report: operator nume_gain_b0_mul_temp is absorbed into DSP nume_gain_b0_mul_temp.
-DSP Report: operator nume_gain_b0_mul_temp is absorbed into DSP nume_gain_b0_mul_temp.
-DSP Report: Generating DSP nume_gain_b0_mul_temp, operation Mode is: (PCIN>>17)+A*B.
-DSP Report: operator nume_gain_b0_mul_temp is absorbed into DSP nume_gain_b0_mul_temp.
-DSP Report: operator nume_gain_b0_mul_temp is absorbed into DSP nume_gain_b0_mul_temp.
-DSP Report: Generating DSP nume_gain_b0_mul_temp, operation Mode is: (A:0x19653)*B.
-DSP Report: operator nume_gain_b0_mul_temp is absorbed into DSP nume_gain_b0_mul_temp.
-DSP Report: operator nume_gain_b0_mul_temp is absorbed into DSP nume_gain_b0_mul_temp.
-DSP Report: Generating DSP nume_gain_b0_mul_temp, operation Mode is: PCIN+A*B.
-DSP Report: operator nume_gain_b0_mul_temp is absorbed into DSP nume_gain_b0_mul_temp.
-DSP Report: operator nume_gain_b0_mul_temp is absorbed into DSP nume_gain_b0_mul_temp.
-DSP Report: Generating DSP nume_gain_b0_mul_temp, operation Mode is: (PCIN>>17)+(A:0x19653)*B.
-DSP Report: operator nume_gain_b0_mul_temp is absorbed into DSP nume_gain_b0_mul_temp.
-DSP Report: operator nume_gain_b0_mul_temp is absorbed into DSP nume_gain_b0_mul_temp.
-DSP Report: Generating DSP nume_gain_b0_mul_temp, operation Mode is: (A:0x19653)*B.
-DSP Report: operator nume_gain_b0_mul_temp is absorbed into DSP nume_gain_b0_mul_temp.
-DSP Report: operator nume_gain_b0_mul_temp is absorbed into DSP nume_gain_b0_mul_temp.
-DSP Report: Generating DSP nume_gain_b0_mul_temp, operation Mode is: (PCIN>>17)+(A:0x19653)*B.
-DSP Report: operator nume_gain_b0_mul_temp is absorbed into DSP nume_gain_b0_mul_temp.
-DSP Report: operator nume_gain_b0_mul_temp is absorbed into DSP nume_gain_b0_mul_temp.
-DSP Report: Generating DSP nume_gain_b0_mul_temp, operation Mode is: PCIN+A*B.
-DSP Report: operator nume_gain_b0_mul_temp is absorbed into DSP nume_gain_b0_mul_temp.
-DSP Report: operator nume_gain_b0_mul_temp is absorbed into DSP nume_gain_b0_mul_temp.
-DSP Report: Generating DSP Product2_mul_temp, operation Mode is: A*B.
-DSP Report: operator Product2_mul_temp is absorbed into DSP Product2_mul_temp.
+WARNING: [Synth 8-3936] Found unconnected internal register 'controlOut_unsigned_reg' and it is trimmed from '16' to '8' bits. [D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.srcs/sources_1/new/topModule.v:379]
+DSP Report: Generating DSP Product4_mul_temp, operation Mode is: A*(B:0x3e8).
+DSP Report: operator Product4_mul_temp is absorbed into DSP Product4_mul_temp.
+DSP Report: Generating DSP Product5_mul_temp, operation Mode is: A*B.
+DSP Report: operator Product5_mul_temp is absorbed into DSP Product5_mul_temp.
 DSP Report: Generating DSP Product1_mul_temp, operation Mode is: A*B.
 DSP Report: operator Product1_mul_temp is absorbed into DSP Product1_mul_temp.
 DSP Report: Generating DSP Add2_out1, operation Mode is: C+(D-A)*B.
 DSP Report: operator Add2_out1 is absorbed into DSP Add2_out1.
-DSP Report: operator Product3_mul_temp is absorbed into DSP Add2_out1.
+DSP Report: operator Product6_mul_temp is absorbed into DSP Add2_out1.
 DSP Report: operator Add3_out1 is absorbed into DSP Add2_out1.
 DSP Report: Generating DSP gain_mul_temp, operation Mode is: A*(B:0x2af3).
 DSP Report: operator gain_mul_temp is absorbed into DSP gain_mul_temp.
@@ -726,161 +272,54 @@ DSP Report: operator Add1_out1 is absorbed into DSP Add1_out1.
 DSP Report: operator Product_mul_temp is absorbed into DSP Add1_out1.
 DSP Report: Generating DSP Product_mul_temp, operation Mode is: A*B.
 DSP Report: operator Product_mul_temp is absorbed into DSP Product_mul_temp.
+DSP Report: Generating DSP Multiply_mul_temp, operation Mode is: A*B.
+DSP Report: operator Multiply_mul_temp is absorbed into DSP Multiply_mul_temp.
+DSP Report: operator Multiply_mul_temp is absorbed into DSP Multiply_mul_temp.
+DSP Report: Generating DSP Multiply_mul_temp, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator Multiply_mul_temp is absorbed into DSP Multiply_mul_temp.
+DSP Report: operator Multiply_mul_temp is absorbed into DSP Multiply_mul_temp.
+DSP Report: Generating DSP Multiply1_mul_temp, operation Mode is: A*B.
+DSP Report: operator Multiply1_mul_temp is absorbed into DSP Multiply1_mul_temp.
+DSP Report: operator Multiply1_mul_temp is absorbed into DSP Multiply1_mul_temp.
+DSP Report: Generating DSP Multiply1_mul_temp, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator Multiply1_mul_temp is absorbed into DSP Multiply1_mul_temp.
+DSP Report: operator Multiply1_mul_temp is absorbed into DSP Multiply1_mul_temp.
+DSP Report: Generating DSP Multiply1_mul_temp, operation Mode is: (A:0x1999a)*B.
+DSP Report: operator Multiply1_mul_temp is absorbed into DSP Multiply1_mul_temp.
+DSP Report: operator Multiply1_mul_temp is absorbed into DSP Multiply1_mul_temp.
+DSP Report: Generating DSP Multiply1_mul_temp, operation Mode is: (PCIN>>17)+(A:0x1999a)*B.
+DSP Report: operator Multiply1_mul_temp is absorbed into DSP Multiply1_mul_temp.
+DSP Report: operator Multiply1_mul_temp is absorbed into DSP Multiply1_mul_temp.
 WARNING: [Synth 8-7129] Port DIR in module topModule is either unconnected or has no load
 WARNING: [Synth 8-7129] Port out in module topModule is either unconnected or has no load
 WARNING: [Synth 8-7129] Port A in module topModule is either unconnected or has no load
 WARNING: [Synth 8-7129] Port B in module topModule is either unconnected or has no load
 WARNING: [Synth 8-7129] Port clearEncoder in module topModule is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:46 . Memory (MB): peak = 1557.422 ; gain = 595.902
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:45 ; elapsed = 00:00:50 . Memory (MB): peak = 1551.246 ; gain = 590.387
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-3323] Resources of type DSP have been overutilized. Used = 124, Available = 120. Use report_utilization command for details.
-DSP Report: Generating DSP Add2_out1, operation Mode is (post resource management): C+(D-A)*(B:0x7fff).
-DSP Report: operator Add2_out1 is absorbed into DSP Add2_out1.
-DSP Report: operator Product3_mul_temp is absorbed into DSP Add2_out1.
-DSP Report: operator Add3_out1 is absorbed into DSP Add2_out1.
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 
-ROM: Preliminary Mapping Report
-+------------+------------+---------------+----------------+
-|Module Name | RTL Object | Depth x Width | Implemented As | 
-+------------+------------+---------------+----------------+
-|topModule   | D0         | 32x5          | LUT            | 
-|topModule   | D0         | 32x5          | LUT            | 
-+------------+------------+---------------+----------------+
-
-
 DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
-+------------+----------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|Module Name | DSP Mapping                | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
-+------------+----------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|topModule   | (A:0xcccd)*B               | 13     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|topModule   | (PCIN>>17)+A*B             | 18     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|topModule   | A*B                        | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|topModule   | PCIN+A*(B:0xcccd)          | 18     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|topModule   | (PCIN>>17)+A*B             | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|topModule   | A*(B:0xcccd)               | 18     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|topModule   | (PCIN>>17)+A*B             | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|topModule   | PCIN+A*(B:0xcccd)          | 18     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|topModule   | A*B2                       | 18     | 18     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
-|topModule   | (PCIN>>17)+A*B2            | 18     | 13     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
-|topModule   | (A:0x1a787)*B2             | 18     | 18     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
-|topModule   | PCIN+A*B2                  | 18     | 18     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
-|topModule   | (PCIN>>17)+(A:0x1a787)*B2  | 18     | 13     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
-|topModule   | (A:0x1a787)*B2             | 18     | 18     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
-|topModule   | (PCIN>>17)+(A:0x1a787)*B2  | 18     | 18     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
-|topModule   | PCIN+A*B2                  | 18     | 18     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
-|topModule   | A*B''                      | 19     | 18     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
-|topModule   | (PCIN>>17)+A*B''           | 19     | 13     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
-|topModule   | A''*(B:0xf766)             | 18     | 17     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
-|topModule   | PCIN+A*B''                 | 19     | 18     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
-|topModule   | (PCIN>>17)+(A:0xf766)*B''  | 17     | 13     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
-|topModule   | A''*(B:0xf766)             | 18     | 17     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
-|topModule   | (PCIN>>17)+A''*(B:0xf766)  | 18     | 17     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
-|topModule   | PCIN+A*B''                 | 19     | 18     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
-|topModule   | A*B''                      | 18     | 18     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
-|topModule   | (PCIN>>17)+A*B''           | 18     | 13     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
-|topModule   | A''*(B:0x6a7f)             | 18     | 16     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
-|topModule   | PCIN+A*B''                 | 18     | 18     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
-|topModule   | (PCIN>>17)+(A:0x6a7f)*B''  | 16     | 13     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
-|topModule   | A''*(B:0x6a7f)             | 18     | 16     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
-|topModule   | (PCIN>>17)+A''*(B:0x6a7f)  | 18     | 16     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
-|topModule   | PCIN+A*B''                 | 18     | 18     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
-|topModule   | A''*B                      | 18     | 16     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
-|topModule   | (PCIN>>17)+A*B''           | 16     | 13     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
-|topModule   | (A:0x11aa0)*B''            | 18     | 18     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
-|topModule   | PCIN+A''*B                 | 18     | 16     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
-|topModule   | (PCIN>>17)+(A:0x11aa0)*B'' | 18     | 13     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
-|topModule   | (A:0x11aa0)*B''            | 18     | 18     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
-|topModule   | (PCIN>>17)+(A:0x11aa0)*B'' | 18     | 18     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
-|topModule   | PCIN+A''*B                 | 18     | 16     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
-|topModule   | A*B                        | 18     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|topModule   | (PCIN>>17)+A*B             | 18     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|topModule   | PCIN+A*B                   | 18     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|topModule   | (PCIN>>17)+A*B             | 13     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|topModule   | A*B                        | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|topModule   | PCIN+A*B                   | 18     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|topModule   | (PCIN>>17)+A*B             | 18     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|topModule   | PCIN+A*B                   | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|topModule   | A*B                        | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|topModule   | PCIN+A*B                   | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|topModule   | (PCIN>>17)+A*B             | 18     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|topModule   | PCIN+A*B                   | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|topModule   | A*B                        | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|topModule   | (PCIN>>17)+A*B             | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|topModule   | PCIN+A*B                   | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|topModule   | (PCIN>>17)+A*B             | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|topModule   | A*B                        | 18     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|topModule   | PCIN+A*B                   | 20     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|topModule   | (PCIN>>17)+A*B             | 20     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|topModule   | (A:0x168f1)*B              | 18     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|topModule   | PCIN+A*B                   | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|topModule   | PCIN+A*B                   | 20     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|topModule   | (A:0x168f1)*B              | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|topModule   | PCIN+A*B                   | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|topModule   | PCIN+A*B                   | 20     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|topModule   | (A:0x168f1)*B              | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|topModule   | (PCIN>>17)+(A:0x168f1)*B   | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|topModule   | PCIN+A*B                   | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|DT          | A*B                        | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|DT          | PCIN+A*B                   | 18     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|DT          | A*B                        | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|DT          | PCIN+A*B                   | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|DT          | (PCIN>>17)+A*B             | 13     | 13     | -      | -      | 13     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|DT          | PCIN+A*B                   | 13     | 13     | -      | -      | 13     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|DT          | A*B                        | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|DT          | (PCIN>>17)+A*B             | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|DT          | PCIN+A*B                   | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|DT          | (PCIN>>17)+A*B             | 18     | 18     | -      | -      | 30     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|topModule   | A2*B                       | 18     | 17     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
-|topModule   | (PCIN>>17)+A*B2            | 17     | 13     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
-|topModule   | (A:0x158e2)*B2             | 18     | 18     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
-|topModule   | PCIN+A2*B                  | 18     | 17     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
-|topModule   | (PCIN>>17)+(A:0x158e2)*B2  | 18     | 13     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
-|topModule   | (A:0x158e2)*B2             | 18     | 18     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
-|topModule   | (PCIN>>17)+(A:0x158e2)*B2  | 18     | 18     | -      | -      | 48     | 0    | 1    | -    | -    | -     | 0    | 0    | 
-|topModule   | PCIN+A2*B                  | 18     | 17     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
-|topModule   | A*B''                      | 18     | 18     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
-|topModule   | (PCIN>>17)+A*B''           | 18     | 13     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
-|topModule   | (A:0x1404f)*B''            | 18     | 18     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
-|topModule   | PCIN+A*B''                 | 18     | 18     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
-|topModule   | (PCIN>>17)+(A:0x1404f)*B'' | 18     | 13     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
-|topModule   | (A:0x1404f)*B''            | 18     | 18     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
-|topModule   | (PCIN>>17)+(A:0x1404f)*B'' | 18     | 18     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
-|topModule   | PCIN+A*B''                 | 18     | 18     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
-|topModule   | A''*B                      | 18     | 17     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
-|topModule   | (PCIN>>17)+A*B''           | 17     | 13     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
-|topModule   | (A:0x1b3d0)*B''            | 18     | 18     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
-|topModule   | PCIN+A''*B                 | 18     | 17     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
-|topModule   | (PCIN>>17)+(A:0x1b3d0)*B'' | 18     | 13     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
-|topModule   | (A:0x1b3d0)*B''            | 18     | 18     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
-|topModule   | (PCIN>>17)+(A:0x1b3d0)*B'' | 18     | 18     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
-|topModule   | PCIN+A''*B                 | 18     | 17     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
-|topModule   | A''*B                      | 18     | 15     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
-|topModule   | (PCIN>>17)+A*B''           | 15     | 13     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
-|topModule   | A''*(B:0xc3ca)             | 18     | 17     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
-|topModule   | PCIN+A''*B                 | 18     | 15     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
-|topModule   | (PCIN>>17)+(A:0xc3ca)*B''  | 17     | 13     | -      | -      | 48     | 0    | 2    | -    | -    | -     | 0    | 0    | 
-|topModule   | A''*(B:0xc3ca)             | 18     | 17     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
-|topModule   | (PCIN>>17)+A''*(B:0xc3ca)  | 18     | 17     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
-|topModule   | PCIN+A''*B                 | 18     | 15     | -      | -      | 48     | 2    | 0    | -    | -    | -     | 0    | 0    | 
-|topModule   | A*B                        | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|topModule   | (PCIN>>17)+A*B             | 15     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|topModule   | (A:0x19653)*B              | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|topModule   | PCIN+A*B                   | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|topModule   | (PCIN>>17)+(A:0x19653)*B   | 18     | 13     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|topModule   | (A:0x19653)*B              | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|topModule   | (PCIN>>17)+(A:0x19653)*B   | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|topModule   | PCIN+A*B                   | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|PID         | A*B                        | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|PID         | A*B                        | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|PID         | C+(D-A)*B                  | 16     | 16     | 16     | 16     | 16     | 0    | 0    | 0    | 0    | 0     | 0    | 0    | 
-|PID         | A*(B:0x2af3)               | 16     | 15     | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|PID         | C'+A*B                     | 16     | 16     | 16     | -      | 16     | 0    | 0    | 1    | -    | -     | 0    | 0    | 
-|PID         | A*B                        | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-+------------+----------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
++------------+--------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping              | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+--------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|DT          | A*(B:0x3e8)              | 16     | 11     | -      | -      | 27     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|DT          | A*B                      | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|DT          | A*B                      | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|DT          | C+(D-A)*B                | 16     | 16     | 16     | 16     | 16     | 0    | 0    | 0    | 0    | 0     | 0    | 0    | 
+|DT          | A*(B:0x2af3)             | 16     | 15     | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|DT          | C'+A*B                   | 16     | 16     | 16     | -      | 16     | 0    | 0    | 1    | -    | -     | 0    | 0    | 
+|DT          | A*B                      | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|IOPID       | A*B                      | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|IOPID       | (PCIN>>17)+A*B           | 15     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|IOPID       | A*B                      | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|IOPID       | (PCIN>>17)+A*B           | 15     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|IOPID       | (A:0x1999a)*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|IOPID       | (PCIN>>17)+(A:0x1999a)*B | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++------------+--------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 
 Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
 ---------------------------------------------------------------------------------
@@ -890,19 +329,19 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:33 ; elapsed = 00:00:57 . Memory (MB): peak = 1557.422 ; gain = 595.902
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:55 ; elapsed = 00:01:00 . Memory (MB): peak = 1551.246 ; gain = 590.387
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:57 . Memory (MB): peak = 1557.422 ; gain = 595.902
+Finished Timing Optimization : Time (s): cpu = 00:00:55 ; elapsed = 00:01:00 . Memory (MB): peak = 1551.246 ; gain = 590.387
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:33 ; elapsed = 00:00:57 . Memory (MB): peak = 1584.684 ; gain = 623.164
+Finished Technology Mapping : Time (s): cpu = 00:00:56 ; elapsed = 00:01:02 . Memory (MB): peak = 1658.016 ; gain = 697.156
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -920,48 +359,59 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:37 ; elapsed = 00:01:03 . Memory (MB): peak = 1599.473 ; gain = 637.953
+Finished IO Insertion : Time (s): cpu = 00:01:01 ; elapsed = 00:01:07 . Memory (MB): peak = 1672.668 ; gain = 711.809
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:37 ; elapsed = 00:01:03 . Memory (MB): peak = 1599.473 ; gain = 637.953
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:01 ; elapsed = 00:01:07 . Memory (MB): peak = 1672.668 ; gain = 711.809
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:37 ; elapsed = 00:01:03 . Memory (MB): peak = 1599.473 ; gain = 637.953
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:01 ; elapsed = 00:01:07 . Memory (MB): peak = 1672.668 ; gain = 711.809
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:37 ; elapsed = 00:01:03 . Memory (MB): peak = 1599.473 ; gain = 637.953
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:02 ; elapsed = 00:01:07 . Memory (MB): peak = 1672.668 ; gain = 711.809
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:37 ; elapsed = 00:01:03 . Memory (MB): peak = 1599.473 ; gain = 637.953
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:02 ; elapsed = 00:01:07 . Memory (MB): peak = 1672.668 ; gain = 711.809
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:37 ; elapsed = 00:01:03 . Memory (MB): peak = 1599.473 ; gain = 637.953
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:02 ; elapsed = 00:01:07 . Memory (MB): peak = 1672.668 ; gain = 711.809
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
 ---------------------------------------------------------------------------------
 
 DSP Final Report (the ' indicates corresponding REG is set)
-+------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|Module Name | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
-+------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|PID         | C+D-A*B     | 30     | 15     | 48     | 15     | 16     | 0    | 0    | 0    | 0    | 0     | 0    | 0    | 
-+------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
++------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping  | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|DT          | A*B          | 30     | 10     | -      | -      | 27     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|DT          | A*B          | 15     | 7      | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|DT          | A*B          | 30     | 18     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|DT          | C+D-A*B      | 30     | 15     | 48     | 15     | 16     | 0    | 0    | 0    | 0    | 0     | 0    | 0    | 
+|DT          | A*B          | 30     | 14     | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|DT          | C'+A*B       | 30     | 9      | 48     | -      | 16     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|IOPID       | A'*B         | 16     | 14     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|IOPID       | PCIN>>17+A*B | 14     | 0      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|IOPID       | A*B          | 17     | 14     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|IOPID       | PCIN>>17+A*B | 14     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|IOPID       | A*B          | 17     | 17     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|IOPID       | PCIN>>17+A*B | 0      | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 
 
 Report BlackBoxes: 
@@ -977,43 +427,41 @@ Report Cell Usage:
 +------+---------+------+
 |1     |xadc_wiz |     1|
 |2     |BUFG     |     2|
-|3     |CARRY4   |   216|
-|4     |DSP48E1  |     1|
-|5     |LUT1     |   117|
-|6     |LUT2     |   390|
-|7     |LUT3     |   155|
-|8     |LUT4     |   128|
-|9     |LUT5     |   110|
-|10    |LUT6     |   180|
-|11    |MUXF7    |     9|
-|12    |MUXF8    |     3|
-|13    |FDRE     |   183|
-|14    |FDSE     |     9|
+|3     |CARRY4   |   411|
+|4     |DSP48E1  |    12|
+|7     |LUT1     |   197|
+|8     |LUT2     |   637|
+|9     |LUT3     |   426|
+|10    |LUT4     |   332|
+|11    |LUT5     |   282|
+|12    |LUT6     |   527|
+|13    |FDRE     |   305|
+|14    |FDSE     |    17|
 |15    |IBUF     |    22|
 |16    |OBUF     |     8|
 |17    |OBUFT    |     2|
 +------+---------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:37 ; elapsed = 00:01:03 . Memory (MB): peak = 1599.473 ; gain = 637.953
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:02 ; elapsed = 00:01:07 . Memory (MB): peak = 1672.668 ; gain = 711.809
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 8 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:31 ; elapsed = 00:01:01 . Memory (MB): peak = 1599.473 ; gain = 544.746
-Synthesis Optimization Complete : Time (s): cpu = 00:00:37 ; elapsed = 00:01:04 . Memory (MB): peak = 1599.473 ; gain = 637.953
+Synthesis finished with 0 errors, 0 critical warnings and 7 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:53 ; elapsed = 00:01:05 . Memory (MB): peak = 1672.668 ; gain = 625.422
+Synthesis Optimization Complete : Time (s): cpu = 00:01:02 ; elapsed = 00:01:07 . Memory (MB): peak = 1672.668 ; gain = 711.809
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 1611.535 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 229 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.047 . Memory (MB): peak = 1682.406 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 423 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1615.176 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1686.121 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete, checksum: 1cef319a
+Synth Design complete, checksum: c7006027
 INFO: [Common 17-83] Releasing license: Synthesis
-49 Infos, 26 Warnings, 0 Critical Warnings and 0 Errors encountered.
+49 Infos, 29 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:40 ; elapsed = 00:01:09 . Memory (MB): peak = 1615.176 ; gain = 1026.684
+synth_design: Time (s): cpu = 00:01:07 ; elapsed = 00:01:13 . Memory (MB): peak = 1686.121 ; gain = 1096.523
 INFO: [Common 17-1381] The checkpoint 'D:/Github/FlybackConverter-FPGA-based-Digital-Twin/Vivado/flyback_converter_serial.xpr/callPWM/callPWM.runs/synth_1/topModule.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file topModule_utilization_synth.rpt -pb topModule_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Jun 30 06:14:54 2023...
+INFO: [Common 17-206] Exiting Vivado at Tue Jul 11 00:44:35 2023...
