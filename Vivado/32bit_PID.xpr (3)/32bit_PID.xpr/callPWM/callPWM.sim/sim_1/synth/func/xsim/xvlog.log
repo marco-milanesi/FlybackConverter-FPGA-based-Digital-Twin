@@ -1,0 +1,10 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/FPGACodes/testScript/callPWM/callPWM.sim/sim_1/synth/func/xsim/topModule_func_synth.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ROM_grados_numericos
+INFO: [VRFC 10-311] analyzing module controlador
+INFO: [VRFC 10-311] analyzing module divisor_freq
+INFO: [VRFC 10-311] analyzing module divisor_freq_0
+INFO: [VRFC 10-311] analyzing module divisor_freq_1
+INFO: [VRFC 10-311] analyzing module pwm
+INFO: [VRFC 10-311] analyzing module topModule
+INFO: [VRFC 10-311] analyzing module transmisor_async
+INFO: [VRFC 10-311] analyzing module glbl

@@ -1,0 +1,15 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../callPWM.srcs/sources_1/imports/Submodulos/ROM_grados_numericos.v" \
+"../../../../callPWM.srcs/sources_1/imports/Submodulos/controlador.v" \
+"../../../../callPWM.srcs/sources_1/imports/Submodulos/divisor_freq.v" \
+"../../../../callPWM.srcs/sources_1/imports/Submodulos/pwm.v" \
+"../../../../callPWM.srcs/sources_1/imports/Submodulos/rotary_decoder.v" \
+"../../../../callPWM.srcs/sources_1/imports/Submodulos/transmisor_async.v" \
+"../../../../callPWM.srcs/sources_1/new/topModule.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
