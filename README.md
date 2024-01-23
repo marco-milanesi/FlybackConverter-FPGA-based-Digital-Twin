@@ -49,6 +49,12 @@ The main contribution of this paper is the digital twin implementation at the ha
 
 The project includes the source code and hardware configuration files for the implementation, as well as detailed instructions on how to set up the hardware and run the code. This project is suitable for anyone interested in learning about embedded systems, control systems, and FPGA programming.
 
+
+
+https://github.com/marco-milanesi/FlybackConverter-FPGA-based-Digital-Twin/assets/47824890/f062ceea-cc9c-405b-9a88-5e0052de91b7
+
+
+
 <div align = left>
 
 ### Built With
