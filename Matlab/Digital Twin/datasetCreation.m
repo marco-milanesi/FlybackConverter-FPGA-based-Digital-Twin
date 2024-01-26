@@ -57,7 +57,7 @@ new_data = zeros(height(resultTable), 11); % 11 columns including R, DC, and the
 
 for i = 1:height(resultTable)
     R = resultTable.R(i);
-    DC = resultTable.DC(i);
+    DC = 100*resultTable.DC(i);
     Vout = resultTable.Vout{i};
     
     % Calculate voltage and frequency features
@@ -78,5 +78,5 @@ new_table = array2table(new_data, 'VariableNames', columns);
 % Display the dataset created
 disp(new_table);
 
-writetable(new_table,'dataset2.csv');
+writetable(new_table,'dataset4.csv');
 
