@@ -7,8 +7,8 @@ C = 1.1943e-4;
 L = 36.5e-6;
 
 % Define the values for the outer and inner loops
-R_values = [10, 12, 15, 22];
-DC_values = 0.01:0.01:0.6;
+R_values = [0.1, 0.68, 2.2, 8.2, 22];
+DC_values = 0.5:0.01:1;
 
 % Initialize an empty table to store the results
 resultTable = table();
@@ -41,7 +41,7 @@ for i = 1:height(resultTable)
     R = resultTable.R(i);
     DC = resultTable.DC(i);
     Vout = resultTable.Vout{i};
-    
+
     % Plot Vout for each set of R and DC
     plot(Vout, 'DisplayName', sprintf('R=%.1f, DC=%.2f', R, DC)); hold on
 end
@@ -57,7 +57,7 @@ new_data = zeros(height(resultTable), 11); % 11 columns including R, DC, and the
 
 for i = 1:height(resultTable)
     R = resultTable.R(i);
-    DC = 100*resultTable.DC(i);
+    DC = floor(100*resultTable.DC(i));
     Vout = resultTable.Vout{i};
     
     % Calculate voltage and frequency features
