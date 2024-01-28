@@ -7,8 +7,8 @@ C = 1.1943e-4;
 L = 36.5e-6;
 
 % Define the values for the outer and inner loops
-R_values = [0.022, 0.1, 0.68];
-DC_values = 0.5:0.01:1;
+R_values = [0.1, 0.2, 0.3, 0.4, 0.68];
+DC_values = 0.6:0.01:1;
 
 % Initialize an empty table to store the results
 resultTable = table();
@@ -78,5 +78,5 @@ new_table = array2table(new_data, 'VariableNames', columns);
 % Display the dataset created
 disp(new_table);
 
-writetable(new_table,'dataset5.csv');
+writetable(new_table,'dataset6.csv');
 
